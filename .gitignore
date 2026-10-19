@@ -1,0 +1,10 @@
+# Synthetic data pack supplied with the brief — not redistributed.
+# Place it at ./carrowmore-data-pack/ to run the prototype (see README).
+carrowmore-data-pack/
+
+# OS / editor noise
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.env
