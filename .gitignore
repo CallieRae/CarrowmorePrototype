@@ -1,6 +1,7 @@
-# Synthetic data pack supplied with the brief — not redistributed.
-# Place it at ./carrowmore-data-pack/ to run the prototype (see README).
-carrowmore-data-pack/
+# Synthetic data pack supplied with the brief.
+# clean/, employers/ and reference/ are committed (~4.4 MB) so the prototype runs from a fresh clone.
+# raw/ (~51 MB) is excluded on purpose: the prototype uses clean/ only (see FRAMING.md for why).
+carrowmore-data-pack/raw/
 
 # OS / editor noise
 .DS_Store

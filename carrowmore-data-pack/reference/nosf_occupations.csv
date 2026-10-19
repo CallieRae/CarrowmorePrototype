@@ -1,0 +1,171 @@
+occupation_id,title,sector_code,sector_name,level,statement_count
+NOSF-MAR-001,Aids to Navigation Technician,MAR,Maritime Operations,5,25
+NOSF-MAR-002,Aids to Navigation Superintendent,MAR,Maritime Operations,5,14
+NOSF-MAR-003,Marine Operations Coordinator,MAR,Maritime Operations,4,31
+NOSF-MAR-004,Small Craft Coxswain,MAR,Maritime Operations,5,27
+NOSF-MAR-005,Offshore Transfer Operative,MAR,Maritime Operations,8,40
+NOSF-MAR-006,Buoyage and Moorings Technician,MAR,Maritime Operations,5,22
+NOSF-MAR-007,Maritime Watch Officer,MAR,Maritime Operations,4,23
+NOSF-MAR-008,Vessel Traffic Services Operator,MAR,Maritime Operations,4,16
+NOSF-MAR-009,Marine Emergency Response Coordinator,MAR,Maritime Operations,5,9
+NOSF-MAR-010,Helicopter Landing Area Officer,MAR,Maritime Operations,6,9
+NOSF-MAR-011,Offshore Installation Logistics Officer,MAR,Maritime Operations,6,32
+NOSF-MAR-012,Marine Meteorological Observer,MAR,Maritime Operations,7,24
+NOSF-MAR-013,Seagoing Deck Operative,MAR,Maritime Operations,5,29
+NOSF-MAR-014,Marine Pilotage Support Officer,MAR,Maritime Operations,7,14
+NOSF-MAR-015,Lighthouse and Beacon Attendant,MAR,Maritime Operations,5,32
+NOSF-MAR-016,Marine Incident Investigator,MAR,Maritime Operations,4,32
+NOSF-MAR-017,Coastal Watch Supervisor,MAR,Maritime Operations,3,34
+NOSF-MAR-018,Offshore Personnel Transfer Supervisor,MAR,Maritime Operations,6,17
+NOSF-MAR-019,Buoy Tender Deck Officer,MAR,Maritime Operations,6,20
+NOSF-MAR-020,Navigation Warning Officer,MAR,Maritime Operations,4,13
+NOSF-MAR-021,Seamanship Instructor,MAR,Maritime Operations,6,13
+NOSF-MAR-022,Marine Aids Inspector,MAR,Maritime Operations,6,13
+NOSF-MAR-023,Offshore Marine Coordinator,MAR,Maritime Operations,4,21
+NOSF-MAR-024,Beacon Maintenance Operative,MAR,Maritime Operations,5,19
+NOSF-ENR-001,High Voltage Authorised Person,ENR,Energy Generation and Transmission,6,8
+NOSF-ENR-002,High Voltage Senior Authorised Person,ENR,Energy Generation and Transmission,7,31
+NOSF-ENR-003,Offshore Wind Turbine Technician,ENR,Energy Generation and Transmission,4,26
+NOSF-ENR-004,Offshore Substation Technician,ENR,Energy Generation and Transmission,6,21
+NOSF-ENR-005,Balance of Plant Technician,ENR,Energy Generation and Transmission,6,33
+NOSF-ENR-006,Electrical Commissioning Technician,ENR,Energy Generation and Transmission,5,32
+NOSF-ENR-007,Generation Plant Operator,ENR,Energy Generation and Transmission,7,18
+NOSF-ENR-008,Protection and Control Technician,ENR,Energy Generation and Transmission,5,17
+NOSF-ENR-009,Cable Jointing Technician,ENR,Energy Generation and Transmission,3,18
+NOSF-ENR-010,Renewable Energy Operations Coordinator,ENR,Energy Generation and Transmission,7,29
+NOSF-ENR-011,Switching Operations Engineer,ENR,Energy Generation and Transmission,4,21
+NOSF-ENR-012,Standby Power Systems Technician,ENR,Energy Generation and Transmission,5,28
+NOSF-ENR-013,Energy Storage Systems Technician,ENR,Energy Generation and Transmission,4,27
+NOSF-ENR-014,Grid Connection Compliance Officer,ENR,Energy Generation and Transmission,5,15
+NOSF-ENR-015,Wind Farm Site Coordinator,ENR,Energy Generation and Transmission,4,16
+NOSF-ENR-016,Power Systems Diagnostic Technician,ENR,Energy Generation and Transmission,6,28
+NOSF-ENR-017,Switchgear Maintenance Technician,ENR,Energy Generation and Transmission,8,33
+NOSF-ENR-018,Transformer Technician,ENR,Energy Generation and Transmission,5,10
+NOSF-ENR-019,Earthing and Bonding Technician,ENR,Energy Generation and Transmission,6,29
+NOSF-ENR-020,Generation Control Room Operator,ENR,Energy Generation and Transmission,6,20
+NOSF-ENR-021,Renewables Commissioning Manager,ENR,Energy Generation and Transmission,6,29
+NOSF-ENR-022,Electrical Safety Rules Coordinator,ENR,Energy Generation and Transmission,6,24
+NOSF-ENR-023,Array Cable Installation Technician,ENR,Energy Generation and Transmission,7,24
+NOSF-ENR-024,Blade Repair Technician,ENR,Energy Generation and Transmission,4,32
+NOSF-ENG-001,Marine Plant Fitter,ENG,Engineering Maintenance,4,19
+NOSF-ENG-002,Rotating Equipment Technician,ENG,Engineering Maintenance,8,22
+NOSF-ENG-003,Fluid Power Technician,ENG,Engineering Maintenance,7,29
+NOSF-ENG-004,Mechanical Maintenance Technician,ENG,Engineering Maintenance,6,20
+NOSF-ENG-005,Lifting Equipment Inspector,ENG,Engineering Maintenance,4,12
+NOSF-ENG-006,Condition Monitoring Technician,ENG,Engineering Maintenance,5,16
+NOSF-ENG-007,Maintenance Planner,ENG,Engineering Maintenance,5,14
+NOSF-ENG-008,Instrumentation Technician,ENG,Engineering Maintenance,5,23
+NOSF-ENG-009,Welding and Fabrication Operative,ENG,Engineering Maintenance,6,25
+NOSF-ENG-010,Reliability Engineer,ENG,Engineering Maintenance,6,21
+NOSF-ENG-011,Machinery Overhaul Technician,ENG,Engineering Maintenance,4,24
+NOSF-ENG-012,Pumped Systems Technician,ENG,Engineering Maintenance,6,15
+NOSF-ENG-013,Hoisting and Haulage Technician,ENG,Engineering Maintenance,5,15
+NOSF-ENG-014,Plant Commissioning Technician,ENG,Engineering Maintenance,5,11
+NOSF-ENG-015,Diesel Engine Technician,ENG,Engineering Maintenance,6,24
+NOSF-ENG-016,Seals and Packing Specialist,ENG,Engineering Maintenance,4,25
+NOSF-ENG-017,Machine Alignment Technician,ENG,Engineering Maintenance,5,7
+NOSF-ENG-018,Workshop Supervisor,ENG,Engineering Maintenance,6,26
+NOSF-ENG-019,Maintenance Team Leader,ENG,Engineering Maintenance,5,15
+NOSF-ENG-020,Asset Integrity Technician,ENG,Engineering Maintenance,5,24
+NOSF-ENG-021,Compressed Air Systems Technician,ENG,Engineering Maintenance,5,19
+NOSF-SAF-001,Safety Documentation Controller,SAF,"Safety, Health and Emergency Response",4,16
+NOSF-SAF-002,Confined Space Attendant,SAF,"Safety, Health and Emergency Response",8,14
+NOSF-SAF-003,Work at Height Supervisor,SAF,"Safety, Health and Emergency Response",5,16
+NOSF-SAF-004,Rope Access Technician,SAF,"Safety, Health and Emergency Response",8,16
+NOSF-SAF-005,Emergency Response Team Member,SAF,"Safety, Health and Emergency Response",4,23
+NOSF-SAF-006,Fire Response Operative,SAF,"Safety, Health and Emergency Response",5,20
+NOSF-SAF-007,Offshore Medic,SAF,"Safety, Health and Emergency Response",6,18
+NOSF-SAF-008,First Responder,SAF,"Safety, Health and Emergency Response",5,30
+NOSF-SAF-009,Occupational Safety Adviser,SAF,"Safety, Health and Emergency Response",6,22
+NOSF-SAF-010,Permit Coordinator,SAF,"Safety, Health and Emergency Response",4,11
+NOSF-SAF-011,Marine Survival Instructor,SAF,"Safety, Health and Emergency Response",4,23
+NOSF-SAF-012,Evacuation Coordinator,SAF,"Safety, Health and Emergency Response",7,15
+NOSF-SAF-013,Gas Testing Operative,SAF,"Safety, Health and Emergency Response",4,21
+NOSF-SAF-014,Safety Case Author,SAF,"Safety, Health and Emergency Response",5,16
+NOSF-SAF-015,Incident Investigator,SAF,"Safety, Health and Emergency Response",6,17
+NOSF-SAF-016,Emergency Response Team Leader,SAF,"Safety, Health and Emergency Response",4,11
+NOSF-SAF-017,Height Rescue Technician,SAF,"Safety, Health and Emergency Response",5,24
+NOSF-SAF-018,Control of Work Supervisor,SAF,"Safety, Health and Emergency Response",7,19
+NOSF-HYD-001,Hydrographic Survey Technician,HYD,Hydrographic and Geospatial Survey,4,15
+NOSF-HYD-002,Geophysical Survey Technician,HYD,Hydrographic and Geospatial Survey,5,16
+NOSF-HYD-003,Survey Data Processor,HYD,Hydrographic and Geospatial Survey,7,12
+NOSF-HYD-004,Offshore Survey Party Chief,HYD,Hydrographic and Geospatial Survey,6,10
+NOSF-HYD-005,Positioning Systems Operator,HYD,Hydrographic and Geospatial Survey,3,13
+NOSF-HYD-006,Bathymetric Data Analyst,HYD,Hydrographic and Geospatial Survey,4,13
+NOSF-HYD-007,Marine Geospatial Officer,HYD,Hydrographic and Geospatial Survey,6,16
+NOSF-HYD-008,Seabed Mapping Technician,HYD,Hydrographic and Geospatial Survey,6,9
+NOSF-HYD-009,Survey Equipment Technician,HYD,Hydrographic and Geospatial Survey,5,14
+NOSF-HYD-010,Offshore Client Representative,HYD,Hydrographic and Geospatial Survey,4,11
+NOSF-HYD-011,Chart Production Officer,HYD,Hydrographic and Geospatial Survey,6,13
+NOSF-HYD-012,Tidal Analysis Technician,HYD,Hydrographic and Geospatial Survey,6,10
+NOSF-PRT-001,Port Marine Electrician,PRT,"Ports, Harbours and Terminals",6,15
+NOSF-PRT-002,Harbour Operations Officer,PRT,"Ports, Harbours and Terminals",4,13
+NOSF-PRT-003,Terminal Maintenance Technician,PRT,"Ports, Harbours and Terminals",4,14
+NOSF-PRT-004,Quayside Services Operative,PRT,"Ports, Harbours and Terminals",5,15
+NOSF-PRT-005,Port Safety Officer,PRT,"Ports, Harbours and Terminals",2,12
+NOSF-PRT-006,Dock Systems Technician,PRT,"Ports, Harbours and Terminals",4,19
+NOSF-PRT-007,Berth Operations Coordinator,PRT,"Ports, Harbours and Terminals",3,11
+NOSF-PRT-008,Harbour Craft Engineer,PRT,"Ports, Harbours and Terminals",5,11
+NOSF-PRT-009,Lock Keeper,PRT,"Ports, Harbours and Terminals",6,12
+NOSF-PRT-010,Shore Power Technician,PRT,"Ports, Harbours and Terminals",3,5
+NOSF-PRT-011,Port Electrical Supervisor,PRT,"Ports, Harbours and Terminals",6,17
+NOSF-PRT-012,Cargo Handling Supervisor,PRT,"Ports, Harbours and Terminals",5,14
+NOSF-TEL-001,Radiocommunications Operator,TEL,Telecommunications and Signals,6,12
+NOSF-TEL-002,Radio Systems Technician,TEL,Telecommunications and Signals,7,12
+NOSF-TEL-003,Antenna Systems Technician,TEL,Telecommunications and Signals,3,10
+NOSF-TEL-004,Telemetry Technician,TEL,Telecommunications and Signals,6,9
+NOSF-TEL-005,Signals Maintenance Technician,TEL,Telecommunications and Signals,5,5
+NOSF-TEL-006,Communications Watch Supervisor,TEL,Telecommunications and Signals,6,10
+NOSF-TEL-007,Satellite Systems Operator,TEL,Telecommunications and Signals,4,8
+NOSF-TEL-008,Radio Licensing Officer,TEL,Telecommunications and Signals,4,8
+NOSF-TEL-009,Network Field Engineer,TEL,Telecommunications and Signals,4,2
+NOSF-TEL-010,Remote Monitoring Analyst,TEL,Telecommunications and Signals,4,12
+NOSF-TEL-011,Radio Frequency Survey Technician,TEL,Telecommunications and Signals,6,9
+NOSF-CON-001,Heritage Masonry Operative,CON,Construction and Built Fabric,3,13
+NOSF-CON-002,Protective Coatings Applicator,CON,Construction and Built Fabric,5,8
+NOSF-CON-003,Structural Glazing Operative,CON,Construction and Built Fabric,7,8
+NOSF-CON-004,Building Fabric Inspector,CON,Construction and Built Fabric,4,12
+NOSF-CON-005,Site Drainage Operative,CON,Construction and Built Fabric,4,6
+NOSF-CON-006,Access Scaffolding Operative,CON,Construction and Built Fabric,6,10
+NOSF-CON-007,Corrosion Protection Technician,CON,Construction and Built Fabric,4,9
+NOSF-CON-008,Conservation Works Supervisor,CON,Construction and Built Fabric,5,7
+NOSF-CON-009,Lime Mortar Specialist,CON,Construction and Built Fabric,4,6
+NOSF-CON-010,Roofing and Weatherproofing Operative,CON,Construction and Built Fabric,5,11
+NOSF-CON-011,Condition Survey Officer,CON,Construction and Built Fabric,3,12
+NOSF-LOG-001,Materials Handling Operative,LOG,Logistics and Materials Handling,5,5
+NOSF-LOG-002,Inventory Control Officer,LOG,Logistics and Materials Handling,4,6
+NOSF-LOG-003,Remote Site Logistics Coordinator,LOG,Logistics and Materials Handling,4,8
+NOSF-LOG-004,Lifting Operations Slinger Signaller,LOG,Logistics and Materials Handling,5,2
+NOSF-LOG-005,Supply Chain Administrator,LOG,Logistics and Materials Handling,4,7
+NOSF-LOG-006,Warehouse Supervisor,LOG,Logistics and Materials Handling,4,7
+NOSF-LOG-007,Appointed Person (Lifting Operations),LOG,Logistics and Materials Handling,3,11
+NOSF-LOG-008,Fuel Handling Operative,LOG,Logistics and Materials Handling,4,5
+NOSF-LOG-009,Remote Depot Supervisor,LOG,Logistics and Materials Handling,5,8
+NOSF-LOG-010,Goods Inwards Inspector,LOG,Logistics and Materials Handling,5,6
+NOSF-ENV-001,Environmental Monitoring Technician,ENV,Environmental Monitoring and Stewardship,3,7
+NOSF-ENV-002,Coastal Ecology Surveyor,ENV,Environmental Monitoring and Stewardship,4,5
+NOSF-ENV-003,Marine Pollution Response Operative,ENV,Environmental Monitoring and Stewardship,4,7
+NOSF-ENV-004,Air and Water Quality Officer,ENV,Environmental Monitoring and Stewardship,5,4
+NOSF-ENV-005,Meteorological Observer,ENV,Environmental Monitoring and Stewardship,2,5
+NOSF-ENV-006,Environmental Compliance Officer,ENV,Environmental Monitoring and Stewardship,4,4
+NOSF-ADM-001,Records Management Officer,ADM,Business and Administrative Services,3,3
+NOSF-ADM-002,Business Support Administrator,ADM,Business and Administrative Services,4,2
+NOSF-ADM-003,Compliance Administrator,ADM,Business and Administrative Services,6,4
+NOSF-ADM-004,Scheduling Coordinator,ADM,Business and Administrative Services,5,3
+NOSF-ADM-005,Operations Clerk,ADM,Business and Administrative Services,4,4
+NOSF-ADM-006,Document Controller,ADM,Business and Administrative Services,4,5
+NOSF-ADM-007,Data Quality Officer,ADM,Business and Administrative Services,6,4
+NOSF-EDU-001,Workplace Assessor,EDU,"Education, Training and Workforce Development",4,4
+NOSF-EDU-002,Technical Instructor,EDU,"Education, Training and Workforce Development",3,3
+NOSF-EDU-003,Learning and Development Coordinator,EDU,"Education, Training and Workforce Development",4,5
+NOSF-EDU-004,Internal Quality Assurer,EDU,"Education, Training and Workforce Development",4,5
+NOSF-EDU-005,Apprenticeship Mentor,EDU,"Education, Training and Workforce Development",5,4
+NOSF-EDU-006,Training Centre Supervisor,EDU,"Education, Training and Workforce Development",3,6
+NOSF-CAR-001,Community Support Worker,CAR,Care and Public Service,3,2
+NOSF-CAR-002,Public Enquiries Officer,CAR,Care and Public Service,3,2
+NOSF-CAR-003,Welfare Coordinator,CAR,Care and Public Service,6,2
+NOSF-CAR-004,Occupational Health Adviser,CAR,Care and Public Service,5,4
+NOSF-RHT-001,Visitor Centre Attendant,RHT,"Retail, Hospitality and Tourism",4,2
+NOSF-RHT-002,Hospitality Services Assistant,RHT,"Retail, Hospitality and Tourism",4,2
+NOSF-RHT-003,Retail Operations Assistant,RHT,"Retail, Hospitality and Tourism",3,3
+NOSF-RHT-004,Heritage Site Guide,RHT,"Retail, Hospitality and Tourism",4,3
