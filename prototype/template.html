@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What your record shows</title>
+<style>
+  :root {
+    --bg: #fbfaf7; --surface: #ffffff; --ink: #1d2327; --muted: #5a646b; --line: #d9dcd6;
+    --auth: #1f6b3a; --auth-bg: #e6f2ea;
+    --near: #7a4f00; --near-bg: #fbf0d9;
+    --evid: #1d4f8a; --evid-bg: #e5eef8;
+    --none: #5a646b; --none-bg: #eef0ee;
+    --gate: #8a1d2c; --gate-bg: #f8e6e8;
+    --focus: #1d4f8a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15191c; --surface: #1d2327; --ink: #eef0ee; --muted: #a9b2b8; --line: #343c42;
+      --auth: #8fd4a6; --auth-bg: #1e3326; --near: #f2c46b; --near-bg: #3a2e14;
+      --evid: #9cc3f0; --evid-bg: #1c2c40; --none: #b8c0c5; --none-bg: #2a3136;
+      --gate: #f0a0ab; --gate-bg: #3d1e23; --focus: #9cc3f0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 18px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.7rem; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 1.3rem; margin: 0 0 2px; }
+  h3 { font-size: 1.05rem; margin: 0; }
+  p { margin: 0 0 12px; }
+  .muted { color: var(--muted); }
+  label[for=keeper] { font-weight: 600; display: block; margin: 20px 0 6px; }
+  select { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px;
+           background: var(--surface); color: var(--ink); max-width: 100%; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .intro { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin: 16px 0 24px; }
+  .posting { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 18px; margin: 0 0 28px; }
+  .route { border-left: 4px solid var(--auth); background: var(--bg); padding: 12px 14px; margin: 14px 0 18px; border-radius: 0 8px 8px 0; }
+  .route ol { margin: 6px 0 0; padding-left: 22px; }
+  .flag { border-left: 4px solid var(--near); background: var(--near-bg); padding: 10px 14px; margin: 10px 0; border-radius: 0 8px 8px 0; font-size: .95rem; }
+  .req { border-top: 1px solid var(--line); padding: 14px 0; }
+  .req-head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .tier { font-size: .8rem; font-weight: 700; letter-spacing: .02em; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+  .t-auth { color: var(--auth); background: var(--auth-bg); }
+  .t-near { color: var(--near); background: var(--near-bg); }
+  .t-evid { color: var(--evid); background: var(--evid-bg); }
+  .t-none { color: var(--none); background: var(--none-bg); }
+  .t-gate { color: var(--gate); background: var(--gate-bg); }
+  .level { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .employer { font-size: .92rem; color: var(--muted); margin: 4px 0 8px; }
+  .employer::before { content: "They ask for: "; font-weight: 600; }
+  .say { margin: 6px 0; }
+  details { margin: 6px 0; }
+  summary { cursor: pointer; color: var(--evid); font-size: .95rem; }
+  ul.entries { list-style: none; padding: 0; margin: 6px 0; font-size: .92rem; }
+  ul.entries li { padding: 6px 0; border-bottom: 1px dashed var(--line); }
+  .src { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .78rem; color: var(--muted); word-break: break-all; }
+  table.mods { border-collapse: collapse; font-size: .92rem; margin: 6px 0; width: 100%; }
+  table.mods td, table.mods th { text-align: left; padding: 4px 8px 4px 0; border-bottom: 1px dashed var(--line); vertical-align: top; }
+  footer { font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>What your record shows</h1>
+  <p class="muted">Two jobs at the Carrowmore Array, read against your own station logs and training records.</p>
+
+  <label for="keeper">Whose record</label>
+  <select id="keeper"></select>
+
+  <div class="intro" id="intro"></div>
+  <div id="postings"></div>
+
+  <footer>
+    <p><strong>How this was made.</strong> From your station logbooks (cleaned by the Authority) and your training records only. Appraisals and station manager notes are not read at all. An AI read every log sentence and marked which job requirements it shows; it was checked against a person's grading on ten keepers before this page existed (see <code>EVALUATION_PLAN.md</code>).</p>
+    <p><strong>What the labels mean.</strong> <em>Authorized</em>: you hold the certificate and it is in date. <em>Nearly Qualified (Partial Cert)</em>: you hold some modules, or the certificate has lapsed. <em>Evidenced</em>: your logs show you doing this work at least twice; it is evidence of the work, not a certificate. <em>Not yet shown</em>: nothing in your records shows it, which is not the same as you not being able to do it.</p>
+    <p>There is no match score. Something wrong or missing? Tell your advisor. You can correct or add to anything here, and nothing goes to an employer without you seeing it first.</p>
+  </footer>
+</main>
+
+<script>
+const DATA = /*__DATA__*/null;
+const Y = DATA.year;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const yr = d => +d.slice(0, 4);
+
+function certStatus(k, scheme, stage) {
+  const s = DATA.schemes[scheme], c = k.certs[scheme], recs = k.training[scheme] || [];
+  const done = {}, attended = {}, failed = {};
+  for (const [mod, name, year, outcome] of recs) {
+    if (outcome === "completed") { if (!done[mod] || done[mod] < year) done[mod] = year; }
+    else if (outcome === "attended") attended[mod] = year;
+    else if (outcome === "failed") failed[mod] = year;
+  }
+  const rows = s.modules.map(([mod, name]) => {
+    let state;
+    if (done[mod]) {
+      const old = s.renewal && (Y - done[mod]) > s.renewal;
+      state = `Completed ${done[mod]}` + (old ? ` <span class="muted">(this scheme renews every ${s.renewal} years, so this may need retaking)</span>` : "");
+    } else if (attended[mod]) state = `Attended ${attended[mod]}, not assessed`;
+    else if (failed[mod]) state = `Not passed (${failed[mod]})`;
+    else state = `<span class="muted">Not in your records</span>`;
+    return {mod, name, state, have: !!done[mod]};
+  });
+  const missing = rows.filter(r => !r.have);
+  let tier, say;
+  if (stage) {
+    let st = 0; for (const r of rows) { if (r.have) st++; else break; }
+    if (st >= stage) { tier = "auth"; say = `Your records show Stage ${st}. Stage ${stage} is needed.`; }
+    else if (st > 0 || rows.some(r => r.have)) { tier = "near"; say = `Your records show Stage ${st}. Stage ${stage} is needed, so the next ${stage - st} module${stage - st > 1 ? "s" : ""} in order.`; }
+    else { tier = "none"; say = `No ${scheme} modules in your records. Stage ${stage} means the first ${stage} modules.`; }
+  } else if (c && c.complete && c.valid_2026) {
+    tier = "auth"; say = `You hold the full certificate${c.expires_year ? `, in date until ${c.expires_year}` : ""}.`;
+  } else if (c && c.complete) {
+    tier = "near"; say = `You held the full certificate, but it ran out${c.expires_year ? ` in ${c.expires_year}` : ""}. Renewing is usually shorter than starting again.`;
+  } else if (rows.some(r => r.have)) {
+    const stale = rows.filter(r => r.have && s.renewal && (Y - done[r.mod]) > s.renewal).length;
+    tier = "near"; say = `You hold ${rows.length - missing.length} of ${rows.length} modules` +
+      (stale ? `, though ${stale === rows.length - missing.length ? (stale > 1 ? "all of them are" : "it is") : stale + " of them " + (stale > 1 ? "are" : "is")} older than this scheme's ${s.renewal}-year renewal and may need retaking` : "") +
+      `. Still to do: ${missing.map(r => r.name).join("; ")}.`;
+  } else {
+    tier = "none"; say = `Not in your records. ${Object.keys(attended).length ? "You attended some modules but they are not recorded as assessed." : ""}`;
+  }
+  const staleCount = rows.filter(r => r.have && s.renewal && (Y - done[r.mod]) > s.renewal).length;
+  return {tier, say, rows, missing, staleCount};
+}
+
+function logStatus(k, req, gate) {
+  const ev = k.evidence[req], n = ev.yes.length;
+  const years = ev.yes.map(e => yr(e[0]));
+  const first = Math.min(...years), last = Math.max(...years);
+  let tier, say;
+  if (n >= DATA.evidenced_min) {
+    tier = gate ? "gate" : "evid";
+    say = `Your logs show this ${n === 2 ? "twice" : n + " times"}, ${first === last ? first : `${first} to ${last}`}.`;
+    if (Y - last > 10) say += ` The most recent is ${last}, so an employer may ask about recent practice.`;
+    if (gate) say += ` That is evidence you did the work. It is not an authorization, and the insurer will not treat it as one.`;
+  } else if (n === 1) {
+    tier = "none"; say = `One log entry shows this (${first}). One isn't enough to count, but it's worth raising.`;
+  } else {
+    tier = "none"; say = `Nothing in your logs clearly shows this. That doesn't mean you haven't done it; it may just not have been written down.`;
+  }
+  return {tier, say, n};
+}
+
+const TIER = {auth: "Authorized", near: "Nearly Qualified (Partial Cert)", evid: "Evidenced", gate: "Evidenced (not an authorization)", none: "Not yet shown"};
+
+function entryList(list) {
+  return `<ul class="entries">${list.map(([d, st, t, src]) =>
+    `<li>${esc(d)} · ${esc(st)}<br>“${esc(t)}”<br><span class="src">${esc(src)}</span></li>`).join("")}</ul>`;
+}
+
+function renderLog(k, item) {
+  const meta = DATA.log_reqs[item.req], s = logStatus(k, item.req, item.gate), ev = k.evidence[item.req];
+  let body = `<p class="say">${s.say}</p>`;
+  if (s.n) {
+    const recent = ev.yes.slice(-3).reverse();
+    body += `<details><summary>See the ${s.n > 3 ? "3 most recent of " + s.n : s.n} log entries</summary>${entryList(recent)}` +
+            (s.n > 3 ? `<details><summary>Show all ${s.n}</summary>${entryList([...ev.yes].reverse())}</details>` : "") + `</details>`;
+  }
+  if (ev.maybe_count) {
+    body += `<details><summary>${ev.maybe_count} more entr${ev.maybe_count > 1 ? "ies" : "y"} might count, worth checking with your advisor</summary>` +
+            `<p class="muted">These could show it, but the entry alone doesn't settle it (for example, the voltage isn't written down). They are not counted above.</p>${entryList([...ev.maybe].reverse())}</details>`;
+  }
+  if (item.gate && s.n >= DATA.evidenced_min) {
+    body += `<div class="flag"><strong>A possible shortcut.</strong> The Competence Board accepts a lapsed Authority HV authorization instead of the two years' experience, but only with paperwork showing the original authorization. Switching like this normally needs an authorization, so the Authority may hold a record of one for you. Your logs can't prove it either way. Ask the Authority for your authorization record; the Array says it has rebuilt some from operator records and will try.</div>`;
+  }
+  if (s.tier === "none" || (item.gate && s.n < DATA.evidenced_min)) body += `<p class="muted"><strong>Route:</strong> ${meta.route}</p>`;
+  return {tier: s.tier, html: head(meta.plain, s.tier, item.level) + `<p class="employer">${esc(item.employer)}</p>` + body};
+}
+
+function renderCert(k, item) {
+  const s = certStatus(k, item.scheme, item.stage), sc = DATA.schemes[item.scheme];
+  const tbl = `<details><summary>Module by module</summary><table class="mods"><tr><th>Module</th><th>Your record</th></tr>` +
+              s.rows.map(r => `<tr><td>${esc(r.mod)} ${esc(r.name)}</td><td>${r.state}</td></tr>`).join("") + `</table></details>`;
+  return {tier: s.tier, missing: s.missing, stale: s.staleCount, html: head(`${sc.name} (${item.scheme})`, s.tier, item.level) +
+          `<p class="employer">${esc(item.employer)}</p><p class="say">${s.say}</p>${tbl}`};
+}
+
+function renderMedical(item) {
+  return {tier: "none", html: head("Offshore medical", "none", item.level) +
+          `<p class="employer">${esc(item.employer)}</p><p class="say">Your records don't include one, which is expected; the Authority never needed it. It's an examination, not a course.</p>`};
+}
+
+function head(title, tier, level) {
+  return `<div class="req-head"><h3>${esc(title)}</h3><span class="tier t-${tier}">${TIER[tier]}</span><span class="level">${esc(level)}</span></div>`;
+}
+
+function render(code) {
+  const k = DATA.keepers.find(x => x.code === code);
+  document.getElementById("intro").innerHTML =
+    `<h2>${esc(k.name)}</h2><p class="muted">${esc(k.grade)} · with the Authority since ${k.joined} · ${k.stations.length} station${k.stations.length > 1 ? "s" : ""} · ${k.entries} log entries read</p>` +
+    `<p>Each line below is one thing an employer asks for, in their words and in plain ones, with what your records show and how sure we can be. Where your logs are the evidence, you can open the entries yourself.</p>`;
+  document.getElementById("postings").innerHTML = DATA.postings.map(p => {
+    const parts = p.items.map(it => it.kind === "log" ? renderLog(k, it) : it.kind === "cert" ? renderCert(k, it) : renderMedical(it));
+    const todo = [];
+    p.items.forEach((it, i) => {
+      const r = parts[i];
+      if (it.kind === "cert" && r.tier !== "auth") {
+        const sc = DATA.schemes[it.scheme];
+        todo.push(it.stage ? `${sc.name}: reach Stage ${it.stage}` :
+          r.missing.length && r.missing.length < sc.modules.length ? `${sc.name}: ${r.missing.length} module${r.missing.length > 1 ? "s" : ""} to go (${r.missing.map(m => m.mod).join(", ")})${r.stale ? ", and older modules may need retaking" : ""}` :
+          r.tier === "near" ? `${sc.name}: renew` : `${sc.name}: all ${sc.modules.length} modules`);
+      }
+      if (it.kind === "medical") todo.push("An offshore medical");
+      if (it.kind === "log" && it.gate) todo.push(parts[i].tier === "gate"
+        ? "Two years' documented 11kV switching, or the paperwork for a past Authority HV authorization (worth asking: switching like yours normally needs one)"
+        : "Two years' documented 11kV switching, or the paperwork for a past Authority HV authorization");
+    });
+    const essentialsShown = p.items.filter((it, i) => it.kind === "log" && !it.gate && ["essential"].includes(it.level) && parts[i].tier === "evid").length;
+    const essentialsTotal = p.items.filter(it => it.kind === "log" && !it.gate && it.level === "essential").length;
+    const route = `<div class="route"><strong>Shortest honest route</strong>` +
+      (todo.length ? `<ol>${todo.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : `<p>Nothing to book. Your records cover what they ask for.</p>`) +
+      (p.id === "om" ? `<p class="muted" style="margin-top:8px">Everything else the Array trains on the job. Your logs show ${essentialsShown} of the ${essentialsTotal} essential experience requirements; the certificate and medical are the only things to book.</p>` : "") + `</div>`;
+    return `<section class="posting" aria-labelledby="h-${p.id}"><h2 id="h-${p.id}">${esc(p.title)}</h2>` +
+      `<p class="muted">${esc(p.employer)} · ${esc(p.posts)}. ${esc(p.note)}</p>${route}` +
+      p.flags.map(f => `<div class="flag">${esc(f)}</div>`).join("") +
+      parts.map(x => `<div class="req">${x.html}</div>`).join("") + `</section>`;
+  }).join("");
+}
+
+const sel = document.getElementById("keeper");
+sel.innerHTML = DATA.keepers.map(k => `<option value="${k.code}">${esc(k.name)} (${k.code})</option>`).join("");
+sel.addEventListener("change", () => { render(sel.value); history.replaceState(null, "", "#" + sel.value); });
+const start = (location.hash.slice(1) && DATA.keepers.some(k => k.code === location.hash.slice(1))) ? location.hash.slice(1) : DATA.keepers[0].code;
+sel.value = start; render(start);
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Mapping prompt (AI under test)
 
-Used to label every distinct logbook sentence in `clean/` against the five requirements in `eval/requirements.json`. The labels in `eval/ai_labels.json` were produced by Claude (Opus 5.5) in a Cowork session following this prompt, without sight of the hand grades. `prototype/ai_map.py` reproduces the run through the API when a key is available.
+Used to label every distinct logbook sentence in `clean/` against the five requirements in `eval/requirements.json`. The labels in `eval/ai_labels.json` were produced by Claude (Opus 5.5) in a Cowork session following this prompt, in one pass over all 516 distinct sentences, without sight of the hand grades. No API script is included; a production version would run this prompt through the API with the labels versioned against the prompt.
 
 ---
 
