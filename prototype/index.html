@@ -136,7 +136,7 @@
       <p style="margin-top:16px"><button type="submit">Sign in</button></p>
     </form>
     <p class="err" id="si-err" role="alert"></p>
-    <div class="demo"><strong>Prototype sign-in, not real security.</strong> Every record is inside this one file, so this only shows how each view is scoped. Keepers: any keeper code (K0566, K1483, K0303…) with password <code>carrowmore</code>. Employers: any email with password <code>array</code>.</div>
+    <div class="demo"><strong>Prototype sign-in, not real security.</strong> Every record is inside this one file, so this only shows how each view is scoped.</div>
   </section>
 
   <!-- Keeper view -->
@@ -165,10 +165,9 @@
   </section>
 
   <footer id="foot">
+    <p><strong>How to use this prototype.</strong> Keepers: sign in with any keeper code (K0566, K1483, K0303…) and password <code>carrowmore</code>, then choose an open role to see how your record compares to the requirements. Employers: sign in with any email and password <code>array</code>, then select a candidate to see how their experience compares to open roles.</p>
     <p><strong>How this was made.</strong> From station logbooks (cleaned by the Authority) and training records only. Appraisals and station manager notes are never read. An AI read every log sentence and marked which job requirements it shows; it was checked against a person's grading on ten keepers before this page existed (<code>EVALUATION_PLAN.md</code>).</p>
-    <details><summary>What the labels mean</summary>
-      <p><em>Authorized</em>: the certificate is held and in date. <em>Nearly Qualified (Partial Cert)</em>: some modules held, or the certificate has lapsed. <em>Evidenced</em>: the logs show this work at least twice; evidence of the work, not a certificate. <em>Not yet shown</em>: nothing in the records shows it, which is not the same as not being able to do it.</p>
-    </details>
+    <p><strong>What the labels mean.</strong> <em>Authorized</em>: the certificate is held and in date. <em>Nearly Qualified (Partial Cert)</em>: some modules held, or the certificate has lapsed. <em>Evidenced</em>: the logs show this work at least twice; evidence of the work, not a certificate. <em>Not yet shown</em>: nothing in the records shows it, which is not the same as not being able to do it.</p>
     <p>There is no match score. Keepers can correct or add to anything, and nothing reaches an employer without the keeper seeing it first.</p>
   </footer>
 </main>
