@@ -89,6 +89,16 @@
   .num { color: var(--value-ink); font-weight: 700; }
   footer { font-size: .88rem; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 12px; }
   footer strong { color: var(--ink-strong); }
+  /* Input box: deep Turquoise 168584 marks where you choose, against the white output cards.
+     White on 168584 is 4.45:1, so text here is set bold at 18.7px or larger (WCAG AA large text). */
+  .input-card { background: #168584; border-color: #168584; color: #FFFFFF; }
+  .input-card h2, .input-card label, .input-card p, .input-card .soft, .input-card summary { color: #FFFFFF; }
+  .input-card p, .input-card .soft, .input-card summary, .input-card label { font-weight: 600; font-size: 1.1rem; }
+  .input-card h2 { font-size: 1.4rem; }
+  .input-card select { background: #FFFFFF; color: #0D004D; border-color: #FFFFFF; }
+  .input-card td { background: #FFFFFF; color: #0D004D; }
+  .input-card tbody tr:nth-child(even) td { background: #C1BFFF; }
+  .input-card :focus-visible { outline-color: #FFFFFF; }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -136,7 +146,8 @@
   <section id="employer-view" hidden>
     <h1>Shortlist explorer</h1>
     <p class="soft">Keepers who have agreed to share their record. The prototype assumes all 38 have.</p>
-    <div class="card">
+    <div class="card input-card">
+      <h2>Candidate Selection</h2>
       <div class="controls">
         <div><label for="e-role">Role</label><select id="e-role"></select></div>
         <div><label for="e-sort">Sort</label>
@@ -362,8 +373,8 @@ function renderKeeper(code) {
     DATA.not_assessed.map(t => `<option disabled>${esc(t)}</option>`).join("") + `</optgroup>`;
   $("keeper-view").innerHTML =
     `<h1>${esc(k.name)}</h1><p class="soft">${esc(k.grade)} · with the Authority since ${k.joined} · ${k.stations.length} station${k.stations.length > 1 ? "s" : ""} · ${k.entries} of your log entries read</p>` +
-    `<div class="card"><p>Choose an open role to see how your record compares: what you already have, the training you'd need, and where we need you to clarify. Only you can see this page until you choose to share it.</p>` +
-    `<label for="k-role">Open role</label><select id="k-role" style="width:100%">${opts}</select></div>` +
+    `<div class="card input-card"><h2 id="k-role-h">Role Selection</h2><p>Choose an open role to see how your record compares: what you already have, the training you'd need, and where we need you to clarify. Only you can see this page until you choose to share it.</p>` +
+    `<select id="k-role" aria-labelledby="k-role-h" style="width:100%">${opts}</select></div>` +
     `<div id="k-detail"></div>`;
   $("k-role").value = DATA.postings[0].id;
   $("k-role").onchange = renderKeeperRole;
