@@ -23,4 +23,4 @@ Ten keepers, chosen by rule with three held out, were graded blind by hand on fi
 
 ## What I chose not to build
 
-The raw pack (tying entries to people took the Authority three weeks for 40 keepers; at 340, that is the kill at scale), a match percentage, four of the six postings, learning-rate and cost-of-candidacy models, appraisals (the tool seeks only what it needs) and real authentication (the mock sign-in shows who sees what).
+The raw pack (attribution took the Authority three weeks for 40 keepers; at 340 it is the kill at scale), four of the six postings, learning-rate and cost-of-candidacy models, appraisals and age-dependent criteria like "younger colleagues" (the tool seeks only what it needs) and real authentication (the mock sign-in shows who sees what).

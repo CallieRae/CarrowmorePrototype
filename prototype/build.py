@@ -64,14 +64,14 @@ POSTINGS = [
             {"kind": "log", "req": "R1_MAINT", "level": "essential",
              "employer": "Hands-on mechanical or electrical maintenance experience on plant you were responsible for."},
             {"kind": "log", "req": "R5_HEIGHT", "level": "essential",
-             "employer": "Comfortable working at height, in enclosed spaces, and on a small boat in a swell."},
+             "employer": "Comfortable working at height, in enclosed spaces, and on a small boat in a swell. (Small-boat work not assessed.)"},
             {"kind": "log", "req": "R2_FAULT", "level": "desirable",
              "employer": "Fault-finding on electrical systems without a laptop telling you the answer."},
             {"kind": "log", "req": "R3_PERMIT", "level": "desirable",
              "employer": "Experience of working to a permit system."},
         ],
         "flags": [
-            "The posting says the safety certificate covers working at height. In the scheme list we were given, height is a separate certificate (WAHS). Worth asking the Array which they mean before booking anything.",
+            "The posting says the safety certificate covers working at height. In the scheme list we were given, height is a separate certificate (WAHS). Confirm exact requirements with employer.",
         ],
     },
     {

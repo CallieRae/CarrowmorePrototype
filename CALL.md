@@ -10,7 +10,7 @@
 
 The AI beat keyword search on the held-out keepers, but 6% sits within five points of the persevere edge. Logs evidence maintenance, fault-finding and permit work well, and HV switching poorly (the voltage is rarely stated, so 2 of 6 were found), the right failure for an insurer gate. These are templated clean logs; raw text is the real test.
 
-The one outside reader took *Evidenced* to mean *qualified*, the exact failure the framing named. It now reads *Logged experience, needs validation or cert*, with a follow-up on every such line, and the new label needs its own test.
+The one outside reader took *Evidenced* to mean *qualified*, the exact failure the framing named. It now reads *Logged experience, needs validation or cert*, with a follow-up on each, and needs its own test.
 
 ## Where the AI was wrong
 
