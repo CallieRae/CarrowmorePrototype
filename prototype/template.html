@@ -69,8 +69,9 @@
   .req { border-top: 1px solid var(--line); padding: 14px 0; }
   .req-head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
   .tier { font-size: .8rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; white-space: nowrap; color: var(--pill-ink); }
-  .t-auth { background: var(--f-auth); } .t-near { background: var(--f-near); } .t-evid { background: var(--f-evid); }
-  .t-gate { background: var(--f-gate); } .t-none, .t-rec { background: #7B1571; color: #FFFFFF; } /* white on 7B1571 = 9.6:1 */
+  /* Qualified: 168584 with black type (4.72:1; white would be 4.45:1, under AA at pill size).
+     Logged experience shares the Nearly Qualified amber fill; the symbol and words tell them apart. */
+  .t-auth { background: #168584; color: #000000; } .t-near { background: var(--f-near); } .t-evid, .t-gate { background: var(--f-near); } .t-none, .t-rec { background: #7B1571; color: #FFFFFF; } /* white on 7B1571 = 9.6:1 */
   .level { font-size: .78rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
   .employer { font-size: .92rem; color: var(--ink-soft); margin: 4px 0 8px; }
   .employer b { color: var(--ink-strong); }
@@ -116,8 +117,8 @@
   <section id="signin" class="card" aria-labelledby="si-h">
     <h1 id="si-h">Sign in</h1>
     <div class="tabs" role="tablist">
-      <button role="tab" aria-selected="true" id="tab-k">I'm an applicant</button>
-      <button role="tab" aria-selected="false" id="tab-e">I'm an employer or advisor</button>
+      <button role="tab" aria-selected="true" id="tab-k">Keeper/Applicant</button>
+      <button role="tab" aria-selected="false" id="tab-e">Employer/Advisor</button>
     </div>
     <form id="form-k">
       <p class="soft">See your own record against the jobs on offer: what you already have, what training you'd need, and where we need your help to fill gaps.</p>
@@ -167,7 +168,7 @@
   <footer id="foot">
     <p><strong>How to use this prototype.</strong> Keepers: sign in with any keeper code (K0566, K1483, K0303…) and password <code>carrowmore</code>, then choose an open role to see how your record compares to the requirements. Employers: sign in with any email and password <code>array</code>, then select a candidate to see how their experience compares to open roles.</p>
     <p><strong>How this was made.</strong> From station logbooks (cleaned by the Authority) and training records only. Appraisals and station manager notes are never read. An AI read every log sentence and marked which job requirements it shows; it was checked against a person's grading on ten keepers before this page existed (<code>EVALUATION_PLAN.md</code>).</p>
-    <p><strong>What the labels mean.</strong> <em>Authorized</em>: the certificate is held and in date. <em>Nearly Qualified (Partial Cert)</em>: some modules held, or the certificate has lapsed. <em>Logged experience, needs validation or cert</em>: the logs show this work at least twice, but nothing formally confirms it yet; it needs confirming with the keeper, or a certificate that isn't on record. <em>No experience identified</em>: nothing in the logs shows this work, which is not the same as not being able to do it. <em>Not on record</em>: no certificate or medical in the training records.</p>
+    <p><strong>What the labels mean.</strong> <em>Qualified logged experience</em>: the certificate is held and in date. <em>Nearly Qualified (Partial Cert)</em>: some modules held, or the certificate has lapsed. <em>Logged experience, needs validation or cert</em>: the logs show this work at least twice, but nothing formally confirms it yet; it needs confirming with the keeper, or a certificate that isn't on record. <em>Insufficient logged experience</em>: the logs and training records don't show enough yet, which is not the same as not being able to do it.</p>
     <p>There is no match score. Keepers can correct or add to anything, and nothing reaches an employer without the keeper seeing it first.</p>
   </footer>
 </main>
@@ -246,7 +247,7 @@ function logStatus(k, req, gate, v) {
   return {tier, say, n, last, oldEvidence};
 }
 
-const TIER = {auth: "✓ Authorized", near: "◐ Nearly Qualified (Partial Cert)", evid: "● Logged experience, needs validation or cert", gate: "● Logged experience, needs authorization", none: "○ No experience identified", rec: "○ Not on record"};
+const TIER = {auth: "✓ Qualified logged experience", near: "◐ Nearly Qualified (Partial Cert)", evid: "● Logged experience, needs validation or cert", gate: "● Logged experience, needs authorization", none: "○ Insufficient logged experience", rec: "○ Insufficient logged experience"};
 
 // One role, one keeper: every line plus the route.
 function assess(k, posting, v) {
