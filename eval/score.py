@@ -8,7 +8,7 @@ Needs: eval/grading_sheet.csv (graded), eval/predictions/*.json
 """
 import csv
 import json
-import re
+
 from collections import defaultdict
 from math import sqrt
 from pathlib import Path
@@ -31,8 +31,9 @@ GATE_REQS = {"R4_HVSW"}      # log evidence may never mark these as met
 # ------------------------------------------------------------------------------
 
 
-def norm(text):
-    return re.sub(r"\d+(\.\d+)?", "#", text.lower()).strip()
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from common import norm  # noqa: E402
 
 
 def wilson(k, n, z=1.96):
@@ -49,18 +50,21 @@ def rate(k, n):
     return {"k": k, "n": n, "rate": round(k / n, 3) if n else None, "ci95": wilson(k, n)}
 
 
-def load_grades():
-    grades, unsure, blank = {}, 0, 0
-    with open(EVAL / "grading_sheet.csv", encoding="utf-8") as f:
+def load_grades(reqs):
+    """Wide sheet: one row per sentence, one column per requirement.
+    Y = supports. ? = can't tell (counted as not supporting). Blank = No."""
+    grades, unsure, odd = {}, 0, 0
+    with open(EVAL / "grading_sheet.csv", encoding="utf-8-sig") as f:
         for row in csv.DictReader(f):
-            g = row["grade (Y/N/?)"].strip().upper()
-            if g == "":
-                blank += 1
-                continue
-            if g == "?":
-                unsure += 1
-            grades[(row["requirement"], norm(row["entry_text"]))] = (g == "Y")  # '?' counts as not supporting
-    return grades, unsure, blank
+            n = norm(row["entry_text"])
+            for r in reqs:
+                g = (row.get(r) or "").strip().upper()
+                if g == "?":
+                    unsure += 1
+                elif g not in ("", "Y", "N"):
+                    odd += 1
+                grades[(r, n)] = (g == "Y")
+    return grades, unsure, odd
 
 
 def score_method(pred, grades, entries_by_id, keepers, reqs, gt_supporting):
@@ -174,9 +178,9 @@ def main():
     keepers = {k["keeper_code"]: k["split"] for k in json.loads((EVAL / "selection.json").read_text())["keepers"]}
     entries = json.loads((CLEAN / "logbook_entries.json").read_text())
     by_id = {e["entry_id"]: e for e in entries}
-    grades, unsure, blank = load_grades()
+    grades, unsure, blank = load_grades(reqs)
     if blank:
-        print(f"WARNING: {blank} items still ungraded")
+        print(f"WARNING: {blank} cells hold something other than Y, N, ? or blank")
 
     gt = {k: {r: [] for r in reqs} for k in keepers}
     for e in entries:

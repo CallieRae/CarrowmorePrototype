@@ -12,7 +12,9 @@ These rules were set and committed before any AI mapping ran. The commit timesta
 
 **The unit.** The clean logbooks are heavily templated: 10,627 entries, 1,270 distinct sentences, about 620 once numbers are masked. A sentence is graded once and the grade applies to every entry that uses it.
 
-**The pool.** For each keeper and requirement: every sentence the keyword baseline matches, plus 2 seeded random sentences it doesn't, plus (later) every sentence the AI cites. The sheet is blind to source and shuffled within each requirement. That came to 283 items before the AI ran. Any supporting sentence that no method surfaced and the random draw missed stays invisible, a known limit of pooled evaluation.
+**The pool.** For each keeper and requirement: every sentence the keyword baseline matches, plus 2 seeded random sentences it doesn't, plus (later) every sentence the AI cites. That came to 188 distinct sentences before the AI ran. The sheet has one row per sentence and one column per requirement, so every sentence is judged against all five; the grader marks only `Y` or `?`, and blank means No (`eval/GRADING_GUIDE.md`). Rows are alphabetical, which groups near-duplicates and reveals nothing about which method surfaced them. Any supporting sentence that no method surfaced and the random draw missed stays invisible, a known limit of pooled evaluation.
+
+*Revised before grading began:* the first sheet had 283 rows, one per sentence and requirement pair. It was collapsed to the layout above to cut grading time and widen coverage. No grades or AI outputs existed at the time.
 
 A keeper counts as **Evidenced** for a requirement when at least 2 of their entries are graded as supporting it.
 
