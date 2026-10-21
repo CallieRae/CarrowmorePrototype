@@ -4,7 +4,7 @@ A keeper's working life is already written down, just not in a language employer
 
 ## Whose problem
 
-The keeper's: *"What am I qualified for, what am I nearly qualified for, and what is the shortest honest route from here to a job?"* The redeployment shortlist runs on the same evidence, so one record serves both views.
+The keeper's: what am I qualified for, what am I nearly qualified for, and what is the shortest route from here to a job? The redeployment shortlist runs on the same evidence, so one record serves both views.
 
 ## What I believe but cannot yet prove
 

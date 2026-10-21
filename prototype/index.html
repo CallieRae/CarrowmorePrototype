@@ -170,7 +170,7 @@
   <footer id="foot">
     <p><strong>How to use this prototype.</strong> Keepers: sign in with any keeper code (K0566, K1483, K0303…) and password <code>carrowmore</code>, then choose an open role to see how your record compares to the requirements. Employers: sign in with any email and password <code>array</code>, then select a candidate to see how their experience compares to open roles.</p>
     <p><strong>How this was made.</strong> From station logbooks (cleaned by the Authority) and training records only. Appraisals and station manager notes are never read. An AI read every log sentence and marked which job requirements it shows; it was checked against a person's grading on ten keepers before this page existed (<code>EVALUATION_PLAN.md</code>).</p>
-    <p><strong>What the labels mean.</strong> <em>Qualified and/or Certified</em>: the certificate is held and in date. <em>Nearly Qualified (Partial Cert)</em>: some modules held, or the certificate has lapsed. <em>Logged experience, needs validation or cert</em>: the logs show this work at least twice, but nothing formally confirms it yet; it needs confirming with the keeper, or a certificate that isn't on record. <em>Insufficient logged experience</em>: the logs don't show this work clearly enough yet, which is not the same as not being able to do it. <em>Insufficient Documented Qualifications</em>: no certificate or medical in the training records.</p>
+    <p><strong>What the labels mean.</strong> <em>Qualified and/or Certified</em>: the certificate is held and in date. <em>Nearly Qualified (Partial Cert)</em>: some modules held, or the certificate has lapsed. <em>Logged experience, needs validation or cert</em>: the logs show this work at least twice, but nothing formally confirms it yet; it needs confirming with the keeper, or a certificate that isn't on record. <em>Insufficient Documented Qualifications</em>: the logs don't show this work clearly enough yet, or there is no certificate or medical in the training records. Neither is the same as not being able to do it.</p>
     <p>There is no match score. Keepers can correct or add to anything, and nothing reaches an employer without the keeper seeing it first.</p>
   </footer>
 </main>
@@ -271,7 +271,7 @@ function logStatus(k, req, gate, v) {
   return {tier, say, n, last, oldEvidence, thin, uniq};
 }
 
-const TIER = {auth: "✓ Qualified and/or Certified", near: "◐ Nearly Qualified (Partial Cert)", evid: "● Logged experience, needs validation or cert", gate: "● Logged experience, needs authorization", none: "○ Insufficient logged experience", rec: "○ Insufficient Documented Qualifications"};
+const TIER = {auth: "✓ Qualified and/or Certified", near: "◐ Nearly Qualified (Partial Cert)", evid: "● Logged experience, needs validation or cert", gate: "● Logged experience, needs authorization", none: "○ Insufficient Documented Qualifications", rec: "○ Insufficient Documented Qualifications"};
 
 // One role, one keeper: every line plus the route.
 function assess(k, posting, v) {
@@ -350,7 +350,7 @@ function renderLine(k, L, v) {
 }
 
 function renderPosting(k, p, v, A) {
-  const route = `<div class="route"><strong>Shortest honest route</strong>` +
+  const route = `<div class="route"><strong>Shortest route</strong>` +
     (A.todo.length ? `<ol>${A.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : `<p>Nothing to book. The records cover what they ask for.</p>`) +
     (p.id === "om" ? `<p class="soft" style="margin:8px 0 0">The Array trains the turbine work itself; comfort at height, in enclosed spaces and on small boats is not negotiable. The logs show <span class="num">${A.lines.filter(L => L.it.kind === "log" && L.it.level === "essential" && L.tier === "evid").length} of ${A.lines.filter(L => L.it.kind === "log" && L.it.level === "essential").length}</span> required experience lines.</p>` : "") + `</div>`;
   return `<section class="card" aria-labelledby="h-${p.id}"><h2 id="h-${p.id}">${esc(p.title)}</h2>` +

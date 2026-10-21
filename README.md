@@ -1,4 +1,4 @@
-# Carrowmore: what a keeper is qualified for, nearly qualified for, and the shortest honest route
+# Carrowmore: what a keeper is qualified for, nearly qualified for, and the shortest route
 
 Senior PM, Zero to One exercise. Read in this order: `FRAMING.md` (the bet), the prototype, then `CALL.md` (the call, QA, and the three written answers). The two are also combined as a one-page Word file, `Carrowmore_Framing_and_Call.docx`.
 
@@ -20,8 +20,7 @@ The sign-in is a prototype affordance, not security: every record is in the one 
 | ✓ Qualified and/or Certified | Certificate held and in date (flagged where the training records show no renewal) |
 | ◐ Nearly Qualified (Partial Cert) | Some modules held, or the certificate has lapsed |
 | ● Logged experience, needs validation or cert | Logs show the work on at least two dates in two different entries; to confirm with the keeper, or a certificate not on record. On HV switching: *needs authorization* |
-| ○ Insufficient logged experience | Logs don't show it clearly enough yet |
-| ○ Insufficient Documented Qualifications | No certificate or medical in the training records |
+| ○ Insufficient Documented Qualifications | Logs don't show the work clearly enough yet, or no certificate or medical in the training records |
 
 Each requirement is tagged REQUIRED or PREFERRED, following the posting. Log evidence never marks an insurer gate as met.
 
