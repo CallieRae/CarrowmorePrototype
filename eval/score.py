@@ -8,6 +8,7 @@ Needs: eval/grading_sheet.csv (graded), eval/predictions/*.json
 """
 import csv
 import json
+import re
 
 from collections import defaultdict
 from math import sqrt
@@ -50,6 +51,18 @@ def rate(k, n):
     return {"k": k, "n": n, "rate": round(k / n, 3) if n else None, "ci95": wilson(k, n)}
 
 
+def guide_example_prefixes():
+    """Normalized prefixes of the example sentences in GRADING_GUIDE.md. The same model
+    wrote those example calls and the AI labels, so they are excluded in a sensitivity run."""
+    out = []
+    for line in (EVAL / "GRADING_GUIDE.md").read_text().splitlines():
+        m = re.match(r"- (?:`[Y?]`|blank:)\s+(.*)", line.strip())
+        if m:
+            text = re.split(r"\.\.\.|\*\(", m.group(1))[0]
+            out.append(norm(text))
+    return [p for p in out if p]
+
+
 def load_grades(reqs):
     """Wide sheet: one row per sentence, one column per requirement.
     Y = supports. ? = can't tell (counted as not supporting). Blank = No."""
@@ -79,10 +92,12 @@ def score_method(pred, grades, entries_by_id, keepers, reqs, gt_supporting):
     for k, split in keepers.items():
         for r in reqs:
             cell = pred["cells"][k][r]
-            cited = cell["cited"]
+            cited = [i for i in cell["cited"] if i in entries_by_id]
             ok = [i for i in cited if grades.get((r, norm(entries_by_id[i]["text"])), False)]
             ungraded = [i for i in cited if (r, norm(entries_by_id[i]["text"])) not in grades]
-            claims = cell["verdict"] in ("Evidenced", "Authorized", "Met")
+            # A claim is Evidenced with at least EVIDENCED_MIN citations. Recomputed here so a
+            # sensitivity run that removes sentences also removes the claims they supported.
+            claims = cell["verdict"] in ("Evidenced", "Authorized", "Met") and len(cited) >= EVIDENCED_MIN
             if r in GATE_REQS and cell["verdict"] in ("Authorized", "Met"):
                 res["gate_violations"].append(f"{k}/{r}")
             gt = len(gt_supporting[k][r]) >= EVIDENCED_MIN
@@ -184,6 +199,14 @@ def main():
     entries = json.loads((CLEAN / "logbook_entries.json").read_text())
     by_id = {e["entry_id"]: e for e in entries}
     grades, unsure, blank = load_grades(reqs)
+    excluded = 0
+    if "--exclude-guide" in sys.argv:
+        prefixes = guide_example_prefixes()
+        drop = {n for (_, n) in grades if any(n.startswith(p) for p in prefixes)}
+        excluded = len(drop)
+        entries = [e for e in entries if norm(e["text"]) not in drop]
+        by_id = {e["entry_id"]: e for e in entries}
+        print(f"Sensitivity run: excluding {excluded} guide-example sentences")
     if blank:
         print(f"WARNING: {blank} cells hold something other than Y, N, ? or blank")
 
@@ -213,7 +236,7 @@ def main():
         if 1 in er and 3 in er and er[1]["rate"] is not None and er[3]["rate"] is not None:
             results["fairness_flag"] = (er[3]["rate"] - er[1]["rate"]) > ERA_GAP_FLAG
 
-    (EVAL / "results.json").write_text(json.dumps(results, indent=1, default=str))
+    (EVAL / ("results_exclude_guide.json" if "--exclude-guide" in sys.argv else "results.json")).write_text(json.dumps(results, indent=1, default=str))
     for name, r in m.items():
         s = r["summary"]["all"]
         print(f"{name:8s} overclaim {s['overclaim']['rate']} {s['overclaim']['ci95']}  "

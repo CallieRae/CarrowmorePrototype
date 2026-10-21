@@ -1,0 +1,1564 @@
+{
+ "unsure_grades": 33,
+ "ungraded_items": 0,
+ "methods": {
+  "ai": {
+   "cells": {
+    "K1483/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 20,
+     "cited": 27,
+     "overclaim": false
+    },
+    "K1483/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 2,
+     "cited": 2,
+     "overclaim": false
+    },
+    "K1483/R3_PERMIT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 2,
+     "cited": 3,
+     "overclaim": false
+    },
+    "K1483/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K1483/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 4,
+     "cited": 4,
+     "overclaim": false
+    },
+    "K1468/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 71,
+     "cited": 99,
+     "overclaim": false
+    },
+    "K1468/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 3,
+     "cited": 3,
+     "overclaim": false
+    },
+    "K1468/R3_PERMIT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K1468/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K1468/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 2,
+     "cited": 2,
+     "overclaim": false
+    },
+    "K0566/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 6,
+     "cited": 7,
+     "overclaim": false
+    },
+    "K0566/R2_FAULT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0566/R3_PERMIT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 97,
+     "cited": 109,
+     "overclaim": false
+    },
+    "K0566/R4_HVSW": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 47,
+     "cited": 47,
+     "overclaim": false
+    },
+    "K0566/R5_HEIGHT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0592/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 63,
+     "cited": 126,
+     "overclaim": false
+    },
+    "K0592/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 10,
+     "cited": 17,
+     "overclaim": false
+    },
+    "K0592/R3_PERMIT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 1,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0592/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0592/R5_HEIGHT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0303/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 56,
+     "cited": 74,
+     "overclaim": false
+    },
+    "K0303/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 41,
+     "cited": 51,
+     "overclaim": false
+    },
+    "K0303/R3_PERMIT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0303/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0303/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 20,
+     "cited": 29,
+     "overclaim": false
+    },
+    "K0663/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 29,
+     "cited": 40,
+     "overclaim": false
+    },
+    "K0663/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 2,
+     "cited": 2,
+     "overclaim": false
+    },
+    "K0663/R3_PERMIT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0663/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0663/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 3,
+     "cited": 3,
+     "overclaim": false
+    },
+    "K1446/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 11,
+     "cited": 33,
+     "overclaim": false
+    },
+    "K1446/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 7,
+     "cited": 14,
+     "overclaim": false
+    },
+    "K1446/R3_PERMIT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": false,
+     "supporting_cited": 1,
+     "cited": 3,
+     "overclaim": true
+    },
+    "K1446/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K1446/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 22,
+     "cited": 33,
+     "overclaim": false
+    },
+    "K0310/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 19,
+     "cited": 63,
+     "overclaim": false
+    },
+    "K0310/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 15,
+     "cited": 23,
+     "overclaim": false
+    },
+    "K0310/R3_PERMIT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0310/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0310/R5_HEIGHT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 1,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0354/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 3,
+     "cited": 8,
+     "overclaim": false
+    },
+    "K0354/R2_FAULT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0354/R3_PERMIT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 2,
+     "cited": 2,
+     "overclaim": false
+    },
+    "K0354/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0354/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 5,
+     "cited": 13,
+     "overclaim": false
+    },
+    "K0478/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 8,
+     "cited": 49,
+     "overclaim": false
+    },
+    "K0478/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 13,
+     "cited": 20,
+     "overclaim": false
+    },
+    "K0478/R3_PERMIT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 16,
+     "cited": 16,
+     "overclaim": false
+    },
+    "K0478/R4_HVSW": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 12,
+     "cited": 12,
+     "overclaim": false
+    },
+    "K0478/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 1,
+     "cited": 2,
+     "overclaim": true
+    }
+   },
+   "gate_violations": [],
+   "summary": {
+    "dev": {
+     "overclaim": {
+      "k": 1,
+      "n": 22,
+      "rate": 0.045,
+      "ci95": [
+       0.008,
+       0.218
+      ]
+     },
+     "recall": {
+      "k": 21,
+      "n": 26,
+      "rate": 0.808,
+      "ci95": [
+       0.621,
+       0.915
+      ]
+     },
+     "citation_precision": {
+      "k": 520,
+      "n": 732,
+      "rate": 0.71,
+      "ci95": [
+       0.676,
+       0.742
+      ]
+     },
+     "ungraded_citations": 0
+    },
+    "dev:R1_MAINT": {
+     "overclaim": {
+      "k": 0,
+      "n": 7,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.354
+      ]
+     },
+     "recall": {
+      "k": 7,
+      "n": 7,
+      "rate": 1.0,
+      "ci95": [
+       0.646,
+       1.0
+      ]
+     }
+    },
+    "all": {
+     "overclaim": {
+      "k": 2,
+      "n": 32,
+      "rate": 0.062,
+      "ci95": [
+       0.017,
+       0.201
+      ]
+     },
+     "recall": {
+      "k": 30,
+      "n": 38,
+      "rate": 0.789,
+      "ci95": [
+       0.637,
+       0.889
+      ]
+     },
+     "citation_precision": {
+      "k": 615,
+      "n": 942,
+      "rate": 0.653,
+      "ci95": [
+       0.622,
+       0.683
+      ]
+     },
+     "ungraded_citations": 0
+    },
+    "all:R1_MAINT": {
+     "overclaim": {
+      "k": 0,
+      "n": 10,
+      "rate": 0.0,
+      "ci95": [
+       -0.0,
+       0.278
+      ]
+     },
+     "recall": {
+      "k": 10,
+      "n": 10,
+      "rate": 1.0,
+      "ci95": [
+       0.722,
+       1.0
+      ]
+     }
+    },
+    "dev:R2_FAULT": {
+     "overclaim": {
+      "k": 0,
+      "n": 6,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.39
+      ]
+     },
+     "recall": {
+      "k": 6,
+      "n": 7,
+      "rate": 0.857,
+      "ci95": [
+       0.487,
+       0.974
+      ]
+     }
+    },
+    "all:R2_FAULT": {
+     "overclaim": {
+      "k": 0,
+      "n": 8,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.324
+      ]
+     },
+     "recall": {
+      "k": 8,
+      "n": 9,
+      "rate": 0.889,
+      "ci95": [
+       0.565,
+       0.98
+      ]
+     }
+    },
+    "dev:R3_PERMIT": {
+     "overclaim": {
+      "k": 1,
+      "n": 3,
+      "rate": 0.333,
+      "ci95": [
+       0.061,
+       0.792
+      ]
+     },
+     "recall": {
+      "k": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+       0.342,
+       1.0
+      ]
+     }
+    },
+    "all:R3_PERMIT": {
+     "overclaim": {
+      "k": 1,
+      "n": 5,
+      "rate": 0.2,
+      "ci95": [
+       0.036,
+       0.624
+      ]
+     },
+     "recall": {
+      "k": 4,
+      "n": 4,
+      "rate": 1.0,
+      "ci95": [
+       0.51,
+       1.0
+      ]
+     }
+    },
+    "dev:R4_HVSW": {
+     "overclaim": {
+      "k": 0,
+      "n": 1,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.793
+      ]
+     },
+     "recall": {
+      "k": 1,
+      "n": 4,
+      "rate": 0.25,
+      "ci95": [
+       0.046,
+       0.699
+      ]
+     }
+    },
+    "all:R4_HVSW": {
+     "overclaim": {
+      "k": 0,
+      "n": 2,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.658
+      ]
+     },
+     "recall": {
+      "k": 2,
+      "n": 6,
+      "rate": 0.333,
+      "ci95": [
+       0.097,
+       0.7
+      ]
+     }
+    },
+    "dev:R5_HEIGHT": {
+     "overclaim": {
+      "k": 0,
+      "n": 5,
+      "rate": 0.0,
+      "ci95": [
+       -0.0,
+       0.434
+      ]
+     },
+     "recall": {
+      "k": 5,
+      "n": 6,
+      "rate": 0.833,
+      "ci95": [
+       0.436,
+       0.97
+      ]
+     }
+    },
+    "all:R5_HEIGHT": {
+     "overclaim": {
+      "k": 1,
+      "n": 7,
+      "rate": 0.143,
+      "ci95": [
+       0.026,
+       0.513
+      ]
+     },
+     "recall": {
+      "k": 6,
+      "n": 9,
+      "rate": 0.667,
+      "ci95": [
+       0.354,
+       0.879
+      ]
+     }
+    },
+    "holdout": {
+     "overclaim": {
+      "k": 1,
+      "n": 10,
+      "rate": 0.1,
+      "ci95": [
+       0.018,
+       0.404
+      ]
+     },
+     "recall": {
+      "k": 9,
+      "n": 12,
+      "rate": 0.75,
+      "ci95": [
+       0.468,
+       0.911
+      ]
+     },
+     "citation_precision": {
+      "k": 95,
+      "n": 210,
+      "rate": 0.452,
+      "ci95": [
+       0.387,
+       0.52
+      ]
+     },
+     "ungraded_citations": 0
+    },
+    "holdout:R1_MAINT": {
+     "overclaim": {
+      "k": 0,
+      "n": 3,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.562
+      ]
+     },
+     "recall": {
+      "k": 3,
+      "n": 3,
+      "rate": 1.0,
+      "ci95": [
+       0.438,
+       1.0
+      ]
+     }
+    },
+    "holdout:R2_FAULT": {
+     "overclaim": {
+      "k": 0,
+      "n": 2,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.658
+      ]
+     },
+     "recall": {
+      "k": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+       0.342,
+       1.0
+      ]
+     }
+    },
+    "holdout:R3_PERMIT": {
+     "overclaim": {
+      "k": 0,
+      "n": 2,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.658
+      ]
+     },
+     "recall": {
+      "k": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+       0.342,
+       1.0
+      ]
+     }
+    },
+    "holdout:R4_HVSW": {
+     "overclaim": {
+      "k": 0,
+      "n": 1,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.793
+      ]
+     },
+     "recall": {
+      "k": 1,
+      "n": 2,
+      "rate": 0.5,
+      "ci95": [
+       0.095,
+       0.905
+      ]
+     }
+    },
+    "holdout:R5_HEIGHT": {
+     "overclaim": {
+      "k": 1,
+      "n": 2,
+      "rate": 0.5,
+      "ci95": [
+       0.095,
+       0.905
+      ]
+     },
+     "recall": {
+      "k": 1,
+      "n": 3,
+      "rate": 0.333,
+      "ci95": [
+       0.061,
+       0.792
+      ]
+     }
+    }
+   },
+   "era_recall": {
+    "1": {
+     "k": 122,
+     "n": 184,
+     "rate": 0.663,
+     "ci95": [
+      0.592,
+      0.727
+     ]
+    },
+    "2": {
+     "k": 236,
+     "n": 354,
+     "rate": 0.667,
+     "ci95": [
+      0.616,
+      0.714
+     ]
+    },
+    "3": {
+     "k": 257,
+     "n": 370,
+     "rate": 0.695,
+     "ci95": [
+      0.646,
+      0.739
+     ]
+    }
+   }
+  },
+  "keyword": {
+   "cells": {
+    "K1483/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 20,
+     "cited": 28,
+     "overclaim": false
+    },
+    "K1483/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 2,
+     "cited": 16,
+     "overclaim": false
+    },
+    "K1483/R3_PERMIT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 2,
+     "cited": 3,
+     "overclaim": false
+    },
+    "K1483/R4_HVSW": {
+     "verdict": "Evidenced",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 3,
+     "overclaim": true
+    },
+    "K1483/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 3,
+     "cited": 14,
+     "overclaim": false
+    },
+    "K1468/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 58,
+     "cited": 97,
+     "overclaim": false
+    },
+    "K1468/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 5,
+     "cited": 20,
+     "overclaim": false
+    },
+    "K1468/R3_PERMIT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K1468/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K1468/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 2,
+     "cited": 20,
+     "overclaim": false
+    },
+    "K0566/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 16,
+     "overclaim": true
+    },
+    "K0566/R2_FAULT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0566/R3_PERMIT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 78,
+     "cited": 84,
+     "overclaim": false
+    },
+    "K0566/R4_HVSW": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 63,
+     "cited": 136,
+     "overclaim": false
+    },
+    "K0566/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 6,
+     "overclaim": true
+    },
+    "K0592/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 37,
+     "cited": 87,
+     "overclaim": false
+    },
+    "K0592/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 17,
+     "cited": 32,
+     "overclaim": false
+    },
+    "K0592/R3_PERMIT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 1,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0592/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0592/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 16,
+     "overclaim": true
+    },
+    "K0303/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 33,
+     "cited": 60,
+     "overclaim": false
+    },
+    "K0303/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 43,
+     "cited": 76,
+     "overclaim": false
+    },
+    "K0303/R3_PERMIT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0303/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0303/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 19,
+     "cited": 61,
+     "overclaim": false
+    },
+    "K0663/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 16,
+     "cited": 28,
+     "overclaim": false
+    },
+    "K0663/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 6,
+     "cited": 18,
+     "overclaim": false
+    },
+    "K0663/R3_PERMIT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0663/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0663/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 3,
+     "cited": 11,
+     "overclaim": false
+    },
+    "K1446/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 2,
+     "cited": 20,
+     "overclaim": false
+    },
+    "K1446/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 7,
+     "cited": 9,
+     "overclaim": false
+    },
+    "K1446/R3_PERMIT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": false,
+     "supporting_cited": 1,
+     "cited": 3,
+     "overclaim": true
+    },
+    "K1446/R4_HVSW": {
+     "verdict": "Evidenced",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 4,
+     "overclaim": true
+    },
+    "K1446/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 22,
+     "cited": 63,
+     "overclaim": false
+    },
+    "K0310/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 7,
+     "cited": 47,
+     "overclaim": false
+    },
+    "K0310/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 18,
+     "cited": 25,
+     "overclaim": false
+    },
+    "K0310/R3_PERMIT": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0310/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 0,
+     "overclaim": false
+    },
+    "K0310/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 1,
+     "cited": 25,
+     "overclaim": true
+    },
+    "K0354/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 6,
+     "overclaim": true
+    },
+    "K0354/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 6,
+     "overclaim": true
+    },
+    "K0354/R3_PERMIT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 2,
+     "cited": 2,
+     "overclaim": false
+    },
+    "K0354/R4_HVSW": {
+     "verdict": "Not yet shown",
+     "gt_evidenced": false,
+     "supporting_cited": 0,
+     "cited": 1,
+     "overclaim": false
+    },
+    "K0354/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 1,
+     "cited": 35,
+     "overclaim": true
+    },
+    "K0478/R1_MAINT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 0,
+     "cited": 14,
+     "overclaim": true
+    },
+    "K0478/R2_FAULT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 16,
+     "cited": 19,
+     "overclaim": false
+    },
+    "K0478/R3_PERMIT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 14,
+     "cited": 14,
+     "overclaim": false
+    },
+    "K0478/R4_HVSW": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 17,
+     "cited": 43,
+     "overclaim": false
+    },
+    "K0478/R5_HEIGHT": {
+     "verdict": "Evidenced",
+     "gt_evidenced": true,
+     "supporting_cited": 1,
+     "cited": 18,
+     "overclaim": true
+    }
+   },
+   "gate_violations": [],
+   "summary": {
+    "dev": {
+     "overclaim": {
+      "k": 6,
+      "n": 26,
+      "rate": 0.231,
+      "ci95": [
+       0.11,
+       0.421
+      ]
+     },
+     "recall": {
+      "k": 20,
+      "n": 26,
+      "rate": 0.769,
+      "ci95": [
+       0.579,
+       0.89
+      ]
+     },
+     "citation_precision": {
+      "k": 440,
+      "n": 937,
+      "rate": 0.47,
+      "ci95": [
+       0.438,
+       0.502
+      ]
+     },
+     "ungraded_citations": 0
+    },
+    "dev:R1_MAINT": {
+     "overclaim": {
+      "k": 1,
+      "n": 7,
+      "rate": 0.143,
+      "ci95": [
+       0.026,
+       0.513
+      ]
+     },
+     "recall": {
+      "k": 6,
+      "n": 7,
+      "rate": 0.857,
+      "ci95": [
+       0.487,
+       0.974
+      ]
+     }
+    },
+    "all": {
+     "overclaim": {
+      "k": 12,
+      "n": 38,
+      "rate": 0.316,
+      "ci95": [
+       0.191,
+       0.475
+      ]
+     },
+     "recall": {
+      "k": 26,
+      "n": 38,
+      "rate": 0.684,
+      "ci95": [
+       0.525,
+       0.809
+      ]
+     },
+     "citation_precision": {
+      "k": 517,
+      "n": 1192,
+      "rate": 0.434,
+      "ci95": [
+       0.406,
+       0.462
+      ]
+     },
+     "ungraded_citations": 0
+    },
+    "all:R1_MAINT": {
+     "overclaim": {
+      "k": 3,
+      "n": 10,
+      "rate": 0.3,
+      "ci95": [
+       0.108,
+       0.603
+      ]
+     },
+     "recall": {
+      "k": 7,
+      "n": 10,
+      "rate": 0.7,
+      "ci95": [
+       0.397,
+       0.892
+      ]
+     }
+    },
+    "dev:R2_FAULT": {
+     "overclaim": {
+      "k": 0,
+      "n": 6,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.39
+      ]
+     },
+     "recall": {
+      "k": 6,
+      "n": 7,
+      "rate": 0.857,
+      "ci95": [
+       0.487,
+       0.974
+      ]
+     }
+    },
+    "all:R2_FAULT": {
+     "overclaim": {
+      "k": 1,
+      "n": 9,
+      "rate": 0.111,
+      "ci95": [
+       0.02,
+       0.435
+      ]
+     },
+     "recall": {
+      "k": 8,
+      "n": 9,
+      "rate": 0.889,
+      "ci95": [
+       0.565,
+       0.98
+      ]
+     }
+    },
+    "dev:R3_PERMIT": {
+     "overclaim": {
+      "k": 1,
+      "n": 3,
+      "rate": 0.333,
+      "ci95": [
+       0.061,
+       0.792
+      ]
+     },
+     "recall": {
+      "k": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+       0.342,
+       1.0
+      ]
+     }
+    },
+    "all:R3_PERMIT": {
+     "overclaim": {
+      "k": 1,
+      "n": 5,
+      "rate": 0.2,
+      "ci95": [
+       0.036,
+       0.624
+      ]
+     },
+     "recall": {
+      "k": 4,
+      "n": 4,
+      "rate": 1.0,
+      "ci95": [
+       0.51,
+       1.0
+      ]
+     }
+    },
+    "dev:R4_HVSW": {
+     "overclaim": {
+      "k": 2,
+      "n": 3,
+      "rate": 0.667,
+      "ci95": [
+       0.208,
+       0.939
+      ]
+     },
+     "recall": {
+      "k": 1,
+      "n": 4,
+      "rate": 0.25,
+      "ci95": [
+       0.046,
+       0.699
+      ]
+     }
+    },
+    "all:R4_HVSW": {
+     "overclaim": {
+      "k": 2,
+      "n": 4,
+      "rate": 0.5,
+      "ci95": [
+       0.15,
+       0.85
+      ]
+     },
+     "recall": {
+      "k": 2,
+      "n": 6,
+      "rate": 0.333,
+      "ci95": [
+       0.097,
+       0.7
+      ]
+     }
+    },
+    "dev:R5_HEIGHT": {
+     "overclaim": {
+      "k": 2,
+      "n": 7,
+      "rate": 0.286,
+      "ci95": [
+       0.082,
+       0.641
+      ]
+     },
+     "recall": {
+      "k": 5,
+      "n": 6,
+      "rate": 0.833,
+      "ci95": [
+       0.436,
+       0.97
+      ]
+     }
+    },
+    "all:R5_HEIGHT": {
+     "overclaim": {
+      "k": 5,
+      "n": 10,
+      "rate": 0.5,
+      "ci95": [
+       0.237,
+       0.763
+      ]
+     },
+     "recall": {
+      "k": 5,
+      "n": 9,
+      "rate": 0.556,
+      "ci95": [
+       0.267,
+       0.811
+      ]
+     }
+    },
+    "holdout": {
+     "overclaim": {
+      "k": 6,
+      "n": 12,
+      "rate": 0.5,
+      "ci95": [
+       0.254,
+       0.746
+      ]
+     },
+     "recall": {
+      "k": 6,
+      "n": 12,
+      "rate": 0.5,
+      "ci95": [
+       0.254,
+       0.746
+      ]
+     },
+     "citation_precision": {
+      "k": 77,
+      "n": 255,
+      "rate": 0.302,
+      "ci95": [
+       0.249,
+       0.361
+      ]
+     },
+     "ungraded_citations": 0
+    },
+    "holdout:R1_MAINT": {
+     "overclaim": {
+      "k": 2,
+      "n": 3,
+      "rate": 0.667,
+      "ci95": [
+       0.208,
+       0.939
+      ]
+     },
+     "recall": {
+      "k": 1,
+      "n": 3,
+      "rate": 0.333,
+      "ci95": [
+       0.061,
+       0.792
+      ]
+     }
+    },
+    "holdout:R2_FAULT": {
+     "overclaim": {
+      "k": 1,
+      "n": 3,
+      "rate": 0.333,
+      "ci95": [
+       0.061,
+       0.792
+      ]
+     },
+     "recall": {
+      "k": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+       0.342,
+       1.0
+      ]
+     }
+    },
+    "holdout:R3_PERMIT": {
+     "overclaim": {
+      "k": 0,
+      "n": 2,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.658
+      ]
+     },
+     "recall": {
+      "k": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+       0.342,
+       1.0
+      ]
+     }
+    },
+    "holdout:R4_HVSW": {
+     "overclaim": {
+      "k": 0,
+      "n": 1,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.793
+      ]
+     },
+     "recall": {
+      "k": 1,
+      "n": 2,
+      "rate": 0.5,
+      "ci95": [
+       0.095,
+       0.905
+      ]
+     }
+    },
+    "holdout:R5_HEIGHT": {
+     "overclaim": {
+      "k": 3,
+      "n": 3,
+      "rate": 1.0,
+      "ci95": [
+       0.438,
+       1.0
+      ]
+     },
+     "recall": {
+      "k": 0,
+      "n": 3,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.562
+      ]
+     }
+    }
+   },
+   "era_recall": {
+    "1": {
+     "k": 108,
+     "n": 184,
+     "rate": 0.587,
+     "ci95": [
+      0.515,
+      0.656
+     ]
+    },
+    "2": {
+     "k": 195,
+     "n": 354,
+     "rate": 0.551,
+     "ci95": [
+      0.499,
+      0.602
+     ]
+    },
+    "3": {
+     "k": 214,
+     "n": 370,
+     "rate": 0.578,
+     "ci95": [
+      0.528,
+      0.628
+     ]
+    }
+   }
+  }
+ },
+ "call": "INCONCLUSIVE",
+ "notes": [
+  "Overclaim 6% (95% CI 2% to 20%) sits within 5% of a band edge."
+ ],
+ "dropped_requirements": [],
+ "fairness_flag": false
+}
