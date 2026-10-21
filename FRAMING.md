@@ -1,10 +1,10 @@
 # Frame
 
-**Forty years of logbooks can be translated into an employer’s terms, graded impartially, and used to show a keeper what they are qualified for, nearly qualified for, and the shortest route between the two.**
+**Forty years of logbooks can be translated into an employer’s terms, graded impartially, and used to show a keeper what they are qualified for or the route to get there.**
 
 ## Whose problem
 
-The keeper’s: *what am I qualified for, what am I nearly qualified for, and what is the shortest route from here to a job?* The employer’s problem runs on the same evidence, so one record serves both views.
+**The keeper’s:** *what am I qualified for, what am I nearly qualified for, and what is the shortest route from here to a job?* The employer’s problem runs on the same evidence, so one record serves both views.
 
 ## Assumptions
 
@@ -24,7 +24,7 @@ The keeper’s: *what am I qualified for, what am I nearly qualified for, and wh
 
 **Method:** On the Authority’s cleaned subset (the question is inference, not OCR repair), ten keepers, chosen by rule with three held out from tuning, were graded blind by hand on five requirements before the AI graded them, citing every log line. No match score: four evidence tiers, and logs never mark an insurer gate as met.
 
-**Kill rules, set before any results:** beat keyword search on the held-out keepers, find at least half the real evidence, and be wrong no more than 1 time in 10 to persevere (1 in 4 to pivot).
+**Kill rules, set before results:** beat keyword search on the held-out keepers, find at least half the real evidence, and be wrong no more than 1 time in 10 to persevere (more than 1 in 4 to kill).
 
 ## What wasn’t built
 
