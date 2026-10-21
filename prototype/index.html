@@ -387,7 +387,7 @@ function keeperExtras(k, assessments) {
     const it = L.it; if (it.kind !== "log" || seen.has(it.req + L.tier)) continue;
     seen.add(it.req + L.tier);
     const meta = DATA.log_reqs[it.req], ev = k.evidence[it.req];
-    if (ev.maybe_count && L.tier === "none") asksList.push(`${meta.plain}: ${ev.maybe_count} log entr${ev.maybe_count > 1 ? "ies" : "y"} might show this but don't settle it. Can you tell us more?`);
+    if (ev.maybe_count && L.tier === "none") asksList.push(`${meta.plain}: ${ev.maybe_count} log entr${ev.maybe_count > 1 ? "ies" : "y"} might show this but ${ev.maybe_count > 1 ? "don't" : "doesn't"} settle it. Can you tell us more?`);
     if (L.thin) asksList.push(`${meta.plain}: ${L.n === 1 ? "only one log entry shows this" : "your logs show this, but not on enough separate occasions to count"}. Have you done it at other times that weren't written up?`);
     if (L.oldEvidence) asksList.push(`${meta.plain}: your most recent logged example is ${L.last}. Have you done this more recently, at the Authority or elsewhere?`);
     if (it.gate && L.tier === "gate") asksList.push(`HV switching: did you ever hold an Authority HV authorization? If so, any letter, card or record of it could replace two years of documented experience for the HV role.`);

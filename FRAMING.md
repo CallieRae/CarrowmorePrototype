@@ -15,12 +15,12 @@ The keeper's: *"What am I qualified for, what am I nearly qualified for, and wha
 
 ## The one that sinks it
 
-**AI can map log entries to employer requirements accurately enough, and word the result plainly enough, that a keeper acts on it correctly.** Wrong, or read as a promise, it sends a fifty-four-year-old to an interview he was never going to pass.
+**AI can map log entries to employer requirements accurately enough, and word the result plainly enough, that a keeper acts on it correctly.** Wrong, or read as a promise, it sends a fifty-four-year-old to an interview he can't pass.
 
 ## How I tested it
 
-Ten keepers, chosen by rule with three held out, were graded blind by hand on five requirements before the AI graded them, citing every log line. No match score: four evidence tiers, and logs never mark an insurer gate as met. The kill rules were committed first: beat keyword search on the held-out keepers, keep recall at 50% or above, and hold overclaims at 10% or below to persevere, 25% to pivot.
+Ten keepers, chosen by rule with three held out, were graded blind by hand on five requirements before the AI graded them, citing every log line. No match score: four evidence tiers, and logs never mark an insurer gate as met. Kill rules, committed first: beat keyword search on the held-out keepers, find at least half the real evidence, and be wrong no more than 1 time in 10 to persevere (1 in 4 to pivot).
 
 ## What I chose not to build
 
-The raw pack (attribution took the Authority three weeks for 40 keepers; at 340 it is the kill at scale), four of the six postings, learning-rate and cost-of-candidacy models, appraisals and age-dependent criteria like "younger colleagues" (the tool seeks only what it needs) and real authentication (the mock sign-in shows who sees what).
+The raw pack (attribution took the Authority three weeks for 40 keepers; at 340 it is the kill at scale), four of the six postings, small-boat work and two untested desirables (supervising contractors, mentoring), learning-rate and cost-of-candidacy models, appraisals and age-dependent criteria like "younger colleagues" (the tool seeks only what it needs) and real authentication (the mock sign-in shows who sees what).

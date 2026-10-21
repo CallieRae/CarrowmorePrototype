@@ -57,3 +57,7 @@ python3 eval/baseline_keyword.py      # keyword predictions
 # grade eval/grading_sheet.csv; run the AI mapper; add its citations
 python3 eval/score.py                 # results and the call
 ```
+
+---
+
+*Addendum, after results: the tier names used in the tool changed after outside review (Evidenced is now "Logged experience, needs validation or cert"), and the tool now applies a stricter evidence rule than the one scored here. See `README.md` and `ai-was-wrong.md` #13 to #16. Nothing above this line was edited.*

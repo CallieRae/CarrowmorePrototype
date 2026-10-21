@@ -1,16 +1,31 @@
 # Carrowmore: what a keeper is qualified for, nearly qualified for, and the shortest honest route
 
-Senior PM, Zero to One exercise. Read in this order: `FRAMING.md` (the bet), the prototype, then `CALL.md` (kill, pivot or persevere, with the evidence and the three written answers).
+Senior PM, Zero to One exercise. Read in this order: `FRAMING.md` (the bet), the prototype, then `CALL.md` (the call, QA, and the three written answers). The two are also combined as a one-page Word file, `Carrowmore_Framing_and_Call.docx`.
 
 ## Open the prototype
 
-Open `prototype/index.html` in any browser. It needs no install or server; without a network it falls back from Plus Jakarta Sans to Arial.
+**Live:** https://callierae.github.io/CarrowmorePrototype/prototype/
 
-Sign in as a **keeper** (any keeper code, e.g. `K0566` or `K1483`, password `carrowmore`) to see one record only, with a drop-down of open roles: pick a role to see how the record compares, the training needed for it, and where the keeper is asked to clarify. Two roles are assessed; the other four postings are listed but marked as not yet assessed. Sign in as an **employer** (any email, password `array`) to browse all shared records by role, sorted alphabetically or by closeness to ready.
+Or open `prototype/index.html` in any browser. It needs no install or server; without a network it falls back from Plus Jakarta Sans to Arial.
+
+- **Keeper/Applicant:** any keeper code (e.g. `K0566`, `K1483`, `K0303`), password `carrowmore`. One record only: choose an open role to see how the record compares, the training it needs, and where the keeper is asked to clarify. Two roles are assessed; the other four postings are listed but marked as not yet assessed.
+- **Employer/Advisor:** any email, password `array`. Choose a role and a candidate; sort alphabetically or by closest to ready (requirements left to clear, never a percentage).
 
 The sign-in is a prototype affordance, not security: every record is in the one file. It's there to show how the two views are scoped differently.
 
-To rebuild it from the data (Python 3, standard library only):
+### What the labels mean
+
+| Label | Meaning |
+|---|---|
+| ✓ Qualified and/or Certified | Certificate held and in date (flagged where the training records show no renewal) |
+| ◐ Nearly Qualified (Partial Cert) | Some modules held, or the certificate has lapsed |
+| ● Logged experience, needs validation or cert | Logs show the work on at least two dates in two different entries; to confirm with the keeper, or a certificate not on record. On HV switching: *needs authorization* |
+| ○ Insufficient logged experience | Logs don't show it clearly enough yet |
+| ○ Insufficient Documented Qualifications | No certificate or medical in the training records |
+
+Each requirement is tagged REQUIRED or PREFERRED, following the posting. Log evidence never marks an insurer gate as met.
+
+To rebuild the page from the data (Python 3, standard library only):
 
 ```
 python3 prototype/build.py
@@ -20,11 +35,12 @@ python3 prototype/build.py
 
 | Path | What it is |
 |---|---|
-| `FRAMING.md` | The one-page framing |
-| `CALL.md` | The call, the evidence behind it, and the Section 6 answers |
+| `FRAMING.md` | The one-page framing, including what I chose not to build |
+| `CALL.md` | The call, the evidence, QA (reviewer feedback, AI errors, build fixes) and what to keep |
+| `Carrowmore_Framing_and_Call.docx` | `FRAMING.md` and `CALL.md` on one branded page |
 | `EVALUATION_PLAN.md` | The test and its kill rules, committed before any AI output existed |
-| `ai-was-wrong.md` | Running log of where the AI was wrong and what I did about it |
-| `prototype/` | The keeper and employer views (`index.html`), the template and build script, and the Pearson logo from the brand guidelines |
+| `ai-was-wrong.md` | Running log of every error found, by the AI, the build or QA, and what changed |
+| `prototype/` | The keeper and employer views (`index.html`), template, build script and the Pearson logo from the brand guidelines |
 | `prompts/map_prompt.md` | The prompt the AI followed to label log sentences |
 | `eval/` | Keeper selection, keyword baseline, blind grading sheets, AI labels, scoring |
 | `carrowmore-data-pack/` | `clean/`, `employers/` and `reference/` from the supplied pack; `raw/` is not committed |
@@ -38,4 +54,8 @@ python3 eval/score.py                  # main result
 python3 eval/score.py --exclude-guide  # sensitivity: drops the grading guide's example sentences
 ```
 
-The commit history is the audit trail: rules (`ed3fd56`), hand grades (`1430b6d`), AI labels (`e53487b`), second grading pass (`b784d07`).
+The commit history is the audit trail: rules (`ed3fd56`), hand grades (`1430b6d`), AI labels (`e53487b`), second grading pass (`b784d07`), scoring (`ce2392f`).
+
+## What changed after the test
+
+The scored results use the pre-registered rule (two supporting entries). After QA, the tool applies a stricter rule (two different dates and two different sentences), which re-scores at 6.5% overclaims and 76% recall on the same ten keepers; the call is unchanged. Tier names changed after outside review (`ai-was-wrong.md`, #13 to #16); `EVALUATION_PLAN.md` keeps the original names because it was committed before results.
