@@ -71,8 +71,10 @@
   .tier { font-size: .8rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; white-space: nowrap; color: var(--pill-ink); }
   /* Qualified: 168584 with black type (4.72:1; white would be 4.45:1, under AA at pill size).
      Logged experience shares the Nearly Qualified amber fill; the symbol and words tell them apart. */
-  .t-auth { background: #168584; color: #000000; } .t-near { background: var(--f-near); } .t-evid, .t-gate { background: var(--f-near); } .t-none, .t-rec { background: #7B1571; color: #FFFFFF; } /* white on 7B1571 = 9.6:1 */
-  .level { font-size: .78rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
+  .t-auth { background: #168584; color: #000000; } .t-near, .t-evid, .t-gate { background: #7F6701; color: #FFFFFF; } /* white on 7F6701 = 5.46:1 */ .t-none, .t-rec { background: #7B1571; color: #FFFFFF; } /* white on 7B1571 = 9.6:1 */
+  /* Requirement level: REQUIRED (Fuchsia tint F6C8F1) or PREFERRED (Amber tint FEF0B4), 290066 type in both themes. */
+  .level { font-size: .74rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #290066; padding: 2px 10px; border-radius: 999px; white-space: nowrap; }
+  .lv-req { background: #F6C8F1; } .lv-pref { background: #FEF0B4; }
   .employer { font-size: .92rem; color: var(--ink-soft); margin: 4px 0 8px; }
   .employer b { color: var(--ink-strong); }
   details { margin: 6px 0; }
@@ -287,8 +289,11 @@ function entryList(list) {
   return `<ul class="entries">${list.map(([d, st, t, src]) =>
     `<li>${esc(d)} · ${esc(st)}<br>“${esc(t)}”<br><span class="src">${esc(src)}</span></li>`).join("")}</ul>`;
 }
+// Posting levels collapse to two: desirable is PREFERRED; essential, mandatory and prerequisite are REQUIRED.
+const levelPill = level => level === "desirable"
+  ? `<span class="level lv-pref">Preferred</span>` : `<span class="level lv-req">Required</span>`;
 const head = (title, tier, level) =>
-  `<div class="req-head"><h3>${esc(title)}</h3><span class="tier t-${tier}">${TIER[tier]}</span><span class="level">${esc(level)}</span></div>`;
+  `<div class="req-head"><h3>${esc(title)}</h3><span class="tier t-${tier}">${TIER[tier]}</span>${levelPill(level)}</div>`;
 // Label the employer's wording by what it is, so a desirable item never reads as required.
 const askLabel = it => it.kind === "medical" ? "Required Medical"
   : it.kind === "cert" ? "Required Certification"
