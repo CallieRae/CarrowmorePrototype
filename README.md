@@ -1,6 +1,6 @@
 # Carrowmore: what a keeper is qualified for, nearly qualified for, and the shortest honest route
 
-Senior PM, Zero to One exercise. Start with `FRAMING.md` (the bet), then open the prototype.
+Senior PM, Zero to One exercise. Read in this order: `FRAMING.md` (the bet), the prototype, then `CALL.md` (kill, pivot or persevere, with the evidence and the three written answers).
 
 ## Open the prototype
 
@@ -21,6 +21,7 @@ python3 prototype/build.py
 | Path | What it is |
 |---|---|
 | `FRAMING.md` | The one-page framing |
+| `CALL.md` | The call, the evidence behind it, and the Section 6 answers |
 | `EVALUATION_PLAN.md` | The test and its kill rules, committed before any AI output existed |
 | `ai-was-wrong.md` | Running log of where the AI was wrong and what I did about it |
 | `prototype/` | The keeper and employer views (`index.html`), the template and build script, and the Pearson logo from the brand guidelines |
