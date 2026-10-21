@@ -9,7 +9,7 @@ Inputs:
 Deliberately NOT read: raw/appraisals and station manager notes. The tool looks only
 for evidence of work and training, rather than trying to filter out what it shouldn't show.
 
-Run: python3 prototype/build.py  ->  prototype/keeper_view.html  (open it in any browser)
+Run: python3 prototype/build.py  ->  prototype/index.html  (open it in any browser)
 """
 import json
 import sys
@@ -147,15 +147,26 @@ def main():
         "evidenced_min": EVIDENCED_MIN,
         "log_reqs": LOG_REQS,
         "postings": POSTINGS,
+        "not_assessed": [
+            "Marine Electrician, Port of Cnoc Harbour Trust",
+            "Watch Officer, Northern Isles Coastguard Service",
+            "Offshore Survey Technician, Deepline Offshore",
+            "Hydrographic Technician, Meridian Survey",
+        ],
         "schemes": {c: {"name": s["name"].replace("Authorised", "Authorized"), "renewal": s.get("renewal_years"),
                         "modules": [[m["code"], m["name"].replace("Authorised", "Authorized")] for m in s["modules"]]}
                     for c, s in schemes.items()},
         "keepers": out,
     }
+    import base64
+    logo = lambda name: "data:image/png;base64," + base64.b64encode(
+        (ROOT / "prototype" / "assets" / name).read_bytes()).decode()
     template = (ROOT / "prototype" / "template.html").read_text()
-    html = template.replace("/*__DATA__*/null", json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
-    (ROOT / "prototype" / "keeper_view.html").write_text(html, encoding="utf-8")
-    print(f"wrote prototype/keeper_view.html ({len(html) // 1024} KB, {len(out)} keepers)")
+    html = (template
+            .replace("/*__DATA__*/null", json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
+            .replace("__LOGO_WHITE__", logo("pearson-logo-white.png")))
+    (ROOT / "prototype" / "index.html").write_text(html, encoding="utf-8")
+    print(f"wrote prototype/index.html ({len(html) // 1024} KB, {len(out)} keepers)")
 
 
 if __name__ == "__main__":

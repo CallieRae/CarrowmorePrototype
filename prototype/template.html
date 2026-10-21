@@ -3,80 +3,160 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What your record shows</title>
+<title>Keeper Skills Record</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
+  /* Pearson palette (Brand Guidelines, March 2025). Type on light: Black, Pearson Purple, Amethyst.
+     Type on dark: White, Light Purple. Accent hues are fills only. */
   :root {
-    --bg: #fbfaf7; --surface: #ffffff; --ink: #1d2327; --muted: #5a646b; --line: #d9dcd6;
-    --auth: #1f6b3a; --auth-bg: #e6f2ea;
-    --near: #7a4f00; --near-bg: #fbf0d9;
-    --evid: #1d4f8a; --evid-bg: #e5eef8;
-    --none: #5a646b; --none-bg: #eef0ee;
-    --gate: #8a1d2c; --gate-bg: #f8e6e8;
-    --focus: #1d4f8a;
+    --purple: #0D004D; --amethyst: #512EAB; --light-purple: #C1BFFF; --mist: #EDECF6; --white: #FFFFFF;
+    --bg: var(--mist); --surface: var(--white); --ink: #000000; --ink-strong: var(--purple); --ink-soft: var(--amethyst);
+    --line: #C1BFFF; --value-ink: var(--amethyst);
+    --btn: var(--amethyst); --btn-ink: var(--white);
+    --f-auth: #CBF6F5; --f-near: #FEF0B4; --f-evid: #C1BFFF; --f-gate: #F6C8F1; --f-none: var(--mist);
+    --pill-ink: var(--purple);
+    --rule-route: #56E2E1; --rule-flag: #FFCE00; --rule-ask: #DF41CF;
+    --tbl-head: var(--purple); --tbl-alt: #C1BFFF;
+    --focus: var(--amethyst);
   }
   @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #15191c; --surface: #1d2327; --ink: #eef0ee; --muted: #a9b2b8; --line: #343c42;
-      --auth: #8fd4a6; --auth-bg: #1e3326; --near: #f2c46b; --near-bg: #3a2e14;
-      --evid: #9cc3f0; --evid-bg: #1c2c40; --none: #b8c0c5; --none-bg: #2a3136;
-      --gate: #f0a0ab; --gate-bg: #3d1e23; --focus: #9cc3f0;
+    :root:not([data-theme="light"]) {
+      --bg: var(--purple); --surface: #290066; --ink: var(--white); --ink-strong: var(--white); --ink-soft: var(--light-purple);
+      --line: #472399; --value-ink: #CAB7FF; --btn: var(--light-purple); --btn-ink: var(--purple);
+      --f-auth: #168584; --f-near: #7F6701; --f-evid: #512EAB; --f-gate: #7B1571; --f-none: #330B77;
+      --pill-ink: var(--white); --tbl-head: #0D004D; --tbl-alt: #330B77; --focus: var(--light-purple);
     }
+  }
+  :root[data-theme="dark"] {
+    --bg: var(--purple); --surface: #290066; --ink: var(--white); --ink-strong: var(--white); --ink-soft: var(--light-purple);
+    --line: #472399; --value-ink: #CAB7FF; --btn: var(--light-purple); --btn-ink: var(--purple);
+    --f-auth: #168584; --f-near: #7F6701; --f-evid: #512EAB; --f-gate: #7B1571; --f-none: #330B77;
+    --pill-ink: var(--white); --tbl-head: #0D004D; --tbl-alt: #330B77; --focus: var(--light-purple);
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink);
-         font: 18px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
-  main { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
-  h1 { font-size: 1.7rem; line-height: 1.2; margin: 0 0 4px; }
-  h2 { font-size: 1.3rem; margin: 0 0 2px; }
-  h3 { font-size: 1.05rem; margin: 0; }
+         font: 17px/1.55 "Plus Jakarta Sans", Helvetica, Verdana, Arial, sans-serif; font-variant-ligatures: none; }
+  .mast { background: var(--purple); padding: 14px 16px; }
+  .mast-in { max-width: 920px; margin: 0 auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .mast img { width: 130px; height: auto; display: block; }
+  .mast .product { color: var(--light-purple); font-weight: 600; font-size: .95rem; border-left: 1px solid #512EAB; padding-left: 16px; }
+  .mast .who { margin-left: auto; color: var(--white); font-size: .9rem; display: flex; gap: 12px; align-items: center; }
+  main { max-width: 920px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 6px; color: var(--ink-strong); }
+  h2 { font-size: 1.3rem; margin: 0 0 4px; color: var(--ink-strong); }
+  h3 { font-size: 1.05rem; margin: 0; color: var(--ink-strong); }
   p { margin: 0 0 12px; }
-  .muted { color: var(--muted); }
-  label[for=keeper] { font-weight: 600; display: block; margin: 20px 0 6px; }
-  select { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px;
-           background: var(--surface); color: var(--ink); max-width: 100%; }
+  .soft { color: var(--ink-soft); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin: 0 0 22px; }
+  button, .btn { font: inherit; font-weight: 600; background: var(--btn); color: var(--btn-ink); border: 0; border-radius: 8px; padding: 10px 18px; cursor: pointer; }
+  button.link { background: none; color: inherit; padding: 4px 8px; text-decoration: underline; font-weight: 600; }
+  .mast button.link { color: var(--white); }
+  input, select { font: inherit; padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); max-width: 100%; }
+  ::placeholder { color: var(--ink-soft); opacity: .8; }
+  label { font-weight: 600; display: block; margin: 12px 0 6px; color: var(--ink-strong); }
   :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
-  .intro { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin: 16px 0 24px; }
-  .posting { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 18px; margin: 0 0 28px; }
-  .route { border-left: 4px solid var(--auth); background: var(--bg); padding: 12px 14px; margin: 14px 0 18px; border-radius: 0 8px 8px 0; }
-  .route ol { margin: 6px 0 0; padding-left: 22px; }
-  .flag { border-left: 4px solid var(--near); background: var(--near-bg); padding: 10px 14px; margin: 10px 0; border-radius: 0 8px 8px 0; font-size: .95rem; }
+  .tabs { display: flex; gap: 8px; margin: 0 0 14px; flex-wrap: wrap; }
+  .tabs button { background: var(--surface); color: var(--ink-strong); border: 1px solid var(--line); }
+  .tabs button[aria-selected="true"] { background: var(--btn); color: var(--btn-ink); border-color: var(--btn); }
+  .demo { font-size: .88rem; border-left: 4px solid var(--rule-flag); padding: 8px 12px; margin-top: 16px; background: var(--bg); border-radius: 0 8px 8px 0; }
+  .err { color: var(--ink-strong); font-weight: 600; margin-top: 10px; }
+  .route { border-left: 5px solid var(--rule-route); background: var(--bg); padding: 12px 14px; margin: 14px 0 18px; border-radius: 0 8px 8px 0; }
+  .route ol, .list ol, .list ul { margin: 6px 0 0; padding-left: 22px; }
+  .flag { border-left: 5px solid var(--rule-flag); background: var(--bg); padding: 10px 14px; margin: 10px 0; border-radius: 0 8px 8px 0; font-size: .95rem; }
+  .ask { border-left: 5px solid var(--rule-ask); }
   .req { border-top: 1px solid var(--line); padding: 14px 0; }
   .req-head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
-  .tier { font-size: .8rem; font-weight: 700; letter-spacing: .02em; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
-  .t-auth { color: var(--auth); background: var(--auth-bg); }
-  .t-near { color: var(--near); background: var(--near-bg); }
-  .t-evid { color: var(--evid); background: var(--evid-bg); }
-  .t-none { color: var(--none); background: var(--none-bg); }
-  .t-gate { color: var(--gate); background: var(--gate-bg); }
-  .level { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
-  .employer { font-size: .92rem; color: var(--muted); margin: 4px 0 8px; }
-  .employer::before { content: "They ask for: "; font-weight: 600; }
-  .say { margin: 6px 0; }
+  .tier { font-size: .8rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; white-space: nowrap; color: var(--pill-ink); }
+  .t-auth { background: var(--f-auth); } .t-near { background: var(--f-near); } .t-evid { background: var(--f-evid); }
+  .t-gate { background: var(--f-gate); } .t-none { background: var(--f-none); outline: 1px solid var(--line); }
+  .level { font-size: .78rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
+  .employer { font-size: .92rem; color: var(--ink-soft); margin: 4px 0 8px; }
+  .employer b { color: var(--ink-strong); }
   details { margin: 6px 0; }
-  summary { cursor: pointer; color: var(--evid); font-size: .95rem; }
+  summary { cursor: pointer; color: var(--ink-soft); font-weight: 600; font-size: .95rem; }
   ul.entries { list-style: none; padding: 0; margin: 6px 0; font-size: .92rem; }
   ul.entries li { padding: 6px 0; border-bottom: 1px dashed var(--line); }
-  .src { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .78rem; color: var(--muted); word-break: break-all; }
-  table.mods { border-collapse: collapse; font-size: .92rem; margin: 6px 0; width: 100%; }
-  table.mods td, table.mods th { text-align: left; padding: 4px 8px 4px 0; border-bottom: 1px dashed var(--line); vertical-align: top; }
-  footer { font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+  .src { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .76rem; color: var(--ink-soft); word-break: break-all; }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+  th { background: var(--tbl-head); color: var(--white); text-align: left; padding: 8px; font-weight: 600; }
+  td { padding: 7px 8px; vertical-align: top; color: var(--ink-strong); }
+  tbody tr:nth-child(even) td { background: var(--tbl-alt); }
+  .rank-wrap { overflow-x: auto; }
+  .controls { display: flex; gap: 16px; flex-wrap: wrap; align-items: end; }
+  .controls > div { min-width: 220px; flex: 1; }
+  .num { color: var(--value-ink); font-weight: 700; }
+  footer { font-size: .88rem; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 12px; }
+  footer strong { color: var(--ink-strong); }
+  [hidden] { display: none !important; }
 </style>
 </head>
 <body>
+<header class="mast">
+  <div class="mast-in">
+    <img src="__LOGO_WHITE__" alt="Pearson">
+    <span class="product">Keeper Skills Record · Carrowmore redeployment</span>
+    <span class="who" id="who" hidden><span id="who-name"></span><button class="link" id="signout">Sign out</button></span>
+  </div>
+</header>
+
 <main>
-  <h1>What your record shows</h1>
-  <p class="muted">Two jobs at the Carrowmore Array, read against your own station logs and training records.</p>
+  <!-- Sign in -->
+  <section id="signin" class="card" aria-labelledby="si-h" style="max-width:560px">
+    <h1 id="si-h">Sign in</h1>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" id="tab-k">I'm a keeper</button>
+      <button role="tab" aria-selected="false" id="tab-e">I'm an employer or advisor</button>
+    </div>
+    <form id="form-k">
+      <p class="soft">See your own record against the jobs on offer: what you already have, what training you'd need, and where we need your help to fill gaps.</p>
+      <label for="k-code">Keeper code</label>
+      <input id="k-code" autocomplete="username" placeholder="for example K0566" required>
+      <label for="k-pass">Password</label>
+      <input id="k-pass" type="password" autocomplete="current-password" required>
+      <p style="margin-top:16px"><button type="submit">Sign in</button></p>
+    </form>
+    <form id="form-e" hidden>
+      <p class="soft">Browse keepers who have shared their record, sorted by name or by how close they are to ready for a role.</p>
+      <label for="e-user">Work email</label>
+      <input id="e-user" autocomplete="username" placeholder="recruiter@carrowmore-array.example" required>
+      <label for="e-pass">Password</label>
+      <input id="e-pass" type="password" autocomplete="current-password" required>
+      <p style="margin-top:16px"><button type="submit">Sign in</button></p>
+    </form>
+    <p class="err" id="si-err" role="alert"></p>
+    <div class="demo"><strong>Prototype sign-in, not real security.</strong> Every record is inside this one file, so this only shows how each view is scoped. Keepers: any keeper code (K0566, K1483, K0303…) with password <code>carrowmore</code>. Employers: any email with password <code>array</code>.</div>
+  </section>
 
-  <label for="keeper">Whose record</label>
-  <select id="keeper"></select>
+  <!-- Keeper view -->
+  <section id="keeper-view" hidden></section>
 
-  <div class="intro" id="intro"></div>
-  <div id="postings"></div>
+  <!-- Employer view -->
+  <section id="employer-view" hidden>
+    <h1>Shortlist explorer</h1>
+    <p class="soft">Keepers who have agreed to share their record. The prototype assumes all 38 have.</p>
+    <div class="card">
+      <div class="controls">
+        <div><label for="e-role">Role</label><select id="e-role"></select></div>
+        <div><label for="e-sort">Sort</label>
+          <select id="e-sort">
+            <option value="ready">Closest to ready</option>
+            <option value="alpha">Alphabetical</option>
+          </select></div>
+      </div>
+      <p class="soft" id="sort-explain" style="margin-top:12px"></p>
+      <details><summary>Show the ranked list</summary><div class="rank-wrap" id="rank"></div></details>
+      <label for="e-keeper">Whose record</label>
+      <select id="e-keeper" style="width:100%"></select>
+    </div>
+    <div id="e-detail"></div>
+  </section>
 
-  <footer>
-    <p><strong>How this was made.</strong> From your station logbooks (cleaned by the Authority) and your training records only. Appraisals and station manager notes are not read at all. An AI read every log sentence and marked which job requirements it shows; it was checked against a person's grading on ten keepers before this page existed (see <code>EVALUATION_PLAN.md</code>).</p>
-    <p><strong>What the labels mean.</strong> <em>Authorized</em>: you hold the certificate and it is in date. <em>Nearly Qualified (Partial Cert)</em>: you hold some modules, or the certificate has lapsed. <em>Evidenced</em>: your logs show you doing this work at least twice; it is evidence of the work, not a certificate. <em>Not yet shown</em>: nothing in your records shows it, which is not the same as you not being able to do it.</p>
-    <p>There is no match score. Something wrong or missing? Tell your advisor. You can correct or add to anything here, and nothing goes to an employer without you seeing it first.</p>
+  <footer id="foot">
+    <p><strong>How this was made.</strong> From station logbooks (cleaned by the Authority) and training records only. Appraisals and station manager notes are never read. An AI read every log sentence and marked which job requirements it shows; it was checked against a person's grading on ten keepers before this page existed (<code>EVALUATION_PLAN.md</code>).</p>
+    <p><strong>What the labels mean.</strong> <em>Authorized</em>: the certificate is held and in date. <em>Nearly Qualified (Partial Cert)</em>: some modules held, or the certificate has lapsed. <em>Evidenced</em>: the logs show this work at least twice; evidence of the work, not a certificate. <em>Not yet shown</em>: nothing in the records shows it, which is not the same as not being able to do it.</p>
+    <p>There is no match score. Keepers can correct or add to anything, and nothing reaches an employer without the keeper seeing it first.</p>
   </footer>
 </main>
 
@@ -85,147 +165,295 @@ const DATA = /*__DATA__*/null;
 const Y = DATA.year;
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const yr = d => +d.slice(0, 4);
+const byCode = Object.fromEntries(DATA.keepers.map(k => [k.code, k]));
+const $ = id => document.getElementById(id);
 
-function certStatus(k, scheme, stage) {
+// Voice: the keeper reads "you"; the employer reads "they".
+const V = {
+  keeper: {Your: "Your", your: "your", you: "you", You: "You", have: "haven't", hold: "You hold", held: "You held"},
+  employer: {Your: "Their", your: "their", you: "they", You: "They", have: "haven't", hold: "Holds", held: "Held"},
+};
+
+// ---------- status logic (shared by both views) ----------
+function certStatus(k, scheme, stage, v) {
   const s = DATA.schemes[scheme], c = k.certs[scheme], recs = k.training[scheme] || [];
   const done = {}, attended = {}, failed = {};
-  for (const [mod, name, year, outcome] of recs) {
+  for (const [mod, , year, outcome] of recs) {
     if (outcome === "completed") { if (!done[mod] || done[mod] < year) done[mod] = year; }
     else if (outcome === "attended") attended[mod] = year;
     else if (outcome === "failed") failed[mod] = year;
   }
   const rows = s.modules.map(([mod, name]) => {
+    const stale = !!(done[mod] && s.renewal && (Y - done[mod]) > s.renewal);
     let state;
-    if (done[mod]) {
-      const old = s.renewal && (Y - done[mod]) > s.renewal;
-      state = `Completed ${done[mod]}` + (old ? ` <span class="muted">(this scheme renews every ${s.renewal} years, so this may need retaking)</span>` : "");
-    } else if (attended[mod]) state = `Attended ${attended[mod]}, not assessed`;
-    else if (failed[mod]) state = `Not passed (${failed[mod]})`;
-    else state = `<span class="muted">Not in your records</span>`;
-    return {mod, name, state, have: !!done[mod]};
+    if (done[mod]) state = `Completed ${done[mod]}` + (stale ? ` (this scheme renews every ${s.renewal} years, so this may need retaking)` : "");
+    else if (attended[mod]) state = `Attended ${attended[mod]}, not recorded as assessed`;
+    else if (failed[mod]) state = `Not recorded as passed (${failed[mod]})`;
+    else state = `Not in the records`;
+    return {mod, name, state, have: !!done[mod], stale, attended: attended[mod], failed: failed[mod], year: done[mod]};
   });
-  const missing = rows.filter(r => !r.have);
-  let tier, say;
+  const missing = rows.filter(r => !r.have), stale = rows.filter(r => r.stale);
+  let tier, say, steps;
   if (stage) {
     let st = 0; for (const r of rows) { if (r.have) st++; else break; }
-    if (st >= stage) { tier = "auth"; say = `Your records show Stage ${st}. Stage ${stage} is needed.`; }
-    else if (st > 0 || rows.some(r => r.have)) { tier = "near"; say = `Your records show Stage ${st}. Stage ${stage} is needed, so the next ${stage - st} module${stage - st > 1 ? "s" : ""} in order.`; }
-    else { tier = "none"; say = `No ${scheme} modules in your records. Stage ${stage} means the first ${stage} modules.`; }
+    steps = Math.max(0, stage - st);
+    if (st >= stage) { tier = "auth"; say = `Records show Stage ${st}. Stage ${stage} is needed.`; }
+    else if (rows.some(r => r.have)) { tier = "near"; say = `Records show Stage ${st}. Stage ${stage} is needed, so the next ${steps} module${steps > 1 ? "s" : ""} in order.`; }
+    else { tier = "none"; say = `No ${scheme} modules in the records. Stage ${stage} means the first ${stage} modules.`; }
   } else if (c && c.complete && c.valid_2026) {
-    tier = "auth"; say = `You hold the full certificate${c.expires_year ? `, in date until ${c.expires_year}` : ""}.`;
+    tier = "auth"; steps = 0; say = `${v.hold} the full certificate${c.expires_year ? `, in date until ${c.expires_year}` : ""}.`;
   } else if (c && c.complete) {
-    tier = "near"; say = `You held the full certificate, but it ran out${c.expires_year ? ` in ${c.expires_year}` : ""}. Renewing is usually shorter than starting again.`;
+    tier = "near"; steps = 1; say = `${v.held} the full certificate, but it ran out${c.expires_year ? ` in ${c.expires_year}` : ""}. Renewing is usually shorter than starting again.`;
   } else if (rows.some(r => r.have)) {
-    const stale = rows.filter(r => r.have && s.renewal && (Y - done[r.mod]) > s.renewal).length;
-    tier = "near"; say = `You hold ${rows.length - missing.length} of ${rows.length} modules` +
-      (stale ? `, though ${stale === rows.length - missing.length ? (stale > 1 ? "all of them are" : "it is") : stale + " of them " + (stale > 1 ? "are" : "is")} older than this scheme's ${s.renewal}-year renewal and may need retaking` : "") +
+    tier = "near"; steps = missing.length;
+    const held = rows.length - missing.length;
+    say = `${v.hold} ${held} of ${rows.length} modules` +
+      (stale.length ? `, though ${stale.length === held ? (held > 1 ? "all of them are" : "it is") : stale.length + " of them " + (stale.length > 1 ? "are" : "is")} older than this scheme's ${s.renewal}-year renewal and may need retaking` : "") +
       `. Still to do: ${missing.map(r => r.name).join("; ")}.`;
   } else {
-    tier = "none"; say = `Not in your records. ${Object.keys(attended).length ? "You attended some modules but they are not recorded as assessed." : ""}`;
+    tier = "none"; steps = rows.length; say = `Not in the records.`;
   }
-  const staleCount = rows.filter(r => r.have && s.renewal && (Y - done[r.mod]) > s.renewal).length;
-  return {tier, say, rows, missing, staleCount};
+  return {tier, say, rows, missing, stale, steps};
 }
 
-function logStatus(k, req, gate) {
+function logStatus(k, req, gate, v) {
   const ev = k.evidence[req], n = ev.yes.length;
   const years = ev.yes.map(e => yr(e[0]));
   const first = Math.min(...years), last = Math.max(...years);
-  let tier, say;
+  let tier, say, oldEvidence = false;
   if (n >= DATA.evidenced_min) {
     tier = gate ? "gate" : "evid";
-    say = `Your logs show this ${n === 2 ? "twice" : n + " times"}, ${first === last ? first : `${first} to ${last}`}.`;
-    if (Y - last > 10) say += ` The most recent is ${last}, so an employer may ask about recent practice.`;
-    if (gate) say += ` That is evidence you did the work. It is not an authorization, and the insurer will not treat it as one.`;
+    say = `${v.Your} logs show this ${n === 2 ? "twice" : n + " times"}, ${first === last ? first : `${first} to ${last}`}.`;
+    if (Y - last > 10) { oldEvidence = true; say += ` The most recent is ${last}, so an employer may ask about recent practice.`; }
+    if (gate) say += ` That is evidence of the work. It is not an authorization, and the insurer will not treat it as one.`;
   } else if (n === 1) {
     tier = "none"; say = `One log entry shows this (${first}). One isn't enough to count, but it's worth raising.`;
   } else {
-    tier = "none"; say = `Nothing in your logs clearly shows this. That doesn't mean you haven't done it; it may just not have been written down.`;
+    tier = "none"; say = `Nothing in the logs clearly shows this. That doesn't mean ${v.you} ${v.have} done it; it may just not have been written down.`;
   }
-  return {tier, say, n};
+  return {tier, say, n, last, oldEvidence};
 }
 
-const TIER = {auth: "Authorized", near: "Nearly Qualified (Partial Cert)", evid: "Evidenced", gate: "Evidenced (not an authorization)", none: "Not yet shown"};
+const TIER = {auth: "✓ Authorized", near: "◐ Nearly Qualified (Partial Cert)", evid: "● Evidenced", gate: "● Evidenced (not an authorization)", none: "○ Not yet shown"};
 
+// One role, one keeper: every line plus the route.
+function assess(k, posting, v) {
+  const lines = posting.items.map(it => {
+    if (it.kind === "log") return {it, ...logStatus(k, it.req, it.gate, v)};
+    if (it.kind === "cert") return {it, ...certStatus(k, it.scheme, it.stage, v)};
+    return {it, tier: "none", steps: 1};
+  });
+  const todo = [];
+  let modules = 0, gates = 0;
+  for (const L of lines) {
+    const it = L.it;
+    if (it.kind === "cert" && L.tier !== "auth") {
+      const sc = DATA.schemes[it.scheme];
+      modules += L.steps; gates++;
+      todo.push(it.stage ? `${sc.name}: reach Stage ${it.stage} (${L.steps} module${L.steps > 1 ? "s" : ""})` :
+        L.tier === "near" && L.missing.length && L.missing.length < sc.modules.length
+          ? `${sc.name}: ${L.missing.length} module${L.missing.length > 1 ? "s" : ""} to go (${L.missing.map(m => m.mod).join(", ")})${L.stale.length ? "; older modules may need retaking" : ""}`
+          : L.tier === "near" ? `${sc.name}: renew` : `${sc.name}: all ${sc.modules.length} modules`);
+    }
+    if (it.kind === "medical") { gates++; todo.push("An offshore medical"); }
+    if (it.kind === "log" && it.gate) {
+      gates++;
+      todo.push(L.tier === "gate"
+        ? "Two years' documented 11kV switching, or paperwork for a past Authority HV authorization (worth asking: switching like this normally needs one)"
+        : "Two years' documented 11kV switching, or paperwork for a past Authority HV authorization");
+    }
+  }
+  const exp = lines.filter(L => L.it.kind === "log" && !L.it.gate);
+  const shown = exp.filter(L => L.tier === "evid").length;
+  const gateEvidenced = lines.some(L => L.it.gate && L.tier === "gate");
+  return {lines, todo, modules, gates, shown, expTotal: exp.length, gateEvidenced};
+}
+
+// ---------- rendering ----------
 function entryList(list) {
   return `<ul class="entries">${list.map(([d, st, t, src]) =>
     `<li>${esc(d)} · ${esc(st)}<br>“${esc(t)}”<br><span class="src">${esc(src)}</span></li>`).join("")}</ul>`;
 }
+const head = (title, tier, level) =>
+  `<div class="req-head"><h3>${esc(title)}</h3><span class="tier t-${tier}">${TIER[tier]}</span><span class="level">${esc(level)}</span></div>`;
+const asks = it => `<p class="employer"><b>They ask for:</b> ${esc(it.employer)}</p>`;
 
-function renderLog(k, item) {
-  const meta = DATA.log_reqs[item.req], s = logStatus(k, item.req, item.gate), ev = k.evidence[item.req];
-  let body = `<p class="say">${s.say}</p>`;
-  if (s.n) {
-    const recent = ev.yes.slice(-3).reverse();
-    body += `<details><summary>See the ${s.n > 3 ? "3 most recent of " + s.n : s.n} log entries</summary>${entryList(recent)}` +
-            (s.n > 3 ? `<details><summary>Show all ${s.n}</summary>${entryList([...ev.yes].reverse())}</details>` : "") + `</details>`;
+function renderLine(k, L, v) {
+  const it = L.it;
+  if (it.kind === "medical") return head("Offshore medical", "none", it.level) + asks(it) +
+    `<p>Not in the records, which is expected; the Authority never needed one. It's an examination, not a course.</p>`;
+  if (it.kind === "cert") {
+    const sc = DATA.schemes[it.scheme];
+    return head(`${sc.name} (${it.scheme})`, L.tier, it.level) + asks(it) + `<p>${L.say}</p>` +
+      `<details><summary>Module by module</summary><table><thead><tr><th>Module</th><th>Record</th></tr></thead><tbody>` +
+      L.rows.map(r => `<tr><td>${esc(r.mod)} ${esc(r.name)}</td><td>${esc(r.state)}</td></tr>`).join("") + `</tbody></table></details>`;
   }
-  if (ev.maybe_count) {
-    body += `<details><summary>${ev.maybe_count} more entr${ev.maybe_count > 1 ? "ies" : "y"} might count, worth checking with your advisor</summary>` +
-            `<p class="muted">These could show it, but the entry alone doesn't settle it (for example, the voltage isn't written down). They are not counted above.</p>${entryList([...ev.maybe].reverse())}</details>`;
+  const meta = DATA.log_reqs[it.req], ev = k.evidence[it.req];
+  let body = `<p>${L.say}</p>`;
+  if (L.n) {
+    body += `<details><summary>See the ${L.n > 3 ? "3 most recent of " + L.n : L.n} log entries</summary>${entryList(ev.yes.slice(-3).reverse())}` +
+      (L.n > 3 ? `<details><summary>Show all ${L.n}</summary>${entryList([...ev.yes].reverse())}</details>` : "") + `</details>`;
   }
-  if (item.gate && s.n >= DATA.evidenced_min) {
-    body += `<div class="flag"><strong>A possible shortcut.</strong> The Competence Board accepts a lapsed Authority HV authorization instead of the two years' experience, but only with paperwork showing the original authorization. Switching like this normally needs an authorization, so the Authority may hold a record of one for you. Your logs can't prove it either way. Ask the Authority for your authorization record; the Array says it has rebuilt some from operator records and will try.</div>`;
-  }
-  if (s.tier === "none" || (item.gate && s.n < DATA.evidenced_min)) body += `<p class="muted"><strong>Route:</strong> ${meta.route}</p>`;
-  return {tier: s.tier, html: head(meta.plain, s.tier, item.level) + `<p class="employer">${esc(item.employer)}</p>` + body};
+  if (ev.maybe_count) body += `<details><summary>${ev.maybe_count} more entr${ev.maybe_count > 1 ? "ies" : "y"} might count, not included above</summary>` +
+    `<p class="soft">These could show it, but the entry alone doesn't settle it (for example, the voltage isn't written down).</p>${entryList([...ev.maybe].reverse())}</details>`;
+  if (it.gate && L.tier === "gate") body += `<div class="flag"><strong>A possible shortcut.</strong> The Competence Board accepts a lapsed Authority HV authorization instead of the two years' experience, but only with paperwork showing the original authorization. Switching like this normally needs an authorization, so the Authority may hold a record. The logs can't prove it either way.</div>`;
+  if (L.tier === "none" || (it.gate && L.tier !== "gate")) body += `<p class="soft"><strong>Route:</strong> ${esc(meta.route)}</p>`;
+  return head(meta.plain, L.tier, it.level) + asks(it) + body;
 }
 
-function renderCert(k, item) {
-  const s = certStatus(k, item.scheme, item.stage), sc = DATA.schemes[item.scheme];
-  const tbl = `<details><summary>Module by module</summary><table class="mods"><tr><th>Module</th><th>Your record</th></tr>` +
-              s.rows.map(r => `<tr><td>${esc(r.mod)} ${esc(r.name)}</td><td>${r.state}</td></tr>`).join("") + `</table></details>`;
-  return {tier: s.tier, missing: s.missing, stale: s.staleCount, html: head(`${sc.name} (${item.scheme})`, s.tier, item.level) +
-          `<p class="employer">${esc(item.employer)}</p><p class="say">${s.say}</p>${tbl}`};
+function renderPosting(k, p, v, A) {
+  const route = `<div class="route"><strong>Shortest honest route</strong>` +
+    (A.todo.length ? `<ol>${A.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : `<p>Nothing to book. The records cover what they ask for.</p>`) +
+    (p.id === "om" ? `<p class="soft" style="margin:8px 0 0">The Array trains everything else on the job. The logs show <span class="num">${A.lines.filter(L => L.it.kind === "log" && L.it.level === "essential" && L.tier === "evid").length} of ${A.lines.filter(L => L.it.kind === "log" && L.it.level === "essential").length}</span> essential experience requirements.</p>` : "") + `</div>`;
+  return `<section class="card" aria-labelledby="h-${p.id}"><h2 id="h-${p.id}">${esc(p.title)}</h2>` +
+    `<p class="soft">${esc(p.employer)} · ${esc(p.posts)}. ${esc(p.note)}</p>${route}` +
+    p.flags.map(f => `<div class="flag">${esc(f)}</div>`).join("") +
+    A.lines.map(L => `<div class="req">${renderLine(k, L, v)}</div>`).join("") + `</section>`;
 }
 
-function renderMedical(item) {
-  return {tier: "none", html: head("Offshore medical", "none", item.level) +
-          `<p class="employer">${esc(item.employer)}</p><p class="say">Your records don't include one, which is expected; the Authority never needed it. It's an examination, not a course.</p>`};
-}
-
-function head(title, tier, level) {
-  return `<div class="req-head"><h3>${esc(title)}</h3><span class="tier t-${tier}">${TIER[tier]}</span><span class="level">${esc(level)}</span></div>`;
-}
-
-function render(code) {
-  const k = DATA.keepers.find(x => x.code === code);
-  document.getElementById("intro").innerHTML =
-    `<h2>${esc(k.name)}</h2><p class="muted">${esc(k.grade)} · with the Authority since ${k.joined} · ${k.stations.length} station${k.stations.length > 1 ? "s" : ""} · ${k.entries} log entries read</p>` +
-    `<p>Each line below is one thing an employer asks for, in their words and in plain ones, with what your records show and how sure we can be. Where your logs are the evidence, you can open the entries yourself.</p>`;
-  document.getElementById("postings").innerHTML = DATA.postings.map(p => {
-    const parts = p.items.map(it => it.kind === "log" ? renderLog(k, it) : it.kind === "cert" ? renderCert(k, it) : renderMedical(it));
-    const todo = [];
-    p.items.forEach((it, i) => {
-      const r = parts[i];
-      if (it.kind === "cert" && r.tier !== "auth") {
-        const sc = DATA.schemes[it.scheme];
-        todo.push(it.stage ? `${sc.name}: reach Stage ${it.stage}` :
-          r.missing.length && r.missing.length < sc.modules.length ? `${sc.name}: ${r.missing.length} module${r.missing.length > 1 ? "s" : ""} to go (${r.missing.map(m => m.mod).join(", ")})${r.stale ? ", and older modules may need retaking" : ""}` :
-          r.tier === "near" ? `${sc.name}: renew` : `${sc.name}: all ${sc.modules.length} modules`);
+// Keeper-only: training needed across both roles, and what we need them to clarify.
+function keeperExtras(k, assessments) {
+  const v = V.keeper;
+  const training = new Map(), retake = new Map(), asksList = [];
+  for (const [p, A] of assessments) for (const L of A.lines) {
+    const it = L.it;
+    if (it.kind === "cert" && L.tier !== "auth") {
+      const sc = DATA.schemes[it.scheme];
+      const mods = it.stage ? L.missing.slice(0, L.steps) : L.missing;
+      for (const m of mods) {
+        const key = m.mod;
+        if (!training.has(key)) training.set(key, {sc: sc.name, m, roles: new Set()});
+        training.get(key).roles.add(p.title);
       }
-      if (it.kind === "medical") todo.push("An offshore medical");
-      if (it.kind === "log" && it.gate) todo.push(parts[i].tier === "gate"
-        ? "Two years' documented 11kV switching, or the paperwork for a past Authority HV authorization (worth asking: switching like yours normally needs one)"
-        : "Two years' documented 11kV switching, or the paperwork for a past Authority HV authorization");
-    });
-    const essentialsShown = p.items.filter((it, i) => it.kind === "log" && !it.gate && ["essential"].includes(it.level) && parts[i].tier === "evid").length;
-    const essentialsTotal = p.items.filter(it => it.kind === "log" && !it.gate && it.level === "essential").length;
-    const route = `<div class="route"><strong>Shortest honest route</strong>` +
-      (todo.length ? `<ol>${todo.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : `<p>Nothing to book. Your records cover what they ask for.</p>`) +
-      (p.id === "om" ? `<p class="muted" style="margin-top:8px">Everything else the Array trains on the job. Your logs show ${essentialsShown} of the ${essentialsTotal} essential experience requirements; the certificate and medical are the only things to book.</p>` : "") + `</div>`;
-    return `<section class="posting" aria-labelledby="h-${p.id}"><h2 id="h-${p.id}">${esc(p.title)}</h2>` +
-      `<p class="muted">${esc(p.employer)} · ${esc(p.posts)}. ${esc(p.note)}</p>${route}` +
-      p.flags.map(f => `<div class="flag">${esc(f)}</div>`).join("") +
-      parts.map(x => `<div class="req">${x.html}</div>`).join("") + `</section>`;
-  }).join("");
+      for (const m of L.stale) retake.set(m.mod, `${m.mod} ${m.name} (completed ${m.year}; ${sc.name} renews every ${sc.renewal} years)`);
+      for (const r of L.rows) {
+        if (r.attended && !r.have) asksList.push(`${sc.name}, ${r.mod} ${r.name}: you attended in ${r.attended} but it isn't recorded as assessed. If you were assessed, do you have the certificate?`);
+      }
+    }
+  }
+  const seen = new Set();
+  for (const [p, A] of assessments) for (const L of A.lines) {
+    const it = L.it; if (it.kind !== "log" || seen.has(it.req + L.tier)) continue;
+    seen.add(it.req + L.tier);
+    const meta = DATA.log_reqs[it.req], ev = k.evidence[it.req];
+    if (ev.maybe_count && L.tier === "none") asksList.push(`${meta.plain}: ${ev.maybe_count} log entr${ev.maybe_count > 1 ? "ies" : "y"} might show this but don't settle it. Can you tell us more?`);
+    if (L.n === 1) asksList.push(`${meta.plain}: only one log entry shows this. Have you done it at other times that weren't written up?`);
+    if (L.oldEvidence) asksList.push(`${meta.plain}: your most recent logged example is ${L.last}. Have you done this more recently, at the Authority or elsewhere?`);
+    if (it.gate && L.tier === "gate") asksList.push(`HV switching: did you ever hold an Authority HV authorization? If so, any letter, card or record of it could replace two years of documented experience for the HV role.`);
+  }
+  if (assessments.some(([p]) => p.id === "om")) asksList.push("Offshore safety certificate: the O&M posting says it covers working at height, but height is a separate certificate in the scheme list. We're asking the Array which they mean; no need to book anything yet.");
+  const tr = [...training.values()];
+  return `<section class="card"><h2>Training you'd need</h2>` +
+    (tr.length ? `<p class="soft">For this role. Nothing here is booked; your advisor can help you choose.</p><div class="rank-wrap"><table><thead><tr><th>Course module</th><th>Certificate</th></tr></thead><tbody>` +
+      tr.map(t => `<tr><td>${esc(t.m.mod)} ${esc(t.m.name)}</td><td>${esc(t.sc)}</td></tr>`).join("") + `</tbody></table></div>` : `<p>No certificate modules outstanding.</p>`) +
+    `<p style="margin-top:12px">Plus an <strong>offshore medical</strong> (an examination, not a course).</p>` +
+    (retake.size ? `<div class="flag"><strong>May need retaking.</strong> These modules are older than their certificate's renewal period. We don't know yet whether the issuing body will still count them.<ul>${[...retake.values()].map(r => `<li>${esc(r)}</li>`).join("")}</ul></div>` : "") +
+    `</section>` +
+    `<section class="card"><h2>Where we need you to clarify</h2><p class="soft">Your answers can only add to your record. Tell your advisor, or reply to the questions they send.</p>` +
+    `<div class="list"><ol>${asksList.map(a => `<li style="margin-bottom:8px">${esc(a)}</li>`).join("")}</ol></div></section>`;
 }
 
-const sel = document.getElementById("keeper");
-sel.innerHTML = DATA.keepers.map(k => `<option value="${k.code}">${esc(k.name)} (${k.code})</option>`).join("");
-sel.addEventListener("change", () => { render(sel.value); history.replaceState(null, "", "#" + sel.value); });
-const start = (location.hash.slice(1) && DATA.keepers.some(k => k.code === location.hash.slice(1))) ? location.hash.slice(1) : DATA.keepers[0].code;
-sel.value = start; render(start);
+let keeperCode = null;
+function renderKeeper(code) {
+  keeperCode = code;
+  const k = byCode[code];
+  const opts = DATA.postings.map(p => `<option value="${p.id}">${esc(p.title)}, ${esc(p.employer)} (${esc(p.posts)})</option>`).join("") +
+    `<optgroup label="Also open, not yet assessed in this prototype">` +
+    DATA.not_assessed.map(t => `<option disabled>${esc(t)}</option>`).join("") + `</optgroup>`;
+  $("keeper-view").innerHTML =
+    `<h1>${esc(k.name)}</h1><p class="soft">${esc(k.grade)} · with the Authority since ${k.joined} · ${k.stations.length} station${k.stations.length > 1 ? "s" : ""} · ${k.entries} of your log entries read</p>` +
+    `<div class="card"><p>Choose an open role to see how your record compares: what you already have, the training you'd need, and where we need you to clarify. Only you can see this page until you choose to share it.</p>` +
+    `<label for="k-role">Open role</label><select id="k-role" style="width:100%">${opts}</select></div>` +
+    `<div id="k-detail"></div>`;
+  $("k-role").value = DATA.postings[0].id;
+  $("k-role").onchange = renderKeeperRole;
+  renderKeeperRole();
+}
+function renderKeeperRole() {
+  const k = byCode[keeperCode], v = V.keeper;
+  const p = DATA.postings.find(x => x.id === $("k-role").value) || DATA.postings[0];
+  const A = assess(k, p, v);
+  $("k-detail").innerHTML = renderPosting(k, p, v, A) + keeperExtras(k, [[p, A]]);
+}
+
+// ---------- employer: sort by closeness to ready, with the reasons visible ----------
+function readiness(k, p) {
+  const A = assess(k, p, V.employer);
+  return {k, A, key: [A.gates, A.modules, -(A.gateEvidenced ? 1 : 0), -A.shown, k.name]};
+}
+function cmp(a, b) {
+  for (let i = 0; i < a.key.length; i++) {
+    if (a.key[i] < b.key[i]) return -1;
+    if (a.key[i] > b.key[i]) return 1;
+  }
+  return 0;
+}
+function summary(r, p) {
+  const A = r.A;
+  return `${A.gates} requirement${A.gates !== 1 ? "s" : ""} to clear (${A.modules} module${A.modules !== 1 ? "s" : ""})` +
+    (p.id === "hv" ? ` · HV switching ${A.gateEvidenced ? "evidenced" : "not shown"}` : "") +
+    ` · experience shown ${A.shown} of ${A.expTotal}`;
+}
+function renderEmployer() {
+  const p = DATA.postings.find(x => x.id === $("e-role").value);
+  const mode = $("e-sort").value;
+  const rows = DATA.keepers.map(k => readiness(k, p));
+  rows.sort(mode === "alpha" ? (a, b) => a.k.name.localeCompare(b.k.name) : cmp);
+  $("sort-explain").textContent = mode === "alpha"
+    ? "Sorted by name."
+    : "Closest to ready, without a percentage: fewest requirements left to clear (certificates, medical, the HV paperwork), then fewest course modules, then HV switching evidenced, then the most experience shown in the logs. Each keeper's reasons are shown next to their name.";
+  const prev = $("e-keeper").value;
+  $("e-keeper").innerHTML = rows.map((r, i) =>
+    `<option value="${r.k.code}">${mode === "ready" ? (i + 1) + ". " : ""}${esc(r.k.name)} (${r.k.code}): ${esc(summary(r, p))}</option>`).join("");
+  $("rank").innerHTML = `<table><thead><tr><th>${mode === "ready" ? "#" : ""}</th><th>Keeper</th><th>To clear</th><th>Modules</th>${p.id === "hv" ? "<th>HV switching</th>" : ""}<th>Experience shown</th></tr></thead><tbody>` +
+    rows.map((r, i) => `<tr><td>${mode === "ready" ? i + 1 : ""}</td><td>${esc(r.k.name)} (${r.k.code})</td><td>${r.A.gates}</td><td>${r.A.modules}</td>${p.id === "hv" ? `<td>${r.A.gateEvidenced ? "Evidenced" : "Not shown"}</td>` : ""}<td>${r.A.shown} of ${r.A.expTotal}</td></tr>`).join("") + `</tbody></table>`;
+  $("e-keeper").value = rows.some(r => r.k.code === prev) ? prev : rows[0].k.code;
+  renderEmployerDetail();
+}
+function renderEmployerDetail() {
+  const p = DATA.postings.find(x => x.id === $("e-role").value);
+  const k = byCode[$("e-keeper").value], v = V.employer, A = assess(k, p, v);
+  $("e-detail").innerHTML =
+    `<div class="card"><h2>${esc(k.name)} (${k.code})</h2><p class="soft" style="margin:0">${esc(k.grade)} · with the Authority since ${k.joined} · ${k.stations.length} station${k.stations.length > 1 ? "s" : ""} · ${k.entries} log entries</p>` +
+    `<p style="margin:10px 0 0">Inferred from logs and training records. Evidence of work is not certification, and nothing here replaces your own assessment at interview.</p></div>` +
+    renderPosting(k, p, v, A);
+}
+
+// ---------- sign-in (prototype only) ----------
+function show(view) {
+  $("signin").hidden = view !== "signin";
+  $("keeper-view").hidden = view !== "keeper";
+  $("employer-view").hidden = view !== "employer";
+  $("who").hidden = view === "signin";
+  window.scrollTo(0, 0);
+}
+function tab(which) {
+  $("tab-k").setAttribute("aria-selected", which === "k");
+  $("tab-e").setAttribute("aria-selected", which === "e");
+  $("form-k").hidden = which !== "k"; $("form-e").hidden = which !== "e"; $("si-err").textContent = "";
+}
+$("tab-k").onclick = () => tab("k");
+$("tab-e").onclick = () => tab("e");
+$("form-k").onsubmit = e => {
+  e.preventDefault();
+  const code = $("k-code").value.trim().toUpperCase();
+  if (!byCode[code] || $("k-pass").value !== "carrowmore") { $("si-err").textContent = "That keeper code and password don't match. (Prototype: try K0566 with carrowmore.)"; return; }
+  $("who-name").textContent = `${byCode[code].name} · keeper`;
+  renderKeeper(code); show("keeper");
+};
+$("form-e").onsubmit = e => {
+  e.preventDefault();
+  if (!$("e-user").value.includes("@") || $("e-pass").value !== "array") { $("si-err").textContent = "That email and password don't match. (Prototype: any email, password array.)"; return; }
+  $("who-name").textContent = `${$("e-user").value} · employer`;
+  $("e-role").innerHTML = DATA.postings.map(p => `<option value="${p.id}">${esc(p.title)}</option>`).join("");
+  $("e-role").value = DATA.postings[0].id; $("e-sort").value = "ready";
+  renderEmployer(); show("employer");
+};
+$("e-role").onchange = renderEmployer;
+$("e-sort").onchange = renderEmployer;
+$("e-keeper").onchange = renderEmployerDetail;
+$("signout").onclick = () => { $("keeper-view").innerHTML = ""; $("e-detail").innerHTML = ""; $("k-pass").value = ""; $("e-pass").value = ""; show("signin"); };
+show("signin");
 </script>
 </body>
 </html>

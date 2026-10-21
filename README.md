@@ -4,7 +4,11 @@ Senior PM, Zero to One exercise. Start with `FRAMING.md` (the bet), then open th
 
 ## Open the prototype
 
-Open `prototype/keeper_view.html` in any browser. It needs no install, server or network. Pick a keeper from the list; add `#K0566` to the URL to jump to one with HV evidence.
+Open `prototype/index.html` in any browser. It needs no install or server; without a network it falls back from Plus Jakarta Sans to Arial.
+
+Sign in as a **keeper** (any keeper code, e.g. `K0566` or `K1483`, password `carrowmore`) to see one record only, with a drop-down of open roles: pick a role to see how the record compares, the training needed for it, and where the keeper is asked to clarify. Two roles are assessed; the other four postings are listed but marked as not yet assessed. Sign in as an **employer** (any email, password `array`) to browse all shared records by role, sorted alphabetically or by closeness to ready.
+
+The sign-in is a prototype affordance, not security: every record is in the one file. It's there to show how the two views are scoped differently.
 
 To rebuild it from the data (Python 3, standard library only):
 
@@ -19,7 +23,7 @@ python3 prototype/build.py
 | `FRAMING.md` | The one-page framing |
 | `EVALUATION_PLAN.md` | The test and its kill rules, committed before any AI output existed |
 | `ai-was-wrong.md` | Running log of where the AI was wrong and what I did about it |
-| `prototype/` | The keeper view and its build script |
+| `prototype/` | The keeper and employer views (`index.html`), the template and build script, and the Pearson logo from the brand guidelines |
 | `prompts/map_prompt.md` | The prompt the AI followed to label log sentences |
 | `eval/` | Keeper selection, keyword baseline, blind grading sheets, AI labels, scoring |
 | `carrowmore-data-pack/` | `clean/`, `employers/` and `reference/` from the supplied pack; `raw/` is not committed |
