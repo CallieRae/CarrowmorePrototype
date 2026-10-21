@@ -1,0 +1,110 @@
+{
+ "seed": 2029,
+ "attempts": 10,
+ "tercile_join_years": {
+  "long": [
+   1979,
+   1996
+  ],
+  "mid": [
+   1996,
+   2004
+  ],
+  "short": [
+   2004,
+   2014
+  ]
+ },
+ "keepers": [
+  {
+   "keeper_code": "K1483",
+   "joined": 1984,
+   "class": "shore",
+   "era1_entries": 221,
+   "entries": 268,
+   "tercile": "long",
+   "split": "dev"
+  },
+  {
+   "keeper_code": "K1468",
+   "joined": 1993,
+   "class": "shore",
+   "era1_entries": 111,
+   "entries": 200,
+   "tercile": "long",
+   "split": "dev"
+  },
+  {
+   "keeper_code": "K0566",
+   "joined": 1999,
+   "class": "island",
+   "era1_entries": 68,
+   "entries": 260,
+   "tercile": "mid",
+   "split": "dev"
+  },
+  {
+   "keeper_code": "K0592",
+   "joined": 1999,
+   "class": "rock",
+   "era1_entries": 46,
+   "entries": 316,
+   "tercile": "mid",
+   "split": "dev"
+  },
+  {
+   "keeper_code": "K0303",
+   "joined": 2000,
+   "class": "shore",
+   "era1_entries": 36,
+   "entries": 367,
+   "tercile": "mid",
+   "split": "dev"
+  },
+  {
+   "keeper_code": "K0663",
+   "joined": 2009,
+   "class": "shore",
+   "era1_entries": 0,
+   "entries": 240,
+   "tercile": "short",
+   "split": "dev"
+  },
+  {
+   "keeper_code": "K1446",
+   "joined": 2009,
+   "class": "rock",
+   "era1_entries": 0,
+   "entries": 408,
+   "tercile": "short",
+   "split": "dev"
+  },
+  {
+   "keeper_code": "K0310",
+   "joined": 1993,
+   "class": "shore",
+   "era1_entries": 113,
+   "entries": 320,
+   "tercile": "long",
+   "split": "holdout"
+  },
+  {
+   "keeper_code": "K0354",
+   "joined": 2001,
+   "class": "shore",
+   "era1_entries": 24,
+   "entries": 199,
+   "tercile": "mid",
+   "split": "holdout"
+  },
+  {
+   "keeper_code": "K0478",
+   "joined": 2014,
+   "class": "rock",
+   "era1_entries": 0,
+   "entries": 192,
+   "tercile": "short",
+   "split": "holdout"
+  }
+ ]
+}

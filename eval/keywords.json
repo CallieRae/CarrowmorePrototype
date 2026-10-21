@@ -1,0 +1,8 @@
+{
+  "_note": "Pre-registered keyword baseline. Written before any AI mapping was run and not tuned afterward. Case-insensitive substring match on entry text. An entry matches a requirement if any term appears.",
+  "R1_MAINT": ["overhaul", "rebuilt", "rebuild", "replaced", "renewed", "changed out", "serviced", "stripped", "bearing", "pump", "generator", "engine", "motor", "gearbox", "sump", "injector", "alternator", "avr", "brushes"],
+  "R2_FAULT": ["fault", "traced", "diagnos", "intermittent", "megger", "insulation", "continuity", "tripped", "trip", "clamp meter", "found the"],
+  "R3_PERMIT": ["permit", "ptw", "safety document", "lock off", "locked off", "sanction"],
+  "R4_HVSW": ["hv", "11kv", "11 kv", "high voltage", "switched", "switching", "earthed", "earths applied", "proved dead", "isolated", "transformer"],
+  "R5_HEIGHT": ["height", "ladder", "fall arrest", "harness", "gallery", "rope", "abseil", "confined", "enclosed space", "tank", "staging", "tower"]
+}

@@ -1,0 +1,1983 @@
+{
+ "G0001": {
+  "requirement": "R1_MAINT",
+  "norm": "recovered a broken-down punt under tow in a rising sea, made fast and got her in.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0002": {
+  "requirement": "R1_MAINT",
+  "norm": "rebuilt the no.# pump end to end, new wear rings, delivery back up to # bar.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0003": {
+  "requirement": "R1_MAINT",
+  "norm": "isolated no.# transformer, earths applied both ends, ptw # issued to the contractor.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0004": {
+  "requirement": "R1_MAINT",
+  "norm": "repaired the storm damage to the landing wall, rebuilt to the original batter.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0005": {
+  "requirement": "R1_MAINT",
+  "norm": "rebuilt the no # pump end to end, new wear rings, delivery back up to # v.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0006": {
+  "requirement": "R1_MAINT",
+  "norm": "rebuilt the clockwork drive, cleaned forty years of gum out of the train.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0007": {
+  "requirement": "R1_MAINT",
+  "norm": "rebuilt the changeover logic after the flood, drew out the sequence before touching it.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0008": {
+  "requirement": "R1_MAINT",
+  "norm": "ran the sump pump out, # hrs.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0009": {
+  "requirement": "R1_MAINT",
+  "norm": "cleaned the lantern glass from the staging.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0010": {
+  "requirement": "R1_MAINT",
+  "norm": "work allocated and checked at #.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0011": {
+  "requirement": "R1_MAINT",
+  "norm": "renewed the sacrificial anodes on the slipway and recorded the wastage rates.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0012": {
+  "requirement": "R1_MAINT",
+  "norm": "compressor not making pressure, rings worn. rebuilt the no.# cylinder.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0013": {
+  "requirement": "R1_MAINT",
+  "norm": "reported the landing as unsafe and refused relief until it was made good.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0014": {
+  "requirement": "R1_MAINT",
+  "norm": "replaced # lantern panes, cut and bedded, no leaks after the next gale.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0015": {
+  "requirement": "R1_MAINT",
+  "norm": "renewed the putty on # panes.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0016": {
+  "requirement": "R1_MAINT",
+  "norm": "traced the nuisance low-volt alarm to a soft cell in the no.# bank, replaced it.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0017": {
+  "requirement": "R1_MAINT",
+  "norm": "set the timing on no.# after the pump was refitted, ran it up and checked exhaust temps.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0018": {
+  "requirement": "R1_MAINT",
+  "norm": "ran the overhaul party of # men, planned the sequence and kept them to it.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0019": {
+  "requirement": "R1_MAINT",
+  "norm": "reprogrammed the dsc controller after the board change and tested with the coast station.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0020": {
+  "requirement": "R1_MAINT",
+  "norm": "cut out and rebuilt # courses on the seaward parapet, lime mix to the old spec.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0021": {
+  "requirement": "R1_MAINT",
+  "norm": "primed the no # pump, running sweet.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0022": {
+  "requirement": "R1_MAINT",
+  "norm": "radio check with the district. loud and clear.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0023": {
+  "requirement": "R1_MAINT",
+  "norm": "injectors off no # and pop-tested, two were dribbling. reconditioned and refitted.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0024": {
+  "requirement": "R1_MAINT",
+  "norm": "helipad swept and the nets checked.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0025": {
+  "requirement": "R1_MAINT",
+  "norm": "stripped failed cement render off the tower and replaced with lime, it needs to breathe.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0026": {
+  "requirement": "R1_MAINT",
+  "norm": "injectors off no.# and pop-tested, two were dribbling. reconditioned and refitted.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0027": {
+  "requirement": "R1_MAINT",
+  "norm": "mechanical seal gone on the fire pump, fitted new and re-aligned the coupling.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0028": {
+  "requirement": "R1_MAINT",
+  "norm": "rebuilt the no # pump end to end, new wear rings, delivery back up to # ohm.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0029": {
+  "requirement": "R1_MAINT",
+  "norm": "isolated no.# transformer, earths applied both ends, ptw/# issued to the contractor.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0030": {
+  "requirement": "R1_MAINT",
+  "norm": "repacked the gland on the no # pump, set the drip and ran up to # v.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0031": {
+  "requirement": "R1_MAINT",
+  "norm": "set the timing on no # after the pump was refitted, ran it up and checked exhaust temps.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0032": {
+  "requirement": "R1_MAINT",
+  "norm": "engine run up and flushed after use.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0033": {
+  "requirement": "R1_MAINT",
+  "norm": "gearbox stripped on the winch, # teeth found broken. replaced the wheel.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0034": {
+  "requirement": "R1_MAINT",
+  "norm": "repacked the gland on the no # pump, set the drip and ran up to # ohm.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0035": {
+  "requirement": "R1_MAINT",
+  "norm": "pump losing prime, found the foot valve seat pitted. lapped it in.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0036": {
+  "requirement": "R1_MAINT",
+  "norm": "topped coolant, checked belts. nil defects.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0037": {
+  "requirement": "R1_MAINT",
+  "norm": "traced the nuisance low-volt alarm to a soft cell in the no # bank, replaced it.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0038": {
+  "requirement": "R1_MAINT",
+  "norm": "compressor not making pressure, rings worn. rebuilt the no # cylinder.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0039": {
+  "requirement": "R1_MAINT",
+  "norm": "renewed the glazing bars on the seaward side where they had wasted through.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0040": {
+  "requirement": "R1_MAINT",
+  "norm": "drive motor brushes and commutator dressed, rotation back to time.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0041": {
+  "requirement": "R1_MAINT",
+  "norm": "renewed fuse links, no # way. all made off.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0042": {
+  "requirement": "R1_MAINT",
+  "norm": "rebuilt the no.# pump end to end, new wear rings, delivery back up to # ohm.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0043": {
+  "requirement": "R1_MAINT",
+  "norm": "fresh water pumped up to the tower tank.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0044": {
+  "requirement": "R1_MAINT",
+  "norm": "engine room fire in the no.# set, hit it with foam and shut off the fuel. out in minutes.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0045": {
+  "requirement": "R1_MAINT",
+  "norm": "set up a duty/standby arrangement on the two sump pumps with alternating starts.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0046": {
+  "requirement": "R1_MAINT",
+  "norm": "checked board readings, # bar on the outgoing.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0047": {
+  "requirement": "R1_MAINT",
+  "norm": "ran no # set # hrs. oil and water checked.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0048": {
+  "requirement": "R1_MAINT",
+  "norm": "bottom-end knock on no.#, dropped the sump and found # big-end shells scored.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0049": {
+  "requirement": "R1_MAINT",
+  "norm": "windsock renewed.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0050": {
+  "requirement": "R1_MAINT",
+  "norm": "overhauled the raw water side, impeller, seals and the heat exchanger stack cleaned.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0051": {
+  "requirement": "R1_MAINT",
+  "norm": "diaphone piston sticking, stripped it out, lapped the sleeve and reset the travel.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0052": {
+  "requirement": "R1_MAINT",
+  "norm": "re-terminated the no.# outgoing at the board, ir tested at # ohm before re-energising.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0053": {
+  "requirement": "R1_MAINT",
+  "norm": "re-terminated the no.# outgoing at the board, ir tested at # bar before re-energising.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0054": {
+  "requirement": "R1_MAINT",
+  "norm": "rebuilt the stores ledger from scratch, three years of it had never been posted.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0055": {
+  "requirement": "R1_MAINT",
+  "norm": "acted as issuing authority for # permits during the overhaul.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0056": {
+  "requirement": "R1_MAINT",
+  "norm": "primed the no.# pump, running sweet.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0057": {
+  "requirement": "R1_MAINT",
+  "norm": "rebuilt the no.# pump end to end, new wear rings, delivery back up to # psi.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0058": {
+  "requirement": "R1_MAINT",
+  "norm": "stripped and cleaned the mercury bath, float centred and the rotation smoothed out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0059": {
+  "requirement": "R1_MAINT",
+  "norm": "repacked the gland on the no.# pump, set the drip and ran up to # v.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0060": {
+  "requirement": "R1_MAINT",
+  "norm": "renewed fuse links, no.# way. all made off.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0061": {
+  "requirement": "R1_MAINT",
+  "norm": "renewed # cells and rebalanced the bank, equalising charge started.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0062": {
+  "requirement": "R1_MAINT",
+  "norm": "rotation checked against the stopwatch.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0063": {
+  "requirement": "R1_MAINT",
+  "norm": "rebuilt the no.# pump end to end, new wear rings, delivery back up to # v.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0064": {
+  "requirement": "R1_MAINT",
+  "norm": "cleaned terminals and greased. no damage.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0065": {
+  "requirement": "R1_MAINT",
+  "norm": "lamp not lit, found the fuse gone. renewed.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0066": {
+  "requirement": "R1_MAINT",
+  "norm": "took the punt round to the east landing.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0067": {
+  "requirement": "R1_MAINT",
+  "norm": "rendered the patch by the door.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0068": {
+  "requirement": "R1_MAINT",
+  "norm": "renewed a shackle on the boat mooring.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0069": {
+  "requirement": "R1_MAINT",
+  "norm": "renewed the winch wire, # splices made up and the drum re-laid properly.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0070": {
+  "requirement": "R2_FAULT",
+  "norm": "kept a lookout for the missing boat.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0071": {
+  "requirement": "R2_FAULT",
+  "norm": "stripped and cleaned the mercury bath, float centred and the rotation smoothed out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0072": {
+  "requirement": "R2_FAULT",
+  "norm": "megger test on the no.# feeder, # v, condemned the cable and ran a temporary.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0073": {
+  "requirement": "R2_FAULT",
+  "norm": "signal secured, visibility cleared.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0074": {
+  "requirement": "R2_FAULT",
+  "norm": "checked continuity on the run to the fog hut.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0075": {
+  "requirement": "R2_FAULT",
+  "norm": "worked a poor-range casualty through on ch.# and relayed to the coast station.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0076": {
+  "requirement": "R2_FAULT",
+  "norm": "stood by while relief switched the no.# transformer out.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0077": {
+  "requirement": "R2_FAULT",
+  "norm": "reset the overspeed after a false trip.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0078": {
+  "requirement": "R2_FAULT",
+  "norm": "dressed a cut hand for relief.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0079": {
+  "requirement": "R2_FAULT",
+  "norm": "traced and lifted an earth fault on the tower lighting ring, split the ring to find it.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0080": {
+  "requirement": "R2_FAULT",
+  "norm": "megger test on the no.# feeder, # ohm, condemned the cable and ran a temporary.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0081": {
+  "requirement": "R2_FAULT",
+  "norm": "quarterly inspection carried out, report filed.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0082": {
+  "requirement": "R2_FAULT",
+  "norm": "rebuilt the clockwork drive, cleaned forty years of gum out of the train.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0083": {
+  "requirement": "R2_FAULT",
+  "norm": "intermittent fault on the gallery lights, watching it.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0084": {
+  "requirement": "R2_FAULT",
+  "norm": "lamp not lit, found the fuse gone. renewed.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0085": {
+  "requirement": "R2_FAULT",
+  "norm": "cleaned the lantern glass from the staging.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0086": {
+  "requirement": "R2_FAULT",
+  "norm": "traced the nuisance low-volt alarm to a soft cell in the no.# bank, replaced it.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0087": {
+  "requirement": "R2_FAULT",
+  "norm": "worked the fault down by halving the circuit, found a wet joint in the no # pull box.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0088": {
+  "requirement": "R2_FAULT",
+  "norm": "lamp circuit off at the board while cleaning.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0089": {
+  "requirement": "R2_FAULT",
+  "norm": "megger test on the no # feeder, # v, condemned the cable and ran a temporary.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0090": {
+  "requirement": "R2_FAULT",
+  "norm": "alarm bell sounding, traced to a loose wire.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0091": {
+  "requirement": "R2_FAULT",
+  "norm": "diaphone piston sticking, stripped it out, lapped the sleeve and reset the travel.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0092": {
+  "requirement": "R2_FAULT",
+  "norm": "gearbox stripped on the winch, # teeth found broken. replaced the wheel.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0093": {
+  "requirement": "R2_FAULT",
+  "norm": "isolated no.# transformer, earths applied both ends, permit # issued to the contractor.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0094": {
+  "requirement": "R2_FAULT",
+  "norm": "renewed fuse links, no.# way. all made off.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0095": {
+  "requirement": "R2_FAULT",
+  "norm": "aton reporting intermittently, traced to the power supply dropping below # ohm at night.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0096": {
+  "requirement": "R2_FAULT",
+  "norm": "stripped failed cement render off the tower and replaced with lime, it needs to breathe.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0097": {
+  "requirement": "R2_FAULT",
+  "norm": "traced the nuisance low-volt alarm to a soft cell in the no # bank, replaced it.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0098": {
+  "requirement": "R2_FAULT",
+  "norm": "set up the telemetry link so the lamp fault alarm comes through on the aton message.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0099": {
+  "requirement": "R2_FAULT",
+  "norm": "worked the fault down by halving the circuit, found a wet joint in the no.# pull box.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0100": {
+  "requirement": "R2_FAULT",
+  "norm": "traced repeated false alerts to a fault in the position feed from the receiver.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0101": {
+  "requirement": "R2_FAULT",
+  "norm": "aton reporting intermittently, traced to the power supply dropping below # v at night.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0102": {
+  "requirement": "R2_FAULT",
+  "norm": "megger test on the no # feeder, # ohm, condemned the cable and ran a temporary.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0103": {
+  "requirement": "R2_FAULT",
+  "norm": "traced bimetallic corrosion at the rail fixings to the wrong bolts being used in #.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0104": {
+  "requirement": "R2_FAULT",
+  "norm": "auto start tested. came up on the first attempt.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0105": {
+  "requirement": "R2_FAULT",
+  "norm": "fault only showed when the compressor cut in, proved it with the clamp meter.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0106": {
+  "requirement": "R2_FAULT",
+  "norm": "racked out no.# breaker, locked off, caps on, danger notices up. permit # refers.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0107": {
+  "requirement": "R2_FAULT",
+  "norm": "greased the compressor and checked the belts.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0108": {
+  "requirement": "R2_FAULT",
+  "norm": "aton reporting intermittently, traced to the power supply dropping below # psi at night.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0109": {
+  "requirement": "R2_FAULT",
+  "norm": "tank entry, # hrs inside.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0110": {
+  "requirement": "R2_FAULT",
+  "norm": "reset tripped breaker on lighting sub-board.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0111": {
+  "requirement": "R2_FAULT",
+  "norm": "changer tested, steps round correctly.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0112": {
+  "requirement": "R2_FAULT",
+  "norm": "traced an intermittent on the lamp changer back to a chafed core in the riser duct.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0113": {
+  "requirement": "R2_FAULT",
+  "norm": "entries checked and signed.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0114": {
+  "requirement": "R2_FAULT",
+  "norm": "megger test on the no.# feeder, # psi, condemned the cable and ran a temporary.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0115": {
+  "requirement": "R2_FAULT",
+  "norm": "pump losing prime, found the foot valve seat pitted. lapped it in.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0116": {
+  "requirement": "R2_FAULT",
+  "norm": "ran through the fire drill with the new man.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0117": {
+  "requirement": "R2_FAULT",
+  "norm": "sat through the night to catch the earth fault. it was the heater element in the fog hut.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0118": {
+  "requirement": "R2_FAULT",
+  "norm": "dressed a cut hand for sak.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0119": {
+  "requirement": "R2_FAULT",
+  "norm": "dressed a cut hand for #nd.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0120": {
+  "requirement": "R3_PERMIT",
+  "norm": "set up the haul for a heavy lift in a poor sea, rigged a preventer on the fall.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0121": {
+  "requirement": "R3_PERMIT",
+  "norm": "isolated no # transformer, earths applied both ends, ptw # issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0122": {
+  "requirement": "R3_PERMIT",
+  "norm": "isolated no # transformer, earths applied both ends, permit # issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0123": {
+  "requirement": "R3_PERMIT",
+  "norm": "racked out no.# breaker, locked off, caps on, danger notices up. ptw # refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0124": {
+  "requirement": "R3_PERMIT",
+  "norm": "acted as issuing authority for # permits during the overhaul.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0125": {
+  "requirement": "R3_PERMIT",
+  "norm": "earthed off both ends of the sub-sea feed, cancelled permit # at # and restored supply.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0126": {
+  "requirement": "R3_PERMIT",
+  "norm": "held the keys for the hv work, permit # refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0127": {
+  "requirement": "R3_PERMIT",
+  "norm": "racked out no.# breaker, locked off, caps on, danger notices up. permit # refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0128": {
+  "requirement": "R3_PERMIT",
+  "norm": "racked out no.# breaker, locked off, caps on, danger notices up. ptw/# refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0129": {
+  "requirement": "R3_PERMIT",
+  "norm": "isolated no.# transformer, earths applied both ends, ptw/# issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0130": {
+  "requirement": "R3_PERMIT",
+  "norm": "recovered a broken-down punt under tow in a rising sea, made fast and got her in.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0131": {
+  "requirement": "R3_PERMIT",
+  "norm": "signed on to ptw # for the day's work.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0132": {
+  "requirement": "R3_PERMIT",
+  "norm": "isolated no.# transformer, earths applied both ends, permit # issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0133": {
+  "requirement": "R3_PERMIT",
+  "norm": "isolated no # transformer, earths applied both ends, ptw/# issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0134": {
+  "requirement": "R3_PERMIT",
+  "norm": "switched the ring to the alternative feed via the no # switch, proved dead and earthed off.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0135": {
+  "requirement": "R3_PERMIT",
+  "norm": "refused to sign permit # back, the isolations were not as stated. reissued after.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0136": {
+  "requirement": "R3_PERMIT",
+  "norm": "aligned the no # panel after the bracket was found slack, checked the beam on a shore mark.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0137": {
+  "requirement": "R3_PERMIT",
+  "norm": "diaphone piston sticking, stripped it out, lapped the sleeve and reset the travel.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0138": {
+  "requirement": "R3_PERMIT",
+  "norm": "rendered the patch by the door.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0139": {
+  "requirement": "R3_PERMIT",
+  "norm": "stood by for the aircraft, pad clear.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0140": {
+  "requirement": "R3_PERMIT",
+  "norm": "isolated no.# transformer, earths applied both ends, ptw # issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0141": {
+  "requirement": "R3_PERMIT",
+  "norm": "held the keys for the hv work, ptw # refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0142": {
+  "requirement": "R3_PERMIT",
+  "norm": "signed on to ptw/# for the day's work.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0143": {
+  "requirement": "R3_PERMIT",
+  "norm": "isolated no.# transformer, earths applied both ends, permit bk.# no.# issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0144": {
+  "requirement": "R3_PERMIT",
+  "norm": "permit returned and cancelled at #.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0145": {
+  "requirement": "R3_PERMIT",
+  "norm": "signed on to permit bk.# no.# for the day's work.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0146": {
+  "requirement": "R3_PERMIT",
+  "norm": "issued ptw # to the contractor, walked the isolations with him before signing.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0147": {
+  "requirement": "R3_PERMIT",
+  "norm": "stood by while the supernumerary switched the no.# transformer out.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0148": {
+  "requirement": "R3_PERMIT",
+  "norm": "earthed off both ends of the sub-sea feed, cancelled permit bk.# no.# at # and restored supply.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0149": {
+  "requirement": "R3_PERMIT",
+  "norm": "racked out no.# breaker, locked off, caps on, danger notices up. permit bk.# no.# refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0150": {
+  "requirement": "R3_PERMIT",
+  "norm": "primed the no.# pump, running sweet.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0151": {
+  "requirement": "R3_PERMIT",
+  "norm": "ais transmitting a wrong mmsi after the swap, reprogrammed and confirmed with the district.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0152": {
+  "requirement": "R3_PERMIT",
+  "norm": "battery room vented, doors left open # hrs.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0153": {
+  "requirement": "R3_PERMIT",
+  "norm": "read the permit conditions before starting.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0154": {
+  "requirement": "R3_PERMIT",
+  "norm": "weekly changeover, no.# set now lead.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0155": {
+  "requirement": "R3_PERMIT",
+  "norm": "earthed off both ends of the sub-sea feed, cancelled ptw/# at # and restored supply.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0156": {
+  "requirement": "R3_PERMIT",
+  "norm": "harness and lanyard inspected. sound.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0157": {
+  "requirement": "R3_PERMIT",
+  "norm": "held the keys for the hv work, permit bk.# no.# refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0158": {
+  "requirement": "R3_PERMIT",
+  "norm": "witnessed earths applied at the no # end.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0159": {
+  "requirement": "R3_PERMIT",
+  "norm": "lamp circuit off at the board while cleaning.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0160": {
+  "requirement": "R3_PERMIT",
+  "norm": "held the keys for the hv work, ptw/# refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0161": {
+  "requirement": "R3_PERMIT",
+  "norm": "returns completed and posted.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0162": {
+  "requirement": "R3_PERMIT",
+  "norm": "acted as top man for the tank entry and kept the log, ptw # refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0163": {
+  "requirement": "R3_PERMIT",
+  "norm": "issued ptw/# to the contractor, walked the isolations with him before signing.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0164": {
+  "requirement": "R3_PERMIT",
+  "norm": "surveyed the whole landing ironwork and reported # items at end of life.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0165": {
+  "requirement": "R3_PERMIT",
+  "norm": "earthed off both ends of the sub-sea feed, cancelled ptw # at # and restored supply.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0166": {
+  "requirement": "R3_PERMIT",
+  "norm": "character confirmed correct after the lamp change.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0167": {
+  "requirement": "R3_PERMIT",
+  "norm": "quarterly inspection carried out, report filed.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0168": {
+  "requirement": "R3_PERMIT",
+  "norm": "renewed # cells and rebalanced the bank, equalising charge started.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0169": {
+  "requirement": "R3_PERMIT",
+  "norm": "racked out no # breaker, locked off, caps on, danger notices up. permit # refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0170": {
+  "requirement": "R4_HVSW",
+  "norm": "log written up for the watch.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0171": {
+  "requirement": "R4_HVSW",
+  "norm": "noted rust breaking through on the rail.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0172": {
+  "requirement": "R4_HVSW",
+  "norm": "stood by while relief switched the no.# transformer out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0173": {
+  "requirement": "R4_HVSW",
+  "norm": "isolated no.# transformer, earths applied both ends, ptw # issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0174": {
+  "requirement": "R4_HVSW",
+  "norm": "anodes checked on the landing ironwork.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0175": {
+  "requirement": "R4_HVSW",
+  "norm": "earthed off both ends of the sub-sea feed, cancelled permit bk.# no.# at # and restored supply.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0176": {
+  "requirement": "R4_HVSW",
+  "norm": "isolated no.# transformer, earths applied both ends, permit # issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0177": {
+  "requirement": "R4_HVSW",
+  "norm": "stood by while #nd switched the no.# transformer out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0178": {
+  "requirement": "R4_HVSW",
+  "norm": "primed the no.# pump, running sweet.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0179": {
+  "requirement": "R4_HVSW",
+  "norm": "first aid box checked and restocked.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0180": {
+  "requirement": "R4_HVSW",
+  "norm": "racked out no.# breaker, locked off, caps on, danger notices up. ptw/# refers.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0181": {
+  "requirement": "R4_HVSW",
+  "norm": "took the #kv board off, worked the sequence myself, relief witnessing.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0182": {
+  "requirement": "R4_HVSW",
+  "norm": "isolated no # transformer, earths applied both ends, ptw # issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0183": {
+  "requirement": "R4_HVSW",
+  "norm": "took the #kv board off, worked the sequence myself, sak witnessing.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0184": {
+  "requirement": "R4_HVSW",
+  "norm": "authorised the switching programme for the annual shutdown and issued the documents.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0185": {
+  "requirement": "R4_HVSW",
+  "norm": "took the #kv board off, worked the sequence myself, the ak witnessing.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0186": {
+  "requirement": "R4_HVSW",
+  "norm": "renewed fuse links, no.# way. all made off.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0187": {
+  "requirement": "R4_HVSW",
+  "norm": "stood by while relief switched the no # transformer out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0188": {
+  "requirement": "R4_HVSW",
+  "norm": "switched the ring to the alternative feed via the no # switch, proved dead and earthed off.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0189": {
+  "requirement": "R4_HVSW",
+  "norm": "stood by while the supernumerary switched the no # transformer out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0190": {
+  "requirement": "R4_HVSW",
+  "norm": "held the keys for the hv work, ptw/# refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0191": {
+  "requirement": "R4_HVSW",
+  "norm": "hv room locked and keys signed back in.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0192": {
+  "requirement": "R4_HVSW",
+  "norm": "stood by while the ak switched the no.# transformer out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0193": {
+  "requirement": "R4_HVSW",
+  "norm": "lamp circuit off at the board while cleaning.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0194": {
+  "requirement": "R4_HVSW",
+  "norm": "isolated no # transformer, earths applied both ends, ptw/# issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0195": {
+  "requirement": "R4_HVSW",
+  "norm": "held the keys for the hv work, permit bk.# no.# refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0196": {
+  "requirement": "R4_HVSW",
+  "norm": "took the #kv board off, worked the sequence myself, the supernumerary witnessing.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0197": {
+  "requirement": "R4_HVSW",
+  "norm": "ob taken at # and passed.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0198": {
+  "requirement": "R4_HVSW",
+  "norm": "took the #kv board off, worked the sequence myself, #nd witnessing.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0199": {
+  "requirement": "R4_HVSW",
+  "norm": "held the keys for the hv work, ptw # refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0200": {
+  "requirement": "R4_HVSW",
+  "norm": "switched the ring to the alternative feed via the no.# switch, proved dead and earthed off.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0201": {
+  "requirement": "R4_HVSW",
+  "norm": "witnessed earths applied at the no.# end.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0202": {
+  "requirement": "R4_HVSW",
+  "norm": "ais reset, back on the air.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0203": {
+  "requirement": "R4_HVSW",
+  "norm": "carried out switching to release the no.# circuit, proving unit checked before and after.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0204": {
+  "requirement": "R4_HVSW",
+  "norm": "carried out switching to release the no # circuit, proving unit checked before and after.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0205": {
+  "requirement": "R4_HVSW",
+  "norm": "checked the ais position against the chart.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0206": {
+  "requirement": "R4_HVSW",
+  "norm": "stood by while #rd switched the no.# transformer out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0207": {
+  "requirement": "R4_HVSW",
+  "norm": "checked board readings, # bar on the outgoing.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0208": {
+  "requirement": "R4_HVSW",
+  "norm": "stood by while #nd switched the no # transformer out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0209": {
+  "requirement": "R4_HVSW",
+  "norm": "harness and lanyard inspected. sound.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0210": {
+  "requirement": "R4_HVSW",
+  "norm": "stood by while pk switched the no.# transformer out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0211": {
+  "requirement": "R4_HVSW",
+  "norm": "received one drum and entered in the book.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0212": {
+  "requirement": "R4_HVSW",
+  "norm": "isolated no.# transformer, earths applied both ends, ptw/# issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0213": {
+  "requirement": "R4_HVSW",
+  "norm": "stood by while the supernumerary switched the no.# transformer out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0214": {
+  "requirement": "R4_HVSW",
+  "norm": "earthed off both ends of the sub-sea feed, cancelled permit # at # and restored supply.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0215": {
+  "requirement": "R4_HVSW",
+  "norm": "took #rd round the plant.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0216": {
+  "requirement": "R4_HVSW",
+  "norm": "stood by while pk switched the no # transformer out.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0217": {
+  "requirement": "R4_HVSW",
+  "norm": "restored the hv after the contractor cleared, removed earths and de-isolated in sequence.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0218": {
+  "requirement": "R4_HVSW",
+  "norm": "earthed off both ends of the sub-sea feed, cancelled ptw/# at # and restored supply.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0219": {
+  "requirement": "R4_HVSW",
+  "norm": "entered the water tank for cleaning, relief on the manhole.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0220": {
+  "requirement": "R4_HVSW",
+  "norm": "worked tender bran on ch.# re the relief.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0221": {
+  "requirement": "R4_HVSW",
+  "norm": "took the #kv board off, worked the sequence myself, pk witnessing.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0222": {
+  "requirement": "R4_HVSW",
+  "norm": "changed over main board to no.# feed.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0223": {
+  "requirement": "R4_HVSW",
+  "norm": "earthed off both ends of the sub-sea feed, cancelled ptw # at # and restored supply.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0224": {
+  "requirement": "R4_HVSW",
+  "norm": "racked out no # breaker, locked off, caps on, danger notices up. permit # refers.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0225": {
+  "requirement": "R4_HVSW",
+  "norm": "witnessed earths applied at the no # end.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0226": {
+  "requirement": "R4_HVSW",
+  "norm": "isolated no.# transformer, earths applied both ends, permit bk.# no.# issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0227": {
+  "requirement": "R4_HVSW",
+  "norm": "isolated no # transformer, earths applied both ends, permit # issued to the contractor.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0228": {
+  "requirement": "R4_HVSW",
+  "norm": "held the keys for the hv work, permit # refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0229": {
+  "requirement": "R5_HEIGHT",
+  "norm": "intermittent fault on the gallery lights, watching it.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0230": {
+  "requirement": "R5_HEIGHT",
+  "norm": "rotation checked against the stopwatch.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0231": {
+  "requirement": "R5_HEIGHT",
+  "norm": "entered the water tank for cleaning, relief on the manhole.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0232": {
+  "requirement": "R5_HEIGHT",
+  "norm": "tank entry, # hrs inside.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0233": {
+  "requirement": "R5_HEIGHT",
+  "norm": "checked board readings, # bar on the outgoing.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0234": {
+  "requirement": "R5_HEIGHT",
+  "norm": "wrote the method for the tower repaint and briefed the party before we started.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0235": {
+  "requirement": "R5_HEIGHT",
+  "norm": "gas tested the fuel tank before entry.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0236": {
+  "requirement": "R5_HEIGHT",
+  "norm": "coal and gas taken up by the winch.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0237": {
+  "requirement": "R5_HEIGHT",
+  "norm": "changed over main board to no # feed.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0238": {
+  "requirement": "R5_HEIGHT",
+  "norm": "detailed #nd to the gallery work.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0239": {
+  "requirement": "R5_HEIGHT",
+  "norm": "changed the battery in the portable set.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0240": {
+  "requirement": "R5_HEIGHT",
+  "norm": "surface prep argued with the district, they wanted it over the rust. did it properly.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0241": {
+  "requirement": "R5_HEIGHT",
+  "norm": "mechanical seal gone on the fire pump, fitted new and re-aligned the coupling.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0242": {
+  "requirement": "R5_HEIGHT",
+  "norm": "checked the septic tank level.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0243": {
+  "requirement": "R5_HEIGHT",
+  "norm": "log made up to date after the relief.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0244": {
+  "requirement": "R5_HEIGHT",
+  "norm": "fuel transferred, # gal to the day tank.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0245": {
+  "requirement": "R5_HEIGHT",
+  "norm": "detailed the ak to the gallery work.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0246": {
+  "requirement": "R5_HEIGHT",
+  "norm": "balanced loads across the board, no # was carrying the lot.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0247": {
+  "requirement": "R5_HEIGHT",
+  "norm": "weekly changeover, no.# set now lead.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0248": {
+  "requirement": "R5_HEIGHT",
+  "norm": "detailed #rd to the gallery work.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0249": {
+  "requirement": "R5_HEIGHT",
+  "norm": "reset tripped breaker on lighting sub-board.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0250": {
+  "requirement": "R5_HEIGHT",
+  "norm": "relaid # m of yard drain to a proper fall, it had been running backwards for years.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0251": {
+  "requirement": "R5_HEIGHT",
+  "norm": "handled # stations at once during the search, kept the traffic log straight throughout.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0252": {
+  "requirement": "R5_HEIGHT",
+  "norm": "fuel transferred, one drum to the day tank.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0253": {
+  "requirement": "R5_HEIGHT",
+  "norm": "occulting timing checked with the watch.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0254": {
+  "requirement": "R5_HEIGHT",
+  "norm": "work allocated and checked at #.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0255": {
+  "requirement": "R5_HEIGHT",
+  "norm": "harness and lanyard inspected. sound.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0256": {
+  "requirement": "R5_HEIGHT",
+  "norm": "recovered #rd from the cable duct after he was overcome, harness and line as rigged.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0257": {
+  "requirement": "R5_HEIGHT",
+  "norm": "checked the anchor points on the gallery.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0258": {
+  "requirement": "R5_HEIGHT",
+  "norm": "fresh water pumped up to the tower tank.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0259": {
+  "requirement": "R5_HEIGHT",
+  "norm": "ropes inspected and logged before use.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0260": {
+  "requirement": "R5_HEIGHT",
+  "norm": "detailed sak to the gallery work.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0261": {
+  "requirement": "R5_HEIGHT",
+  "norm": "cleaned the lantern glass from the staging.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0262": {
+  "requirement": "R5_HEIGHT",
+  "norm": "rebuilt the no.# pump end to end, new wear rings, delivery back up to # ohm.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0263": {
+  "requirement": "R5_HEIGHT",
+  "norm": "isolated no.# transformer, earths applied both ends, ptw # issued to the contractor.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0264": {
+  "requirement": "R5_HEIGHT",
+  "norm": "fuel transferred, # lit to the day tank.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0265": {
+  "requirement": "R5_HEIGHT",
+  "norm": "detailed pk to the gallery work.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0266": {
+  "requirement": "R5_HEIGHT",
+  "norm": "rigged staging round the lantern for the glazing job, tied back at # points.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0267": {
+  "requirement": "R5_HEIGHT",
+  "norm": "showed pk the lamp changer routine.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0268": {
+  "requirement": "R5_HEIGHT",
+  "norm": "tower whitewashed to the second band.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0269": {
+  "requirement": "R5_HEIGHT",
+  "norm": "painted the gallery rail, one coat.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0270": {
+  "requirement": "R5_HEIGHT",
+  "norm": "detailed relief to the gallery work.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0271": {
+  "requirement": "R5_HEIGHT",
+  "norm": "up the ladder to the gallery, harness on.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0272": {
+  "requirement": "R5_HEIGHT",
+  "norm": "decoke on no.#, heads off, valves ground in and reset to clearance.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0273": {
+  "requirement": "R5_HEIGHT",
+  "norm": "set up the fall arrest on the vertical ladder and tested it with a dead weight.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0274": {
+  "requirement": "R5_HEIGHT",
+  "norm": "abseil inspection of the north face.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0275": {
+  "requirement": "R5_HEIGHT",
+  "norm": "needle-gunned the gallery rail back to bright and built up # coats to the spec.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0276": {
+  "requirement": "R5_HEIGHT",
+  "norm": "acted as top man for the tank entry and kept the log, ptw # refers.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0277": {
+  "requirement": "R5_HEIGHT",
+  "norm": "took the #kv board off, worked the sequence myself, relief witnessing.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0278": {
+  "requirement": "R5_HEIGHT",
+  "norm": "stripped failed cement render off the tower and replaced with lime, it needs to breathe.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0279": {
+  "requirement": "R5_HEIGHT",
+  "norm": "renewed the winch wire, # splices made up and the drum re-laid properly.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0280": {
+  "requirement": "R5_HEIGHT",
+  "norm": "traced and lifted an earth fault on the tower lighting ring, split the ring to find it.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0281": {
+  "requirement": "R5_HEIGHT",
+  "norm": "worked local boat on ch.# re the relief.",
+  "sources": [
+   "random"
+  ]
+ },
+ "G0282": {
+  "requirement": "R5_HEIGHT",
+  "norm": "detailed the supernumerary to the gallery work.",
+  "sources": [
+   "keyword"
+  ]
+ },
+ "G0283": {
+  "requirement": "R5_HEIGHT",
+  "norm": "ran the whole tower repaint over two seasons, staging, prep, coats and records.",
+  "sources": [
+   "keyword"
+  ]
+ }
+}
