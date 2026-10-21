@@ -364,7 +364,7 @@ function keeperExtras(k, assessments) {
   }
   const logged = assessments.flatMap(([, A]) => A.lines.filter(L => L.tier === "evid").map(L => DATA.log_reqs[L.it.req].plain));
   if (logged.length) asksList.unshift(`Logged experience (${logged.join("; ")}): your logs show this work, but nothing formally confirms it yet. Please confirm it with your advisor, and tell us about any certificates for it that aren't in our records.`);
-  if (assessments.some(([p]) => p.id === "om")) asksList.push("Offshore safety certificate: the O&M posting says it covers working at height, but height is a separate certificate in the scheme list. We're asking the Array which they mean; no need to book anything yet.");
+  if (assessments.some(([p]) => p.id === "om")) asksList.push("Offshore safety certificate: the O&M posting says it covers working at height, but height is a separate certificate in the scheme list. Confirm exact requirements with employer.");
   const tr = [...training.values()];
   return `<section class="card"><h2>Training you'd need</h2>` +
     (tr.length ? `<p class="soft">For this role. Nothing here is booked; your advisor can help you choose.</p><div class="rank-wrap"><table><thead><tr><th>Course module</th><th>Certificate</th></tr></thead><tbody>` +
