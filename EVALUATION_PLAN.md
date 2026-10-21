@@ -43,6 +43,8 @@ A keeper sees roughly six graded requirements. If errors were independent, a 10%
 ## Known weaknesses
 
 - One grader, a layperson, is the ground truth.
+- The same model wrote the grading guide's example calls and, later, the AI labels. About 20 guide examples could agree by construction, so scoring is also reported with those sentences excluded.
+- The AI labels (`eval/ai_labels.json`) came from Claude labeling all 516 distinct sentences in one pass inside the working session, not from a fresh API run. `prompts/map_prompt.md` is the prompt it followed.
 - Fifty cells, ten keepers, a non-random clean subset.
 - Because the logs are templated, a hand-built lookup of 620 sentences might beat both methods on this data. Real logs, and the raw pack, are not templated, which is where the AI would have to earn its keep.
 

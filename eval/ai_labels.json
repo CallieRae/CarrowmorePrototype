@@ -1,0 +1,2517 @@
+{
+ "_note": "Produced by Claude (Opus 5.5) in a Cowork session following prompts/map_prompt.md, one pass, without sight of the hand grades. Keyed by normalized sentence (eval/common.py). Y = evidence, ? = possible. Absent = no.",
+ "labels": {
+  "abseil inspection of the north face": {
+   "example": "Abseil inspection of the north face.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "acted as issuing authority for # permits during the overhaul": {
+   "example": "Acted as issuing authority for 2 permits during the overhaul.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "acted as on scene reporting point for the search plotted # units on the chart": {
+   "example": "Acted as on-scene reporting point for the search, plotted 3 units on the chart.",
+   "labels": {}
+  },
+  "acted as top man for the tank entry and kept the log permit # refers": {
+   "example": "Acted as top man for the tank entry and kept the log, permit 0412 refers.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "acted as top man for the tank entry and kept the log ptw # refers": {
+   "example": "Acted as top man for the tank entry and kept the log, PTW 46 refers.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "aerial inspected connections sound": {
+   "example": "Aerial inspected, connections sound.",
+   "labels": {}
+  },
+  "ais reset back on the air": {
+   "example": "AIS reset, back on the air.",
+   "labels": {}
+  },
+  "ais transmitting a wrong mmsi after the swap reprogrammed and confirmed with the district": {
+   "example": "AIS transmitting a wrong MMSI after the swap, reprogrammed and confirmed with the district.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "ais unit reporting checked on the screen": {
+   "example": "AIS unit reporting. Checked on the screen.",
+   "labels": {}
+  },
+  "alarm bell sounding traced to a loose wire": {
+   "example": "Alarm bell sounding, traced to a loose wire.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "aligned the no # panel after the bracket was found slack checked the beam on a shore mark": {
+   "example": "Aligned the no 2 panel after the bracket was found slack, checked the beam on a shore mark.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "annual return completed": {
+   "example": "Annual return completed.",
+   "labels": {}
+  },
+  "anodes checked on the landing ironwork": {
+   "example": "Anodes checked on the landing ironwork.",
+   "labels": {}
+  },
+  "antenna feeder found waterlogged at the gland remade the joint and sealed it": {
+   "example": "Antenna feeder found waterlogged at the gland, remade the joint and sealed it.",
+   "labels": {
+    "R1_MAINT": "Y",
+    "R2_FAULT": "?"
+   }
+  },
+  "assessed # keepers on the boat work for the district and made out the reports": {
+   "example": "Assessed 3 keepers on the boat work for the district and made out the reports.",
+   "labels": {}
+  },
+  "astragals checked for movement": {
+   "example": "Astragals checked for movement.",
+   "labels": {}
+  },
+  "aton message confirmed correct": {
+   "example": "Aton message confirmed correct.",
+   "labels": {}
+  },
+  "aton reporting intermittently traced to the power supply dropping below # ohm at night": {
+   "example": "Aton reporting intermittently, traced to the power supply dropping below 0.8 ohm at night.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "aton reporting intermittently traced to the power supply dropping below # v at night": {
+   "example": "Aton reporting intermittently, traced to the power supply dropping below 24.6 V at night.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "aton reporting intermittently traced to the power supply dropping below # psi at night": {
+   "example": "Aton reporting intermittently, traced to the power supply dropping below 48 psi at night.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "audited the consumables across # stations for the district and reported the shortfalls": {
+   "example": "Audited the consumables across 3 stations for the district and reported the shortfalls.",
+   "labels": {}
+  },
+  "authorised the switching programme for the annual shutdown and issued the documents": {
+   "example": "Authorised the switching programme for the annual shutdown and issued the documents.",
+   "labels": {
+    "R3_PERMIT": "Y",
+    "R4_HVSW": "?"
+   }
+  },
+  "auto start tested came up on the first attempt": {
+   "example": "Auto start tested. Came up on the first attempt.",
+   "labels": {}
+  },
+  "avr on no # replaced and the volts set to # bar load shared with no # properly after": {
+   "example": "AVR on no 1 replaced and the volts set to 3.6 bar, load-shared with NO.2 properly after.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "avr on no # replaced and the volts set to # ohm load shared with no # properly after": {
+   "example": "AVR on no.2 replaced and the volts set to 0.8 ohm, load-shared with no 2 properly after.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "avr on no # replaced and the volts set to # v load shared with no # properly after": {
+   "example": "AVR on No.2 replaced and the volts set to 232 V, load-shared with no 2 properly after.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "avr on no # replaced and the volts set to # psi load shared with no # properly after": {
+   "example": "AVR on no.3 replaced and the volts set to 48 psi, load-shared with No.2 properly after.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "balanced loads across the board no # was carrying the lot": {
+   "example": "Balanced loads across the board, no 1 was carrying the lot.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "bar # ohm falling reported": {
+   "example": "Bar 0.8 ohm, falling. Reported.",
+   "labels": {}
+  },
+  "bar # v falling reported": {
+   "example": "Bar 24.6 V, falling. Reported.",
+   "labels": {}
+  },
+  "bar # bar falling reported": {
+   "example": "Bar 3.6 bar, falling. Reported.",
+   "labels": {}
+  },
+  "bar # psi falling reported": {
+   "example": "Bar 48 psi, falling. Reported.",
+   "labels": {}
+  },
+  "battery checked on the beacon": {
+   "example": "Battery checked on the beacon.",
+   "labels": {}
+  },
+  "battery room vented doors left open # hrs": {
+   "example": "Battery room vented, doors left open 2 hrs.",
+   "labels": {}
+  },
+  "bled the fuel system after the filter change": {
+   "example": "Bled the fuel system after the filter change.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "boat away to the landing # hrs": {
+   "example": "Boat away to the landing, 0.5 hrs.",
+   "labels": {}
+  },
+  "boat hauled up and covered": {
+   "example": "Boat hauled up and covered.",
+   "labels": {}
+  },
+  "bottom end knock on no # dropped the sump and found # big end shells scored": {
+   "example": "Bottom-end knock on No.2, dropped the sump and found 2 big-end shells scored.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "brake band relined on the main haul winch and the test load run": {
+   "example": "Brake band relined on the main haul winch and the test load run.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "briefed the new men on pad discipline and ran the drill before the first lift": {
+   "example": "Briefed the new men on pad discipline and ran the drill before the first lift.",
+   "labels": {}
+  },
+  "briefed the new supernumerary on survival kit and made him don a suit against the clock": {
+   "example": "Briefed the new supernumerary on survival kit and made him don a suit against the clock.",
+   "labels": {}
+  },
+  "buoy recovered and taken up the slip": {
+   "example": "Buoy recovered and taken up the slip.",
+   "labels": {}
+  },
+  "carried out switching to release the no # circuit proving unit checked before and after": {
+   "example": "Carried out switching to release the no.2 circuit, proving unit checked before and after.",
+   "labels": {
+    "R4_HVSW": "?"
+   }
+  },
+  "casualty bag inspected contents correct": {
+   "example": "Casualty bag inspected, contents correct.",
+   "labels": {}
+  },
+  "changed oil and filters on no #": {
+   "example": "Changed oil and filters on no.2.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "changed over main board to no # feed": {
+   "example": "Changed over main board to No.2 feed.",
+   "labels": {
+    "R4_HVSW": "?"
+   }
+  },
+  "changed the battery in the portable set": {
+   "example": "Changed the battery in the portable set.",
+   "labels": {}
+  },
+  "changer tested steps round correctly": {
+   "example": "Changer tested, steps round correctly.",
+   "labels": {}
+  },
+  "character checked correct to the list": {
+   "example": "Character checked, correct to the list.",
+   "labels": {}
+  },
+  "character confirmed correct after the lamp change": {
+   "example": "Character confirmed correct after the lamp change.",
+   "labels": {}
+  },
+  "character found # sec out over ten periods adjusted the flasher and re timed": {
+   "example": "Character found 1 sec out over ten periods, adjusted the flasher and re-timed.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "charger float voltage set wrong was cooking the bank reset and logged the readings": {
+   "example": "Charger float voltage set wrong, was cooking the bank. Reset and logged the readings.",
+   "labels": {
+    "R2_FAULT": "Y",
+    "R1_MAINT": "?"
+   }
+  },
+  "charger on boost overnight as instructed": {
+   "example": "Charger on boost overnight as instructed.",
+   "labels": {}
+  },
+  "checked board readings # ohm on the outgoing": {
+   "example": "Checked board readings, 0.8 ohm on the outgoing.",
+   "labels": {}
+  },
+  "checked board readings # v on the outgoing": {
+   "example": "Checked board readings, 24.6 V on the outgoing.",
+   "labels": {}
+  },
+  "checked board readings # bar on the outgoing": {
+   "example": "Checked board readings, 3.6 bar on the outgoing.",
+   "labels": {}
+  },
+  "checked board readings # psi on the outgoing": {
+   "example": "Checked board readings, 48 psi on the outgoing.",
+   "labels": {}
+  },
+  "checked continuity on the run to the fog hut": {
+   "example": "Checked continuity on the run to the fog hut.",
+   "labels": {
+    "R2_FAULT": "?"
+   }
+  },
+  "checked for weeps on the rams one seeping": {
+   "example": "Checked for weeps on the rams. One seeping.",
+   "labels": {}
+  },
+  "checked panel gauges all within normal": {
+   "example": "Checked panel gauges, all within normal.",
+   "labels": {}
+  },
+  "checked the ais position against the chart": {
+   "example": "Checked the AIS position against the chart.",
+   "labels": {}
+  },
+  "checked the anchor points on the gallery": {
+   "example": "Checked the anchor points on the gallery.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "checked the delivery against the note": {
+   "example": "Checked the delivery against the note.",
+   "labels": {}
+  },
+  "checked the feeder run for chafe": {
+   "example": "Checked the feeder run for chafe.",
+   "labels": {}
+  },
+  "checked the septic tank level": {
+   "example": "Checked the septic tank level.",
+   "labels": {}
+  },
+  "checked the shackles and strops all sound": {
+   "example": "Checked the shackles and strops, all sound.",
+   "labels": {}
+  },
+  "cleaned terminals and greased no damage": {
+   "example": "Cleaned terminals and greased. No damage.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "cleaned the contacts in the changeover relay": {
+   "example": "Cleaned the contacts in the changeover relay.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "cleaned the lantern glass from the staging": {
+   "example": "Cleaned the lantern glass from the staging.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "cleared a blockage in the suction strainer": {
+   "example": "Cleared a blockage in the suction strainer.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "cleared a false dsc alert": {
+   "example": "Cleared a false DSC alert.",
+   "labels": {}
+  },
+  "cleared the yard drain running free": {
+   "example": "Cleared the yard drain, running free.",
+   "labels": {}
+  },
+  "coached #rd through his grade board he passed on the second attempt": {
+   "example": "Coached 3rd through his grade board, he passed on the second attempt.",
+   "labels": {}
+  },
+  "coached relief through his grade board he passed on the second attempt": {
+   "example": "Coached relief through his grade board, he passed on the second attempt.",
+   "labels": {}
+  },
+  "coached sak through his grade board he passed on the second attempt": {
+   "example": "Coached SAK through his grade board, he passed on the second attempt.",
+   "labels": {}
+  },
+  "coal and gas taken up by the winch": {
+   "example": "Coal and gas taken up by the winch.",
+   "labels": {}
+  },
+  "coding wheel set to the district letter and confirmed with the tender at #": {
+   "example": "Coding wheel set to the district letter and confirmed with the tender at 352.",
+   "labels": {}
+  },
+  "compressor not making pressure rings worn rebuilt the no # cylinder": {
+   "example": "Compressor not making pressure, rings worn. Rebuilt the no.1 cylinder.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "compressor run up and the receiver drained": {
+   "example": "Compressor run up and the receiver drained.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "condemned # strops at the annual inspection and made out the report": {
+   "example": "Condemned 3 strops at the annual inspection and made out the report.",
+   "labels": {}
+  },
+  "configured the synthetic aton message for the outlying rock and proved reception ashore": {
+   "example": "Configured the synthetic aton message for the outlying rock and proved reception ashore.",
+   "labels": {}
+  },
+  "confined space entry into the cable duct under the yard forced ventilation rigged": {
+   "example": "Confined space entry into the cable duct under the yard, forced ventilation rigged.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "confined space entry to the no # fuel tank ptw # refers gas tested throughout": {
+   "example": "Confined space entry to the no.2 fuel tank, PTW/88 refers, gas tested throughout.",
+   "labels": {
+    "R5_HEIGHT": "Y",
+    "R3_PERMIT": "Y"
+   }
+  },
+  "confined space work in the water tank # hrs inside sak as top man": {
+   "example": "Confined space work in the water tank, 3 hrs inside, SAK as top man.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "contractor could not find it found it in # hrs on the drawings a wrong terminal from #": {
+   "example": "Contractor could not find it. Found it in 2 hrs on the drawings, a wrong terminal from 1981.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "coordinated the relay between two stations that could not hear each other": {
+   "example": "Coordinated the relay between two stations that could not hear each other.",
+   "labels": {}
+  },
+  "copied a distress on mf during the silence period and relayed the position": {
+   "example": "Copied a distress on MF during the silence period and relayed the position.",
+   "labels": {}
+  },
+  "coxed for the relief all week # runs no damage to boat or men": {
+   "example": "Coxed for the relief all week, 3 runs, no damage to boat or men.",
+   "labels": {}
+  },
+  "cracked pane taped pending replacement": {
+   "example": "Cracked pane taped pending replacement.",
+   "labels": {}
+  },
+  "crane hook and block inspected sound": {
+   "example": "Crane hook and block inspected. Sound.",
+   "labels": {}
+  },
+  "cut out and rebuilt # courses on the seaward parapet lime mix to the old spec": {
+   "example": "Cut out and rebuilt 3 courses on the seaward parapet, lime mix to the old spec.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "decoke on no # heads off valves ground in and reset to clearance": {
+   "example": "Decoke on no.3, heads off, valves ground in and reset to clearance.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "defect reported on the no # set": {
+   "example": "Defect reported on the no 1 set.",
+   "labels": {}
+  },
+  "derrick used for the relief # hrs": {
+   "example": "Derrick used for the relief, 2 hrs.",
+   "labels": {}
+  },
+  "descended to the mid course for a look": {
+   "example": "Descended to the mid-course for a look.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "detailed #nd to the gallery work": {
+   "example": "Detailed 2nd to the gallery work.",
+   "labels": {}
+  },
+  "detailed #rd to the gallery work": {
+   "example": "Detailed 3rd to the gallery work.",
+   "labels": {}
+  },
+  "detailed pk to the gallery work": {
+   "example": "Detailed PK to the gallery work.",
+   "labels": {}
+  },
+  "detailed relief to the gallery work": {
+   "example": "Detailed relief to the gallery work.",
+   "labels": {}
+  },
+  "detailed sak to the gallery work": {
+   "example": "Detailed SAK to the gallery work.",
+   "labels": {}
+  },
+  "detailed the ak to the gallery work": {
+   "example": "Detailed the AK to the gallery work.",
+   "labels": {}
+  },
+  "detailed the supernumerary to the gallery work": {
+   "example": "Detailed the supernumerary to the gallery work.",
+   "labels": {}
+  },
+  "diaphone piston sticking stripped it out lapped the sleeve and reset the travel": {
+   "example": "Diaphone piston sticking, stripped it out, lapped the sleeve and reset the travel.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "diaphone tested sounding correct": {
+   "example": "Diaphone tested, sounding correct.",
+   "labels": {}
+  },
+  "discrimination not right between the incomer and no # way adjusted settings and proved": {
+   "example": "Discrimination not right between the incomer and no 2 way, adjusted settings and proved.",
+   "labels": {
+    "R2_FAULT": "Y",
+    "R1_MAINT": "Y"
+   }
+  },
+  "distress watch kept on ch #": {
+   "example": "Distress watch kept on ch.16.",
+   "labels": {}
+  },
+  "dressed a cut hand for #nd": {
+   "example": "Dressed a cut hand for 2nd.",
+   "labels": {}
+  },
+  "dressed a cut hand for #rd": {
+   "example": "Dressed a cut hand for 3rd.",
+   "labels": {}
+  },
+  "dressed a cut hand for pk": {
+   "example": "Dressed a cut hand for PK.",
+   "labels": {}
+  },
+  "dressed a cut hand for relief": {
+   "example": "Dressed a cut hand for relief.",
+   "labels": {}
+  },
+  "dressed a cut hand for sak": {
+   "example": "Dressed a cut hand for SAK.",
+   "labels": {}
+  },
+  "dressed a cut hand for the ak": {
+   "example": "Dressed a cut hand for the AK.",
+   "labels": {}
+  },
+  "dressed a cut hand for the supernumerary": {
+   "example": "Dressed a cut hand for the supernumerary.",
+   "labels": {}
+  },
+  "drive motor brushes and commutator dressed rotation back to time": {
+   "example": "Drive motor brushes and commutator dressed, rotation back to time.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "dsc test call sent and acknowledged": {
+   "example": "DSC test call sent and acknowledged.",
+   "labels": {}
+  },
+  "dsc watch maintained": {
+   "example": "DSC watch maintained.",
+   "labels": {}
+  },
+  "earth mat for the mf aerial repaired after the gale output back to normal": {
+   "example": "Earth mat for the MF aerial repaired after the gale, output back to normal.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "earthed off both ends of the sub sea feed cancelled permit # at # and restored supply": {
+   "example": "Earthed off both ends of the sub-sea feed, cancelled permit 0412 at 1730 and restored supply.",
+   "labels": {
+    "R4_HVSW": "?",
+    "R3_PERMIT": "Y"
+   }
+  },
+  "earthed off both ends of the sub sea feed cancelled permit bk # no # at # and restored supply": {
+   "example": "Earthed off both ends of the sub-sea feed, cancelled permit bk.3 no.19 at 1730 and restored supply.",
+   "labels": {
+    "R4_HVSW": "?",
+    "R3_PERMIT": "Y"
+   }
+  },
+  "earthed off both ends of the sub sea feed cancelled ptw # at # and restored supply": {
+   "example": "Earthed off both ends of the sub-sea feed, cancelled PTW 114 at 1730 and restored supply.",
+   "labels": {
+    "R4_HVSW": "?",
+    "R3_PERMIT": "Y"
+   }
+  },
+  "emitter horn corroded through at the throat cut out and a new section let in": {
+   "example": "Emitter horn corroded through at the throat, cut out and a new section let in.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "empties sent back with the boat": {
+   "example": "Empties sent back with the boat.",
+   "labels": {}
+  },
+  "engine room fire in the no # set hit it with foam and shut off the fuel out in minutes": {
+   "example": "Engine room fire in the NO.2 set, hit it with foam and shut off the fuel. Out in minutes.",
+   "labels": {}
+  },
+  "engine run up and flushed after use": {
+   "example": "Engine run up and flushed after use.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "entered the water tank for cleaning #rd on the manhole": {
+   "example": "Entered the water tank for cleaning, 3rd on the manhole.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "entered the water tank for cleaning relief on the manhole": {
+   "example": "Entered the water tank for cleaning, relief on the manhole.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "entered the water tank for cleaning sak on the manhole": {
+   "example": "Entered the water tank for cleaning, SAK on the manhole.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "entered the water tank for cleaning the ak on the manhole": {
+   "example": "Entered the water tank for cleaning, the AK on the manhole.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "entries checked and signed": {
+   "example": "Entries checked and signed.",
+   "labels": {}
+  },
+  "evacuated the station in sw # after the sea took the door all hands off by boat": {
+   "example": "Evacuated the station in SW 6 after the sea took the door, all hands off by boat.",
+   "labels": {}
+  },
+  "evacuated the station in w # after the sea took the door all hands off by boat": {
+   "example": "Evacuated the station in W 8 after the sea took the door, all hands off by boat.",
+   "labels": {}
+  },
+  "evacuation route checked and clear": {
+   "example": "Evacuation route checked and clear.",
+   "labels": {}
+  },
+  "extinguishers checked and signed": {
+   "example": "Extinguishers checked and signed.",
+   "labels": {}
+  },
+  "fault only showed when the compressor cut in proved it with the clamp meter": {
+   "example": "Fault only showed when the compressor cut in, proved it with the clamp meter.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "filter changed on the power pack": {
+   "example": "Filter changed on the power pack.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "fire alarm tested working": {
+   "example": "Fire alarm tested. Working.",
+   "labels": {}
+  },
+  "fire drill held # hr": {
+   "example": "Fire drill held, 8 hr.",
+   "labels": {}
+  },
+  "first aid box checked and restocked": {
+   "example": "First aid box checked and restocked.",
+   "labels": {}
+  },
+  "flushed the whole system after water ingress new fluid and both filters": {
+   "example": "Flushed the whole system after water ingress, new fluid and both filters.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "fog detector cutting in late recalibrated against visual marks at known distances": {
+   "example": "Fog detector cutting in late, recalibrated against visual marks at known distances.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "fog signal in operation # hrs": {
+   "example": "Fog signal in operation 2 hrs.",
+   "labels": {}
+  },
+  "found the receiver desensitised by the charger fitted suppression and the noise went": {
+   "example": "Found the receiver desensitised by the charger, fitted suppression and the noise went.",
+   "labels": {
+    "R2_FAULT": "Y",
+    "R1_MAINT": "Y"
+   }
+  },
+  "fresh water pumped up to the tower tank": {
+   "example": "Fresh water pumped up to the tower tank.",
+   "labels": {}
+  },
+  "fuel transfer by hose in a swell rigged a break away and lost nothing": {
+   "example": "Fuel transfer by hose in a swell, rigged a break-away and lost nothing.",
+   "labels": {}
+  },
+  "fuel transferred # gal to the day tank": {
+   "example": "Fuel transferred, 2 gal to the day tank.",
+   "labels": {}
+  },
+  "fuel transferred # lit to the day tank": {
+   "example": "Fuel transferred, 200 lit to the day tank.",
+   "labels": {}
+  },
+  "fuel transferred half drum to the day tank": {
+   "example": "Fuel transferred, half drum to the day tank.",
+   "labels": {}
+  },
+  "fuel transferred one drum to the day tank": {
+   "example": "Fuel transferred, one drum to the day tank.",
+   "labels": {}
+  },
+  "full capacity discharge on the emergency bank held the load for # hrs before cut off": {
+   "example": "Full capacity discharge on the emergency bank, held the load for 6 hrs before cut-off.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "full condition survey of the station # defects raised with photographs": {
+   "example": "Full condition survey of the station, 1 defects raised with photographs.",
+   "labels": {}
+  },
+  "gas tested the fuel tank before entry": {
+   "example": "Gas tested the fuel tank before entry.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "gearbox stripped on the winch # teeth found broken replaced the wheel": {
+   "example": "Gearbox stripped on the winch, 1 teeth found broken. Replaced the wheel.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "got four men and stores ashore in ne # rigged a jackstay from the derrick head": {
+   "example": "Got four men and stores ashore in NE 5. Rigged a jackstay from the derrick head.",
+   "labels": {}
+  },
+  "got four men and stores ashore in s # rigged a jackstay from the derrick head": {
+   "example": "Got four men and stores ashore in S 4. Rigged a jackstay from the derrick head.",
+   "labels": {}
+  },
+  "got four men and stores ashore in w # rigged a jackstay from the derrick head": {
+   "example": "Got four men and stores ashore in W 8. Rigged a jackstay from the derrick head.",
+   "labels": {}
+  },
+  "governor hunting under load adjusted droop and stability until it settled": {
+   "example": "Governor hunting under load, adjusted droop and stability until it settled.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "greased the compressor and checked the belts": {
+   "example": "Greased the compressor and checked the belts.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "greased the derrick head and the slew ring": {
+   "example": "Greased the derrick head and the slew ring.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "greased the exposed threads": {
+   "example": "Greased the exposed threads.",
+   "labels": {}
+  },
+  "greased the winch and checked the pawl": {
+   "example": "Greased the winch and checked the pawl.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "gutters cleared of weed and grit": {
+   "example": "Gutters cleared of weed and grit.",
+   "labels": {}
+  },
+  "had to stand a man down for coming back unfit reported it and dealt with it on station": {
+   "example": "Had to stand a man down for coming back unfit. Reported it and dealt with it on station.",
+   "labels": {}
+  },
+  "handled # stations at once during the search kept the traffic log straight throughout": {
+   "example": "Handled 4 stations at once during the search, kept the traffic log straight throughout.",
+   "labels": {}
+  },
+  "handled a live dsc distress alert acknowledged took the traffic on ch # and passed it on": {
+   "example": "Handled a live DSC distress alert, acknowledged, took the traffic on ch.16 and passed it on.",
+   "labels": {}
+  },
+  "harness and lanyard inspected sound": {
+   "example": "Harness and lanyard inspected. Sound.",
+   "labels": {}
+  },
+  "hauled up stores with the winch # hrs on it": {
+   "example": "Hauled up stores with the winch, 2 hrs on it.",
+   "labels": {}
+  },
+  "heard the mayday first and got the position before it went off the air": {
+   "example": "Heard the mayday first and got the position before it went off the air.",
+   "labels": {}
+  },
+  "held the distress watch through the night while the coast station was down": {
+   "example": "Held the distress watch through the night while the coast station was down.",
+   "labels": {}
+  },
+  "held the keys for the hv work permit # refers": {
+   "example": "Held the keys for the HV work, permit 1102 refers.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "held the keys for the hv work permit bk # no # refers": {
+   "example": "Held the keys for the HV work, permit bk.3 no.19 refers.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "held the keys for the hv work ptw # refers": {
+   "example": "Held the keys for the HV work, PTW 331 refers.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "held the search log for eleven hours and produced the timeline for the inquiry": {
+   "example": "Held the search log for eleven hours and produced the timeline for the inquiry.",
+   "labels": {}
+  },
+  "helipad swept and the nets checked": {
+   "example": "Helipad swept and the nets checked.",
+   "labels": {}
+  },
+  "hose reels run out and flushed": {
+   "example": "Hose reels run out and flushed.",
+   "labels": {}
+  },
+  "hv room locked and keys signed back in": {
+   "example": "HV room locked and keys signed back in.",
+   "labels": {
+    "R3_PERMIT": "?"
+   }
+  },
+  "hypothermia case off a fishing boat rewarmed slowly and handed over to the ambulance": {
+   "example": "Hypothermia case off a fishing boat, rewarmed slowly and handed over to the ambulance.",
+   "labels": {}
+  },
+  "immersion suits aired and checked": {
+   "example": "Immersion suits aired and checked.",
+   "labels": {}
+  },
+  "immobilised a back injury on the steps and packaged him for the winch lift": {
+   "example": "Immobilised a back injury on the steps and packaged him for the winch lift.",
+   "labels": {}
+  },
+  "indent made out for the next relief": {
+   "example": "Indent made out for the next relief.",
+   "labels": {}
+  },
+  "injectors off no # and pop tested two were dribbling reconditioned and refitted": {
+   "example": "Injectors off NO.2 and pop-tested, two were dribbling. Reconditioned and refitted.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "instrument screen found badly sited moved it and the readings came into line": {
+   "example": "Instrument screen found badly sited, moved it and the readings came into line.",
+   "labels": {}
+  },
+  "intermittent fault on the gallery lights watching it": {
+   "example": "Intermittent fault on the gallery lights, watching it.",
+   "labels": {
+    "R2_FAULT": "?"
+   }
+  },
+  "isolated no # transformer earths applied both ends ptw # issued to the contractor": {
+   "example": "Isolated no 2 transformer, earths applied both ends, PTW 114 issued to the contractor.",
+   "labels": {
+    "R4_HVSW": "Y",
+    "R3_PERMIT": "Y"
+   }
+  },
+  "isolated no # transformer earths applied both ends permit # issued to the contractor": {
+   "example": "Isolated No.1 transformer, earths applied both ends, permit 1102 issued to the contractor.",
+   "labels": {
+    "R4_HVSW": "Y",
+    "R3_PERMIT": "Y"
+   }
+  },
+  "isolated no # transformer earths applied both ends permit bk # no # issued to the contractor": {
+   "example": "Isolated no.3 transformer, earths applied both ends, permit bk.3 no.19 issued to the contractor.",
+   "labels": {
+    "R4_HVSW": "Y",
+    "R3_PERMIT": "Y"
+   }
+  },
+  "issued permit # to the contractor walked the isolations with him before signing": {
+   "example": "Issued permit 0412 to the contractor, walked the isolations with him before signing.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "issued ptw # to the contractor walked the isolations with him before signing": {
+   "example": "Issued PTW/88 to the contractor, walked the isolations with him before signing.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "judged the sea wrong on the first pass and got a soaking second pass clean": {
+   "example": "Judged the sea wrong on the first pass and got a soaking. Second pass clean.",
+   "labels": {}
+  },
+  "kept a full timeline of the incident as it happened used later by the inquiry": {
+   "example": "Kept a full timeline of the incident as it happened, used later by the inquiry.",
+   "labels": {}
+  },
+  "kept a lookout for the missing boat": {
+   "example": "Kept a lookout for the missing boat.",
+   "labels": {}
+  },
+  "kept hourly obs through the storm when the automatic gear failed # hrs by eye": {
+   "example": "Kept hourly obs through the storm when the automatic gear failed, 0.5 hrs by eye.",
+   "labels": {}
+  },
+  "laid a new ground chain for the boat mooring # shots and buoyed it off": {
+   "example": "Laid a new ground chain for the boat mooring, 1 shots, and buoyed it off.",
+   "labels": {}
+  },
+  "lamp changed old one to stores": {
+   "example": "Lamp changed, old one to stores.",
+   "labels": {}
+  },
+  "lamp changer stepping twice dismantled the ratchet and dressed the pawl faces": {
+   "example": "Lamp changer stepping twice, dismantled the ratchet and dressed the pawl faces.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "lamp circuit off at the board while cleaning": {
+   "example": "Lamp circuit off at the board while cleaning.",
+   "labels": {
+    "R3_PERMIT": "?"
+   }
+  },
+  "lamp not lit found the fuse gone renewed": {
+   "example": "Lamp not lit, found the fuse gone. Renewed.",
+   "labels": {
+    "R2_FAULT": "?"
+   }
+  },
+  "landed the relief on the west steps in a heavy sw swell timed to the seventh sea": {
+   "example": "Landed the relief on the west steps in a heavy SW swell, timed to the seventh sea.",
+   "labels": {}
+  },
+  "landing attempted abandoned too much swell": {
+   "example": "Landing attempted, abandoned, too much swell.",
+   "labels": {}
+  },
+  "landing in the dark by torch worked the swell and put everyone up dry": {
+   "example": "Landing in the dark by torch, worked the swell and put everyone up dry.",
+   "labels": {}
+  },
+  "landing party rigged the lines": {
+   "example": "Landing party rigged the lines.",
+   "labels": {}
+  },
+  "lantern glass cleaned inside and out": {
+   "example": "Lantern glass cleaned inside and out.",
+   "labels": {}
+  },
+  "lens panels cleaned and polished": {
+   "example": "Lens panels cleaned and polished.",
+   "labels": {}
+  },
+  "lifejackets inspected all sound": {
+   "example": "Lifejackets inspected, all sound.",
+   "labels": {}
+  },
+  "liferaft service date checked": {
+   "example": "Liferaft service date checked.",
+   "labels": {}
+  },
+  "load chart worked out for the new generator lift rigged and landed it first go": {
+   "example": "Load chart worked out for the new generator lift, rigged and landed it first go.",
+   "labels": {}
+  },
+  "load tested the winch and the landing gear to the annual figure and certified the log": {
+   "example": "Load tested the winch and the landing gear to the annual figure and certified the log.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "load tested the standby bank no # cell down to # bar taken out and shorted round": {
+   "example": "Load-tested the standby bank, No.2 cell down to 3.6 bar, taken out and shorted round.",
+   "labels": {
+    "R1_MAINT": "Y",
+    "R2_FAULT": "?"
+   }
+  },
+  "load tested the standby bank no # cell down to # psi taken out and shorted round": {
+   "example": "Load-tested the standby bank, no.2 cell down to 48 psi, taken out and shorted round.",
+   "labels": {
+    "R1_MAINT": "Y",
+    "R2_FAULT": "?"
+   }
+  },
+  "load tested the standby bank no # cell down to # v taken out and shorted round": {
+   "example": "Load-tested the standby bank, no.3 cell down to 11.2 V, taken out and shorted round.",
+   "labels": {
+    "R1_MAINT": "Y",
+    "R2_FAULT": "?"
+   }
+  },
+  "load tested the standby bank no # cell down to # ohm taken out and shorted round": {
+   "example": "Load-tested the standby bank, no.3 cell down to 2.4 ohm, taken out and shorted round.",
+   "labels": {
+    "R1_MAINT": "Y",
+    "R2_FAULT": "?"
+   }
+  },
+  "log made up to date after the relief": {
+   "example": "Log made up to date after the relief.",
+   "labels": {}
+  },
+  "log written up for the watch": {
+   "example": "Log written up for the watch.",
+   "labels": {}
+  },
+  "logged a mayday relay heard at #": {
+   "example": "Logged a mayday relay heard at 1620.",
+   "labels": {}
+  },
+  "logged the search traffic": {
+   "example": "Logged the search traffic.",
+   "labels": {}
+  },
+  "logged the silence periods": {
+   "example": "Logged the silence periods.",
+   "labels": {}
+  },
+  "made a template for the curved pane and had it cut ashore fitted first time": {
+   "example": "Made a template for the curved pane and had it cut ashore, fitted first time.",
+   "labels": {}
+  },
+  "made up a mix to match the original mortar after testing three samples through the winter": {
+   "example": "Made up a mix to match the original mortar after testing three samples through the winter.",
+   "labels": {}
+  },
+  "made up a new hose to length with the on station swager pressure tested before fitting": {
+   "example": "Made up a new hose to length with the on-station swager, pressure tested before fitting.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "made up a new strop and thimble for the riser and proved it on the load": {
+   "example": "Made up a new strop and thimble for the riser and proved it on the load.",
+   "labels": {}
+  },
+  "managed a suspected heart case overnight radio medical advice taken hourly": {
+   "example": "Managed a suspected heart case overnight, radio medical advice taken hourly.",
+   "labels": {}
+  },
+  "marshalled the relief aircraft in e # held her off one cycle for a squall": {
+   "example": "Marshalled the relief aircraft in E 6, held her off one cycle for a squall.",
+   "labels": {}
+  },
+  "marshalled the relief aircraft in ne # held her off one cycle for a squall": {
+   "example": "Marshalled the relief aircraft in NE 5, held her off one cycle for a squall.",
+   "labels": {}
+  },
+  "marshalled the relief aircraft in nw # gusting # held her off one cycle for a squall": {
+   "example": "Marshalled the relief aircraft in NW 7 gusting 9, held her off one cycle for a squall.",
+   "labels": {}
+  },
+  "marshalled the relief aircraft in s # held her off one cycle for a squall": {
+   "example": "Marshalled the relief aircraft in S 4, held her off one cycle for a squall.",
+   "labels": {}
+  },
+  "marshalled the relief aircraft in sw # held her off one cycle for a squall": {
+   "example": "Marshalled the relief aircraft in SW 6, held her off one cycle for a squall.",
+   "labels": {}
+  },
+  "marshalled the relief aircraft in var # held her off one cycle for a squall": {
+   "example": "Marshalled the relief aircraft in var 2, held her off one cycle for a squall.",
+   "labels": {}
+  },
+  "mechanical seal gone on the fire pump fitted new and re aligned the coupling": {
+   "example": "Mechanical seal gone on the fire pump, fitted new and re-aligned the coupling.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "megger test on the no # feeder # v condemned the cable and ran a temporary": {
+   "example": "Megger test on the no 1 feeder, 24.6 V, condemned the cable and ran a temporary.",
+   "labels": {
+    "R2_FAULT": "Y",
+    "R1_MAINT": "?"
+   }
+  },
+  "megger test on the no # feeder # ohm condemned the cable and ran a temporary": {
+   "example": "Megger test on the No.1 feeder, 2.4 ohm, condemned the cable and ran a temporary.",
+   "labels": {
+    "R2_FAULT": "Y",
+    "R1_MAINT": "?"
+   }
+  },
+  "megger test on the no # feeder # psi condemned the cable and ran a temporary": {
+   "example": "Megger test on the No.1 feeder, 48 psi, condemned the cable and ran a temporary.",
+   "labels": {
+    "R2_FAULT": "Y",
+    "R1_MAINT": "?"
+   }
+  },
+  "megger test on the no # feeder # bar condemned the cable and ran a temporary": {
+   "example": "Megger test on the No.2 feeder, 3.6 bar, condemned the cable and ran a temporary.",
+   "labels": {
+    "R2_FAULT": "Y",
+    "R1_MAINT": "?"
+   }
+  },
+  "mercury bath checked level correct": {
+   "example": "Mercury bath checked, level correct.",
+   "labels": {}
+  },
+  "mf set checked on the dummy load": {
+   "example": "MF set checked on the dummy load.",
+   "labels": {}
+  },
+  "mf transmitter down on power changed the pa valve and retuned": {
+   "example": "MF transmitter down on power, changed the PA valve and retuned.",
+   "labels": {
+    "R1_MAINT": "Y",
+    "R2_FAULT": "?"
+   }
+  },
+  "mf watch kept # hrs": {
+   "example": "MF watch kept 8 hrs.",
+   "labels": {}
+  },
+  "missed the # ob sent late": {
+   "example": "Missed the 0900 ob, sent late.",
+   "labels": {}
+  },
+  "mixed mortar and patched the steps": {
+   "example": "Mixed mortar and patched the steps.",
+   "labels": {}
+  },
+  "mmsi checked in the set": {
+   "example": "MMSI checked in the set.",
+   "labels": {}
+  },
+  "mooring chain inspected at low water": {
+   "example": "Mooring chain inspected at low water.",
+   "labels": {}
+  },
+  "mooring dragged in the gale recovered the whole lot and relaid in better holding": {
+   "example": "Mooring dragged in the gale, recovered the whole lot and relaid in better holding.",
+   "labels": {}
+  },
+  "moorings checked after the blow holding": {
+   "example": "Moorings checked after the blow. Holding.",
+   "labels": {}
+  },
+  "muster list posted in the messroom": {
+   "example": "Muster list posted in the messroom.",
+   "labels": {}
+  },
+  "needle gunned the gallery rail back to bright and built up # coats to the spec": {
+   "example": "Needle-gunned the gallery rail back to bright and built up 1 coats to the spec.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "noted damage to the boundary wall": {
+   "example": "Noted damage to the boundary wall.",
+   "labels": {}
+  },
+  "noted rust breaking through on the rail": {
+   "example": "Noted rust breaking through on the rail.",
+   "labels": {}
+  },
+  "nothing heard on the distress frequency": {
+   "example": "Nothing heard on the distress frequency.",
+   "labels": {}
+  },
+  "ob taken at # and passed": {
+   "example": "Ob taken at 0140 and passed.",
+   "labels": {}
+  },
+  "occulting timing checked with the watch": {
+   "example": "Occulting timing checked with the watch.",
+   "labels": {}
+  },
+  "organised the annual store # tons up the slip in a day between weather": {
+   "example": "Organised the annual store, 2 tons up the slip in a day between weather.",
+   "labels": {}
+  },
+  "overhauled the foam installation and proved the induction rate on test": {
+   "example": "Overhauled the foam installation and proved the induction rate on test.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "overhauled the raw water side impeller seals and the heat exchanger stack cleaned": {
+   "example": "Overhauled the raw water side, impeller, seals and the heat exchanger stack cleaned.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "pad lighting tested before the night lift": {
+   "example": "Pad lighting tested before the night lift.",
+   "labels": {}
+  },
+  "painted the gallery rail one coat": {
+   "example": "Painted the gallery rail, one coat.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "painted the lantern roof": {
+   "example": "Painted the lantern roof.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "passed the weather by vhf at #": {
+   "example": "Passed the weather by VHF at 1115.",
+   "labels": {}
+  },
+  "permit returned and cancelled at #": {
+   "example": "Permit returned and cancelled at 2100.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "pointing made good on the south wall": {
+   "example": "Pointing made good on the south wall.",
+   "labels": {}
+  },
+  "practised a pick off rescue on the tower with #nd as the casualty": {
+   "example": "Practised a pick-off rescue on the tower with 2nd as the casualty.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "practised a pick off rescue on the tower with #rd as the casualty": {
+   "example": "Practised a pick-off rescue on the tower with 3rd as the casualty.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "practised a pick off rescue on the tower with pk as the casualty": {
+   "example": "Practised a pick-off rescue on the tower with PK as the casualty.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "practised a pick off rescue on the tower with relief as the casualty": {
+   "example": "Practised a pick-off rescue on the tower with relief as the casualty.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "practised a pick off rescue on the tower with sak as the casualty": {
+   "example": "Practised a pick-off rescue on the tower with SAK as the casualty.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "practised a pick off rescue on the tower with the ak as the casualty": {
+   "example": "Practised a pick-off rescue on the tower with the AK as the casualty.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "practised a pick off rescue on the tower with the supernumerary as the casualty": {
+   "example": "Practised a pick-off rescue on the tower with the supernumerary as the casualty.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "pressure reading # ohm about normal": {
+   "example": "Pressure reading 0.8 ohm, about normal.",
+   "labels": {}
+  },
+  "pressure reading # v about normal": {
+   "example": "Pressure reading 11.2 V, about normal.",
+   "labels": {}
+  },
+  "pressure reading # bar about normal": {
+   "example": "Pressure reading 3.6 bar, about normal.",
+   "labels": {}
+  },
+  "pressure reading # psi about normal": {
+   "example": "Pressure reading 48 psi, about normal.",
+   "labels": {}
+  },
+  "primed the no # pump running sweet": {
+   "example": "Primed the no.3 pump, running sweet.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "produced the dilapidation schedule for the district ahead of the automation survey": {
+   "example": "Produced the dilapidation schedule for the district ahead of the automation survey.",
+   "labels": {}
+  },
+  "protection relay settings checked against the schedule and two were found wrong": {
+   "example": "Protection relay settings checked against the schedule and two were found wrong.",
+   "labels": {
+    "R2_FAULT": "?",
+    "R1_MAINT": "?"
+   }
+  },
+  "pump losing prime found the foot valve seat pitted lapped it in": {
+   "example": "Pump losing prime, found the foot valve seat pitted. Lapped it in.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "quarterly inspection carried out report filed": {
+   "example": "Quarterly inspection carried out, report filed.",
+   "labels": {}
+  },
+  "queried our own obs against the district s chart and found our anemometer reading low": {
+   "example": "Queried our own obs against the district's chart and found our anemometer reading low.",
+   "labels": {}
+  },
+  "racked out no # breaker locked off caps on danger notices up permit # refers": {
+   "example": "Racked out NO.2 breaker, locked off, caps on, danger notices up. permit 1102 refers.",
+   "labels": {
+    "R3_PERMIT": "Y",
+    "R4_HVSW": "?"
+   }
+  },
+  "racked out no # breaker locked off caps on danger notices up permit bk # no # refers": {
+   "example": "Racked out no.2 breaker, locked off, caps on, danger notices up. permit bk.3 no.19 refers.",
+   "labels": {
+    "R3_PERMIT": "Y",
+    "R4_HVSW": "?"
+   }
+  },
+  "racked out no # breaker locked off caps on danger notices up ptw # refers": {
+   "example": "Racked out no.3 breaker, locked off, caps on, danger notices up. PTW 331 refers.",
+   "labels": {
+    "R3_PERMIT": "Y",
+    "R4_HVSW": "?"
+   }
+  },
+  "racon checked on the set responding": {
+   "example": "Racon checked on the set. Responding.",
+   "labels": {}
+  },
+  "racon coding confirmed correct": {
+   "example": "Racon coding confirmed correct.",
+   "labels": {}
+  },
+  "racon not triggering on x band swapped the receiver module and proved it off a passing ship": {
+   "example": "Racon not triggering on X-band, swapped the receiver module and proved it off a passing ship.",
+   "labels": {
+    "R1_MAINT": "Y",
+    "R2_FAULT": "?"
+   }
+  },
+  "racon reset after a power dip": {
+   "example": "Racon reset after a power dip.",
+   "labels": {}
+  },
+  "radio check with the district loud and clear": {
+   "example": "Radio check with the district. Loud and clear.",
+   "labels": {}
+  },
+  "raked out the joints ready for pointing": {
+   "example": "Raked out the joints ready for pointing.",
+   "labels": {}
+  },
+  "ran comms for the lift operation on a working channel with three parties": {
+   "example": "Ran comms for the lift operation on a working channel with three parties.",
+   "labels": {}
+  },
+  "ran no # set # hrs oil and water checked": {
+   "example": "Ran No.2 set 0.5 hrs. Oil and water checked.",
+   "labels": {}
+  },
+  "ran the annual survival drill raft inflated and boarded from the steps": {
+   "example": "Ran the annual survival drill, raft inflated and boarded from the steps.",
+   "labels": {}
+  },
+  "ran the boat off the rock in e # held her off the steps while the stores went across": {
+   "example": "Ran the boat off the rock in E 6, held her off the steps while the stores went across.",
+   "labels": {}
+  },
+  "ran the boat off the rock in ne # held her off the steps while the stores went across": {
+   "example": "Ran the boat off the rock in NE 5, held her off the steps while the stores went across.",
+   "labels": {}
+  },
+  "ran the boat off the rock in nw # gusting # held her off the steps while the stores went across": {
+   "example": "Ran the boat off the rock in NW 7 gusting 9, held her off the steps while the stores went across.",
+   "labels": {}
+  },
+  "ran the boat off the rock in s # held her off the steps while the stores went across": {
+   "example": "Ran the boat off the rock in S 4, held her off the steps while the stores went across.",
+   "labels": {}
+  },
+  "ran the boat off the rock in sw # held her off the steps while the stores went across": {
+   "example": "Ran the boat off the rock in SW 6, held her off the steps while the stores went across.",
+   "labels": {}
+  },
+  "ran the boat off the rock in var # held her off the steps while the stores went across": {
+   "example": "Ran the boat off the rock in var 2, held her off the steps while the stores went across.",
+   "labels": {}
+  },
+  "ran the boat off the rock in w # held her off the steps while the stores went across": {
+   "example": "Ran the boat off the rock in W 8, held her off the steps while the stores went across.",
+   "labels": {}
+  },
+  "ran the deck for # lifts in the day fuel state and manifests kept straight": {
+   "example": "Ran the deck for 2 lifts in the day, fuel state and manifests kept straight.",
+   "labels": {}
+  },
+  "ran the fire drill as a real scenario with smoke timed the muster and wrote it up": {
+   "example": "Ran the fire drill as a real scenario with smoke, timed the muster and wrote it up.",
+   "labels": {}
+  },
+  "ran the lifting operation for the lantern panel change four of us briefed beforehand": {
+   "example": "Ran the lifting operation for the lantern panel change, four of us, briefed beforehand.",
+   "labels": {}
+  },
+  "ran the muster and got # off the rock by helicopter in one lift": {
+   "example": "Ran the muster and got 4 off the rock by helicopter in one lift.",
+   "labels": {}
+  },
+  "ran the overhaul party of # men planned the sequence and kept them to it": {
+   "example": "Ran the overhaul party of 2 men, planned the sequence and kept them to it.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "ran the sump pump out # hrs": {
+   "example": "Ran the sump pump out, 2 hrs.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "ran the whole tower repaint over two seasons staging prep coats and records": {
+   "example": "Ran the whole tower repaint over two seasons, staging, prep, coats and records.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "ran through the fire drill with the new man": {
+   "example": "Ran through the fire drill with the new man.",
+   "labels": {}
+  },
+  "re terminated the no # outgoing at the board ir tested at # bar before re energising": {
+   "example": "Re-terminated the no 1 outgoing at the board, IR tested at 3.6 bar before re-energising.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "re terminated the no # outgoing at the board ir tested at # psi before re energising": {
+   "example": "Re-terminated the no 2 outgoing at the board, IR tested at 48 psi before re-energising.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "re terminated the no # outgoing at the board ir tested at # ohm before re energising": {
+   "example": "Re-terminated the NO.2 outgoing at the board, IR tested at 2.4 ohm before re-energising.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "re terminated the no # outgoing at the board ir tested at # v before re energising": {
+   "example": "Re-terminated the No.2 outgoing at the board, IR tested at 232 V before re-energising.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "read the permit conditions before starting": {
+   "example": "Read the permit conditions before starting.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "rebuilt the aerial mast head after the gale new insulators and the feeder remade": {
+   "example": "Rebuilt the aerial mast head after the gale, new insulators and the feeder remade.",
+   "labels": {
+    "R1_MAINT": "Y",
+    "R5_HEIGHT": "?"
+   }
+  },
+  "rebuilt the changeover logic after the flood drew out the sequence before touching it": {
+   "example": "Rebuilt the changeover logic after the flood, drew out the sequence before touching it.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "rebuilt the clockwork drive cleaned forty years of gum out of the train": {
+   "example": "Rebuilt the clockwork drive, cleaned forty years of gum out of the train.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "rebuilt the no # pump end to end new wear rings delivery back up to # ohm": {
+   "example": "Rebuilt the no 1 pump end to end, new wear rings, delivery back up to 0.8 ohm.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "rebuilt the no # pump end to end new wear rings delivery back up to # v": {
+   "example": "Rebuilt the No.2 pump end to end, new wear rings, delivery back up to 232 V.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "rebuilt the no # pump end to end new wear rings delivery back up to # bar": {
+   "example": "Rebuilt the NO.2 pump end to end, new wear rings, delivery back up to 3.6 bar.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "rebuilt the no # pump end to end new wear rings delivery back up to # psi": {
+   "example": "Rebuilt the No.2 pump end to end, new wear rings, delivery back up to 48 psi.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "rebuilt the soakaway after the flooding and put in a silt trap": {
+   "example": "Rebuilt the soakaway after the flooding and put in a silt trap.",
+   "labels": {}
+  },
+  "rebuilt the stores ledger from scratch three years of it had never been posted": {
+   "example": "Rebuilt the stores ledger from scratch, three years of it had never been posted.",
+   "labels": {}
+  },
+  "received # gal and entered in the book": {
+   "example": "Received 2 gal and entered in the book.",
+   "labels": {}
+  },
+  "received # lit and entered in the book": {
+   "example": "Received 40 lit and entered in the book.",
+   "labels": {}
+  },
+  "received half drum and entered in the book": {
+   "example": "Received half drum and entered in the book.",
+   "labels": {}
+  },
+  "received one drum and entered in the book": {
+   "example": "Received one drum and entered in the book.",
+   "labels": {}
+  },
+  "reconfigured distribution so the lamp feed is independent of the domestic side": {
+   "example": "Reconfigured distribution so the lamp feed is independent of the domestic side.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "reconstructed the log for the missing week from the rough book and the radio sheets": {
+   "example": "Reconstructed the log for the missing week from the rough book and the radio sheets.",
+   "labels": {}
+  },
+  "recovered #rd from the cable duct after he was overcome harness and line as rigged": {
+   "example": "Recovered 3rd from the cable duct after he was overcome, harness and line as rigged.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "recovered a broken down punt under tow in a rising sea made fast and got her in": {
+   "example": "Recovered a broken-down punt under tow in a rising sea, made fast and got her in.",
+   "labels": {}
+  },
+  "recovered the ak from the cable duct after he was overcome harness and line as rigged": {
+   "example": "Recovered the AK from the cable duct after he was overcome, harness and line as rigged.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "red lead on the bare patches": {
+   "example": "Red lead on the bare patches.",
+   "labels": {}
+  },
+  "refused to sign permit # back the isolations were not as stated reissued after": {
+   "example": "Refused to sign permit 0412 back, the isolations were not as stated. Reissued after.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "refused to sign permit bk # no # back the isolations were not as stated reissued after": {
+   "example": "Refused to sign permit bk.3 no.19 back, the isolations were not as stated. Reissued after.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "refused to sign ptw # back the isolations were not as stated reissued after": {
+   "example": "Refused to sign PTW 114 back, the isolations were not as stated. Reissued after.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "relaid # m of yard drain to a proper fall it had been running backwards for years": {
+   "example": "Relaid 3 m of yard drain to a proper fall, it had been running backwards for years.",
+   "labels": {}
+  },
+  "rendered the patch by the door": {
+   "example": "Rendered the patch by the door.",
+   "labels": {}
+  },
+  "renewed # cells and rebalanced the bank equalising charge started": {
+   "example": "Renewed 4 cells and rebalanced the bank, equalising charge started.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "renewed a shackle on the boat mooring": {
+   "example": "Renewed a shackle on the boat mooring.",
+   "labels": {}
+  },
+  "renewed fuse links no # way all made off": {
+   "example": "Renewed fuse links, No.2 way. All made off.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "renewed the glazing bars on the seaward side where they had wasted through": {
+   "example": "Renewed the glazing bars on the seaward side where they had wasted through.",
+   "labels": {}
+  },
+  "renewed the putty on # panes": {
+   "example": "Renewed the putty on 2 panes.",
+   "labels": {}
+  },
+  "renewed the sacrificial anodes on the slipway and recorded the wastage rates": {
+   "example": "Renewed the sacrificial anodes on the slipway and recorded the wastage rates.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "renewed the winch wire # splices made up and the drum re laid properly": {
+   "example": "Renewed the winch wire, 1 splices made up and the drum re-laid properly.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "reorganised the store below and set a minimum stock for the consumables": {
+   "example": "Reorganised the store below and set a minimum stock for the consumables.",
+   "labels": {}
+  },
+  "reorganised the watch bill so the new men were always paired with an experienced hand": {
+   "example": "Reorganised the watch bill so the new men were always paired with an experienced hand.",
+   "labels": {}
+  },
+  "repacked the gland on the no # pump set the drip and ran up to # ohm": {
+   "example": "Repacked the gland on the no 1 pump, set the drip and ran up to 0.8 ohm.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "repacked the gland on the no # pump set the drip and ran up to # v": {
+   "example": "Repacked the gland on the no 1 pump, set the drip and ran up to 24.6 V.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "repaired the derrick luffing gear new pin and bush turned up on station": {
+   "example": "Repaired the derrick luffing gear, new pin and bush turned up on station.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "repaired the storm damage to the landing wall rebuilt to the original batter": {
+   "example": "Repaired the storm damage to the landing wall, rebuilt to the original batter.",
+   "labels": {}
+  },
+  "replaced # lantern panes cut and bedded no leaks after the next gale": {
+   "example": "Replaced 2 lantern panes, cut and bedded, no leaks after the next gale.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "reported a flare seen to the #": {
+   "example": "Reported a flare seen to the 227.",
+   "labels": {}
+  },
+  "reported the landing as unsafe and refused relief until it was made good": {
+   "example": "Reported the landing as unsafe and refused relief until it was made good.",
+   "labels": {}
+  },
+  "reprogrammed the dsc controller after the board change and tested with the coast station": {
+   "example": "Reprogrammed the DSC controller after the board change and tested with the coast station.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "rescue kit rigged at the manhole before the confined space entry ptw # refers": {
+   "example": "Rescue kit rigged at the manhole before the confined space entry. PTW/88 refers.",
+   "labels": {
+    "R3_PERMIT": "Y",
+    "R5_HEIGHT": "?"
+   }
+  },
+  "reseal on the no # ram honed the bore and fitted new seals pressure held at # psi": {
+   "example": "Reseal on the no 1 ram, honed the bore and fitted new seals. Pressure held at 48 psi.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "reseal on the no # ram honed the bore and fitted new seals pressure held at # v": {
+   "example": "Reseal on the No.1 ram, honed the bore and fitted new seals. Pressure held at 232 V.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "reseal on the no # ram honed the bore and fitted new seals pressure held at # ohm": {
+   "example": "Reseal on the NO.2 ram, honed the bore and fitted new seals. Pressure held at 0.8 ohm.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "reseal on the no # ram honed the bore and fitted new seals pressure held at # bar": {
+   "example": "Reseal on the NO.2 ram, honed the bore and fitted new seals. Pressure held at 3.6 bar.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "reset the overspeed after a false trip": {
+   "example": "Reset the overspeed after a false trip.",
+   "labels": {}
+  },
+  "reset tripped breaker on lighting sub board": {
+   "example": "Reset tripped breaker on lighting sub-board.",
+   "labels": {}
+  },
+  "restored the hv after the contractor cleared removed earths and de isolated in sequence": {
+   "example": "Restored the HV after the contractor cleared, removed earths and de-isolated in sequence.",
+   "labels": {
+    "R4_HVSW": "Y",
+    "R3_PERMIT": "?"
+   }
+  },
+  "returns completed and posted": {
+   "example": "Returns completed and posted.",
+   "labels": {}
+  },
+  "reviewed the station abandon plan after the new landing was built": {
+   "example": "Reviewed the station abandon plan after the new landing was built.",
+   "labels": {}
+  },
+  "rewired the changeover contactor arrangement tested on both feeds and left in auto": {
+   "example": "Rewired the changeover contactor arrangement, tested on both feeds and left in auto.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "rewrote the station evacuation plan after the near miss and drilled it": {
+   "example": "Rewrote the station evacuation plan after the near miss and drilled it.",
+   "labels": {}
+  },
+  "rewrote the station returns format so the district could actually read it": {
+   "example": "Rewrote the station returns format so the district could actually read it.",
+   "labels": {}
+  },
+  "rigged a rebelay past the corbel and worked the whole face in two drops": {
+   "example": "Rigged a rebelay past the corbel and worked the whole face in two drops.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "rigged staging round the lantern for the glazing job tied back at # points": {
+   "example": "Rigged staging round the lantern for the glazing job, tied back at 3 points.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "rodded the soil pipe": {
+   "example": "Rodded the soil pipe.",
+   "labels": {}
+  },
+  "roped access to the seaward face for the pointing # hrs on the rope": {
+   "example": "Roped access to the seaward face for the pointing, 4 hrs on the rope.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "ropes inspected and logged before use": {
+   "example": "Ropes inspected and logged before use.",
+   "labels": {}
+  },
+  "rotation checked against the stopwatch": {
+   "example": "Rotation checked against the stopwatch.",
+   "labels": {}
+  },
+  "routine mf sched with the coast station": {
+   "example": "Routine MF sched with the coast station.",
+   "labels": {}
+  },
+  "sat through the night to catch the earth fault it was the heater element in the fog hut": {
+   "example": "Sat through the night to catch the earth fault. It was the heater element in the fog hut.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "scheduled call made and logged": {
+   "example": "Scheduled call made and logged.",
+   "labels": {}
+  },
+  "sea state and swell recorded": {
+   "example": "Sea state and swell recorded.",
+   "labels": {}
+  },
+  "second confined space entry this week the no # tank cleaned out and inspected": {
+   "example": "Second confined space entry this week, the no 1 tank cleaned out and inspected.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "set minimum stock levels for the station and cut the emergency indents to nil": {
+   "example": "Set minimum stock levels for the station and cut the emergency indents to nil.",
+   "labels": {}
+  },
+  "set the new flasher unit to the published character and witnessed it over an hour": {
+   "example": "Set the new flasher unit to the published character and witnessed it over an hour.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "set the timing gear on the signal to the published character and proved it over # hrs": {
+   "example": "Set the timing gear on the signal to the published character and proved it over 2 hrs.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "set the timing on no # after the pump was refitted ran it up and checked exhaust temps": {
+   "example": "Set the timing on no.2 after the pump was refitted, ran it up and checked exhaust temps.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "set up a duty standby arrangement on the two sump pumps with alternating starts": {
+   "example": "Set up a duty/standby arrangement on the two sump pumps with alternating starts.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "set up the auto start sequence on no # after the card was changed timings adjusted": {
+   "example": "Set up the auto-start sequence on no.2 after the card was changed, timings adjusted.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "set up the fall arrest on the vertical ladder and tested it with a dead weight": {
+   "example": "Set up the fall arrest on the vertical ladder and tested it with a dead weight.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "set up the haul for a heavy lift in a poor sea rigged a preventer on the fall": {
+   "example": "Set up the haul for a heavy lift in a poor sea, rigged a preventer on the fall.",
+   "labels": {}
+  },
+  "set up the new beacon from the manual no engineer available working by the following week": {
+   "example": "Set up the new beacon from the manual, no engineer available, working by the following week.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "set up the new lamp focus adjusted until the beam was even round the horizon": {
+   "example": "Set up the new lamp focus, adjusted until the beam was even round the horizon.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "set up the standby transmitter from cold and retuned it to the working frequency": {
+   "example": "Set up the standby transmitter from cold and retuned it to the working frequency.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "set up the telemetry link so the lamp fault alarm comes through on the aton message": {
+   "example": "Set up the telemetry link so the lamp fault alarm comes through on the aton message.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "sgs taken across the bank all reading fair": {
+   "example": "SGs taken across the bank, all reading fair.",
+   "labels": {}
+  },
+  "showed #nd the lamp changer routine": {
+   "example": "Showed 2nd the lamp changer routine.",
+   "labels": {}
+  },
+  "showed #rd the lamp changer routine": {
+   "example": "Showed 3rd the lamp changer routine.",
+   "labels": {}
+  },
+  "showed pk the lamp changer routine": {
+   "example": "Showed PK the lamp changer routine.",
+   "labels": {}
+  },
+  "showed relief the lamp changer routine": {
+   "example": "Showed relief the lamp changer routine.",
+   "labels": {}
+  },
+  "showed sak the lamp changer routine": {
+   "example": "Showed SAK the lamp changer routine.",
+   "labels": {}
+  },
+  "showed the ak the lamp changer routine": {
+   "example": "Showed the AK the lamp changer routine.",
+   "labels": {}
+  },
+  "showed the supernumerary the lamp changer routine": {
+   "example": "Showed the supernumerary the lamp changer routine.",
+   "labels": {}
+  },
+  "signal secured visibility cleared": {
+   "example": "Signal secured, visibility cleared.",
+   "labels": {}
+  },
+  "signed on to permit # for the day s work": {
+   "example": "Signed on to permit 1102 for the day's work.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "signed on to permit bk # no # for the day s work": {
+   "example": "Signed on to permit bk.3 no.19 for the day's work.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "signed on to ptw # for the day s work": {
+   "example": "Signed on to PTW/88 for the day's work.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "slewed heavy plant off the boat in e # timed the lifts to the swell": {
+   "example": "Slewed heavy plant off the boat in E 6, timed the lifts to the swell.",
+   "labels": {}
+  },
+  "slewed heavy plant off the boat in ne # timed the lifts to the swell": {
+   "example": "Slewed heavy plant off the boat in NE 5, timed the lifts to the swell.",
+   "labels": {}
+  },
+  "slewed heavy plant off the boat in nw # gusting # timed the lifts to the swell": {
+   "example": "Slewed heavy plant off the boat in NW 7 gusting 9, timed the lifts to the swell.",
+   "labels": {}
+  },
+  "slewed heavy plant off the boat in s # timed the lifts to the swell": {
+   "example": "Slewed heavy plant off the boat in S 4, timed the lifts to the swell.",
+   "labels": {}
+  },
+  "slewed heavy plant off the boat in sw # timed the lifts to the swell": {
+   "example": "Slewed heavy plant off the boat in SW 6, timed the lifts to the swell.",
+   "labels": {}
+  },
+  "slewed heavy plant off the boat in var # timed the lifts to the swell": {
+   "example": "Slewed heavy plant off the boat in var 2, timed the lifts to the swell.",
+   "labels": {}
+  },
+  "slewed heavy plant off the boat in w # timed the lifts to the swell": {
+   "example": "Slewed heavy plant off the boat in W 8, timed the lifts to the swell.",
+   "labels": {}
+  },
+  "specified and applied a two pack system on the lantern checked film thickness as we went": {
+   "example": "Specified and applied a two-pack system on the lantern, checked film thickness as we went.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "started no # set and ran on load # hrs": {
+   "example": "Started no 1 set and ran on load 8 hrs.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "stocktake carried out two items short": {
+   "example": "Stocktake carried out. Two items short.",
+   "labels": {}
+  },
+  "stood by at the landing for the boat": {
+   "example": "Stood by at the landing for the boat.",
+   "labels": {}
+  },
+  "stood by for evacuation stood down": {
+   "example": "Stood by for evacuation, stood down.",
+   "labels": {}
+  },
+  "stood by for the aircraft pad clear": {
+   "example": "Stood by for the aircraft, pad clear.",
+   "labels": {}
+  },
+  "stood by while #nd switched the no # transformer out": {
+   "example": "Stood by while 2nd switched the no 1 transformer out.",
+   "labels": {}
+  },
+  "stood by while #rd switched the no # transformer out": {
+   "example": "Stood by while 3rd switched the no 1 transformer out.",
+   "labels": {}
+  },
+  "stood by while pk switched the no # transformer out": {
+   "example": "Stood by while PK switched the no.1 transformer out.",
+   "labels": {}
+  },
+  "stood by while relief switched the no # transformer out": {
+   "example": "Stood by while relief switched the NO.2 transformer out.",
+   "labels": {}
+  },
+  "stood by while sak switched the no # transformer out": {
+   "example": "Stood by while SAK switched the No.2 transformer out.",
+   "labels": {}
+  },
+  "stood by while the ak switched the no # transformer out": {
+   "example": "Stood by while the AK switched the No.1 transformer out.",
+   "labels": {}
+  },
+  "stood by while the supernumerary switched the no # transformer out": {
+   "example": "Stood by while the supernumerary switched the no.2 transformer out.",
+   "labels": {}
+  },
+  "stores checked and the ledger made up": {
+   "example": "Stores checked and the ledger made up.",
+   "labels": {}
+  },
+  "stores landed and struck below": {
+   "example": "Stores landed and struck below.",
+   "labels": {}
+  },
+  "stores list made up for next relief": {
+   "example": "Stores list made up for next relief.",
+   "labels": {}
+  },
+  "stripped and cleaned the mercury bath float centred and the rotation smoothed out": {
+   "example": "Stripped and cleaned the mercury bath, float centred and the rotation smoothed out.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "stripped failed cement render off the tower and replaced with lime it needs to breathe": {
+   "example": "Stripped failed cement render off the tower and replaced with lime, it needs to breathe.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "surface prep argued with the district they wanted it over the rust did it properly": {
+   "example": "Surface prep argued with the district, they wanted it over the rust. Did it properly.",
+   "labels": {}
+  },
+  "surveyed the roof water system and found the downpipe never connected to anything": {
+   "example": "Surveyed the roof water system and found the downpipe never connected to anything.",
+   "labels": {}
+  },
+  "surveyed the whole landing ironwork and reported # items at end of life": {
+   "example": "Surveyed the whole landing ironwork and reported 2 items at end of life.",
+   "labels": {}
+  },
+  "survival drill with the station party": {
+   "example": "Survival drill with the station party.",
+   "labels": {}
+  },
+  "switched the ring to the alternative feed via the no # switch proved dead and earthed off": {
+   "example": "Switched the ring to the alternative feed via the NO.2 switch, proved dead and earthed off.",
+   "labels": {
+    "R4_HVSW": "?"
+   }
+  },
+  "synchronised no # onto the board manually the auto sync had drifted off": {
+   "example": "Synchronised No.1 onto the board manually, the auto sync had drifted off.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "system running hot found the relief valve passing reset and proved on the gauge": {
+   "example": "System running hot, found the relief valve passing. Reset and proved on the gauge.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "talked the pilot in on the radio when the pad lights failed torches on the corners": {
+   "example": "Talked the pilot in on the radio when the pad lights failed, torches on the corners.",
+   "labels": {}
+  },
+  "tank entry # hrs inside": {
+   "example": "Tank entry, 1.5 hrs inside.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "tightened glands in the cable trunk by the stair": {
+   "example": "Tightened glands in the cable trunk by the stair.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "timed the flashes # in the period": {
+   "example": "Timed the flashes, 3 in the period.",
+   "labels": {}
+  },
+  "took #nd round the plant": {
+   "example": "Took 2nd round the plant.",
+   "labels": {}
+  },
+  "took #rd round the plant": {
+   "example": "Took 3rd round the plant.",
+   "labels": {}
+  },
+  "took charge of the station for # weeks in the pk s absence no issues": {
+   "example": "Took charge of the station for 0.5 weeks in the PK's absence, no issues.",
+   "labels": {}
+  },
+  "took pk round the plant": {
+   "example": "Took PK round the plant.",
+   "labels": {}
+  },
+  "took relief round the plant": {
+   "example": "Took relief round the plant.",
+   "labels": {}
+  },
+  "took sak round the plant": {
+   "example": "Took SAK round the plant.",
+   "labels": {}
+  },
+  "took the #kv board off worked the sequence myself #nd witnessing": {
+   "example": "Took the 11kV board off, worked the sequence myself, 2nd witnessing.",
+   "labels": {
+    "R4_HVSW": "Y"
+   }
+  },
+  "took the #kv board off worked the sequence myself #rd witnessing": {
+   "example": "Took the 11kV board off, worked the sequence myself, 3rd witnessing.",
+   "labels": {
+    "R4_HVSW": "Y"
+   }
+  },
+  "took the #kv board off worked the sequence myself pk witnessing": {
+   "example": "Took the 11kV board off, worked the sequence myself, PK witnessing.",
+   "labels": {
+    "R4_HVSW": "Y"
+   }
+  },
+  "took the #kv board off worked the sequence myself relief witnessing": {
+   "example": "Took the 11kV board off, worked the sequence myself, relief witnessing.",
+   "labels": {
+    "R4_HVSW": "Y"
+   }
+  },
+  "took the #kv board off worked the sequence myself sak witnessing": {
+   "example": "Took the 11kV board off, worked the sequence myself, SAK witnessing.",
+   "labels": {
+    "R4_HVSW": "Y"
+   }
+  },
+  "took the #kv board off worked the sequence myself the ak witnessing": {
+   "example": "Took the 11kV board off, worked the sequence myself, the AK witnessing.",
+   "labels": {
+    "R4_HVSW": "Y"
+   }
+  },
+  "took the #kv board off worked the sequence myself the supernumerary witnessing": {
+   "example": "Took the 11kV board off, worked the sequence myself, the supernumerary witnessing.",
+   "labels": {
+    "R4_HVSW": "Y"
+   }
+  },
+  "took the ak round the plant": {
+   "example": "Took the AK round the plant.",
+   "labels": {}
+  },
+  "took the boat through the sound in poor vis on # no radar by the sound of the water": {
+   "example": "Took the boat through the sound in poor vis on 076, no radar, by the sound of the water.",
+   "labels": {}
+  },
+  "took the punt round to the east landing": {
+   "example": "Took the punt round to the east landing.",
+   "labels": {}
+  },
+  "took the supernumerary round the plant": {
+   "example": "Took the supernumerary round the plant.",
+   "labels": {}
+  },
+  "took the supernumerary through the whole plant over # weeks and signed him off": {
+   "example": "Took the supernumerary through the whole plant over 0.5 weeks and signed him off.",
+   "labels": {}
+  },
+  "topped coolant checked belts nil defects": {
+   "example": "Topped coolant, checked belts. Nil defects.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "topped the hydraulic reservoir # gal": {
+   "example": "Topped the hydraulic reservoir, 2 gal.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "topped the hydraulic reservoir # lit": {
+   "example": "Topped the hydraulic reservoir, 40 lit.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "topped the hydraulic reservoir half drum": {
+   "example": "Topped the hydraulic reservoir, half drum.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "topped the hydraulic reservoir one drum": {
+   "example": "Topped the hydraulic reservoir, one drum.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "topped up cells # gal distilled water used": {
+   "example": "Topped up cells, 2 gal distilled water used.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "topped up cells # lit distilled water used": {
+   "example": "Topped up cells, 40 lit distilled water used.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "topped up cells half drum distilled water used": {
+   "example": "Topped up cells, half drum distilled water used.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "topped up cells one drum distilled water used": {
+   "example": "Topped up cells, one drum distilled water used.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "tower whitewashed to the second band": {
+   "example": "Tower whitewashed to the second band.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "traced an intermittent on the lamp changer back to a chafed core in the riser duct": {
+   "example": "Traced an intermittent on the lamp changer back to a chafed core in the riser duct.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "traced and lifted an earth fault on the tower lighting ring split the ring to find it": {
+   "example": "Traced and lifted an earth fault on the tower lighting ring, split the ring to find it.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "traced bimetallic corrosion at the rail fixings to the wrong bolts being used in #": {
+   "example": "Traced bimetallic corrosion at the rail fixings to the wrong bolts being used in 1988.",
+   "labels": {}
+  },
+  "traced repeated false alerts to a fault in the position feed from the receiver": {
+   "example": "Traced repeated false alerts to a fault in the position feed from the receiver.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "traced the nuisance low volt alarm to a soft cell in the no # bank replaced it": {
+   "example": "Traced the nuisance low-volt alarm to a soft cell in the No.2 bank, replaced it.",
+   "labels": {
+    "R2_FAULT": "Y",
+    "R1_MAINT": "Y"
+   }
+  },
+  "trained #nd on the observing code and checked their first week of obs": {
+   "example": "Trained 2nd on the observing code and checked their first week of obs.",
+   "labels": {}
+  },
+  "trained #rd on the observing code and checked their first week of obs": {
+   "example": "Trained 3rd on the observing code and checked their first week of obs.",
+   "labels": {}
+  },
+  "trained pk on the observing code and checked their first week of obs": {
+   "example": "Trained PK on the observing code and checked their first week of obs.",
+   "labels": {}
+  },
+  "trained relief on the observing code and checked their first week of obs": {
+   "example": "Trained relief on the observing code and checked their first week of obs.",
+   "labels": {}
+  },
+  "trained sak on the observing code and checked their first week of obs": {
+   "example": "Trained SAK on the observing code and checked their first week of obs.",
+   "labels": {}
+  },
+  "trained the ak on the observing code and checked their first week of obs": {
+   "example": "Trained the AK on the observing code and checked their first week of obs.",
+   "labels": {}
+  },
+  "trained the supernumerary on the observing code and checked their first week of obs": {
+   "example": "Trained the supernumerary on the observing code and checked their first week of obs.",
+   "labels": {}
+  },
+  "treated #nd for a crush injury to the hand splinted and kept him until the boat came": {
+   "example": "Treated 2nd for a crush injury to the hand, splinted and kept him until the boat came.",
+   "labels": {}
+  },
+  "treated #rd for a crush injury to the hand splinted and kept him until the boat came": {
+   "example": "Treated 3rd for a crush injury to the hand, splinted and kept him until the boat came.",
+   "labels": {}
+  },
+  "treated pk for a crush injury to the hand splinted and kept him until the boat came": {
+   "example": "Treated PK for a crush injury to the hand, splinted and kept him until the boat came.",
+   "labels": {}
+  },
+  "treated relief for a crush injury to the hand splinted and kept him until the boat came": {
+   "example": "Treated relief for a crush injury to the hand, splinted and kept him until the boat came.",
+   "labels": {}
+  },
+  "treated sak for a crush injury to the hand splinted and kept him until the boat came": {
+   "example": "Treated SAK for a crush injury to the hand, splinted and kept him until the boat came.",
+   "labels": {}
+  },
+  "treated the ak for a crush injury to the hand splinted and kept him until the boat came": {
+   "example": "Treated the AK for a crush injury to the hand, splinted and kept him until the boat came.",
+   "labels": {}
+  },
+  "treated the supernumerary for a crush injury to the hand splinted and kept him until the boat came": {
+   "example": "Treated the supernumerary for a crush injury to the hand, splinted and kept him until the boat came.",
+   "labels": {}
+  },
+  "tuned the aerial after the storm swr back to normal and range restored": {
+   "example": "Tuned the aerial after the storm, SWR back to normal and range restored.",
+   "labels": {
+    "R1_MAINT": "?"
+   }
+  },
+  "up the ladder to the gallery harness on": {
+   "example": "Up the ladder to the gallery, harness on.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "ventilated the cellar before going in": {
+   "example": "Ventilated the cellar before going in.",
+   "labels": {
+    "R5_HEIGHT": "?"
+   }
+  },
+  "watch bill made out for the month": {
+   "example": "Watch bill made out for the month.",
+   "labels": {}
+  },
+  "weekly changeover no # set now lead": {
+   "example": "Weekly changeover, no.3 set now lead.",
+   "labels": {}
+  },
+  "wick trimmed and the glass cleaned": {
+   "example": "Wick trimmed and the glass cleaned.",
+   "labels": {}
+  },
+  "winch brake adjusted a little": {
+   "example": "Winch brake adjusted a little.",
+   "labels": {
+    "R1_MAINT": "Y"
+   }
+  },
+  "wind e # vis # miles cloud # # passed": {
+   "example": "Wind E 6, vis 4 miles, cloud 6/8. Passed.",
+   "labels": {}
+  },
+  "wind ne # vis # miles cloud # # passed": {
+   "example": "Wind NE 5, vis 4 miles, cloud 6/8. Passed.",
+   "labels": {}
+  },
+  "wind nw # gusting # vis # miles cloud # # passed": {
+   "example": "Wind NW 7 gusting 9, vis 4 miles, cloud 6/8. Passed.",
+   "labels": {}
+  },
+  "wind s # vis # miles cloud # # passed": {
+   "example": "Wind S 4, vis 4 miles, cloud 6/8. Passed.",
+   "labels": {}
+  },
+  "wind var # vis # miles cloud # # passed": {
+   "example": "Wind var 2, vis 4 miles, cloud 6/8. Passed.",
+   "labels": {}
+  },
+  "wind w # vis # miles cloud # # passed": {
+   "example": "Wind W 8, vis 4 miles, cloud 6/8. Passed.",
+   "labels": {}
+  },
+  "windsock renewed": {
+   "example": "Windsock renewed.",
+   "labels": {}
+  },
+  "wire brushed and primed the door frame": {
+   "example": "Wire brushed and primed the door frame.",
+   "labels": {}
+  },
+  "wire inspected no broken strands seen": {
+   "example": "Wire inspected, no broken strands seen.",
+   "labels": {}
+  },
+  "witnessed earths applied at the no # end": {
+   "example": "Witnessed earths applied at the no.2 end.",
+   "labels": {}
+  },
+  "work allocated and checked at #": {
+   "example": "Work allocated and checked at 2100.",
+   "labels": {}
+  },
+  "worked a poor range casualty through on ch # and relayed to the coast station": {
+   "example": "Worked a poor-range casualty through on ch.16 and relayed to the coast station.",
+   "labels": {}
+  },
+  "worked local boat on ch # re the relief": {
+   "example": "Worked local boat on ch.16 re the relief.",
+   "labels": {}
+  },
+  "worked mfv keimna on ch # re the relief": {
+   "example": "Worked MFV KEIMNA on ch.16 re the relief.",
+   "labels": {}
+  },
+  "worked mv sealadh on ch # re the relief": {
+   "example": "Worked MV SEALADH on ch.16 re the relief.",
+   "labels": {}
+  },
+  "worked out a search pattern from the drift and passed it to the boats": {
+   "example": "Worked out a search pattern from the drift and passed it to the boats.",
+   "labels": {}
+  },
+  "worked tender bran on ch # re the relief": {
+   "example": "Worked tender BRAN on ch.16 re the relief.",
+   "labels": {}
+  },
+  "worked tender isla mor on ch # re the relief": {
+   "example": "Worked tender ISLA MOR on ch.16 re the relief.",
+   "labels": {}
+  },
+  "worked the fault down by halving the circuit found a wet joint in the no # pull box": {
+   "example": "Worked the fault down by halving the circuit, found a wet joint in the NO.2 pull box.",
+   "labels": {
+    "R2_FAULT": "Y"
+   }
+  },
+  "worked the mast head in e # two point attachment throughout": {
+   "example": "Worked the mast head in E 6, two-point attachment throughout.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "worked the mast head in ne # two point attachment throughout": {
+   "example": "Worked the mast head in NE 5, two-point attachment throughout.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "worked the mast head in nw # gusting # two point attachment throughout": {
+   "example": "Worked the mast head in NW 7 gusting 9, two-point attachment throughout.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "worked the mast head in s # two point attachment throughout": {
+   "example": "Worked the mast head in S 4, two-point attachment throughout.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "worked the mast head in sw # two point attachment throughout": {
+   "example": "Worked the mast head in SW 6, two-point attachment throughout.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "worked the mast head in var # two point attachment throughout": {
+   "example": "Worked the mast head in var 2, two-point attachment throughout.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "worked the mast head in w # two point attachment throughout": {
+   "example": "Worked the mast head in W 8, two-point attachment throughout.",
+   "labels": {
+    "R5_HEIGHT": "Y"
+   }
+  },
+  "worked the relief boat on ch # re the relief": {
+   "example": "Worked the relief boat on ch.16 re the relief.",
+   "labels": {}
+  },
+  "wrote a station handbook for the new men because nothing existed": {
+   "example": "Wrote a station handbook for the new men because nothing existed.",
+   "labels": {}
+  },
+  "wrote the method for the tower repaint and briefed the party before we started": {
+   "example": "Wrote the method for the tower repaint and briefed the party before we started.",
+   "labels": {}
+  },
+  "wrote the safe system for the lantern work and had it countersigned by the district": {
+   "example": "Wrote the safe system for the lantern work and had it countersigned by the district.",
+   "labels": {
+    "R3_PERMIT": "Y"
+   }
+  },
+  "wrote up the running hours schedule for all three sets and put it on the wall": {
+   "example": "Wrote up the running hours schedule for all three sets and put it on the wall.",
+   "labels": {}
+  }
+ }
+}

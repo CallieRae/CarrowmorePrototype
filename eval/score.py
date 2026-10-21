@@ -54,16 +54,21 @@ def load_grades(reqs):
     """Wide sheet: one row per sentence, one column per requirement.
     Y = supports. ? = can't tell (counted as not supporting). Blank = No."""
     grades, unsure, odd = {}, 0, 0
-    with open(EVAL / "grading_sheet.csv", encoding="utf-8-sig") as f:
-        for row in csv.DictReader(f):
-            n = norm(row["entry_text"])
-            for r in reqs:
-                g = (row.get(r) or "").strip().upper()
-                if g == "?":
-                    unsure += 1
-                elif g not in ("", "Y", "N"):
-                    odd += 1
-                grades[(r, n)] = (g == "Y")
+    sheets = [EVAL / "grading_sheet.csv", EVAL / "grading_sheet_part2.csv"]
+    rows = []
+    for path in sheets:
+        if path.exists():
+            with open(path, encoding="utf-8-sig") as f:
+                rows += list(csv.DictReader(f))
+    for row in rows:
+        n = norm(row["entry_text"])
+        for r in reqs:
+            g = (row.get(r) or "").strip().upper()
+            if g == "?":
+                unsure += 1
+            elif g not in ("", "Y", "N"):
+                odd += 1
+            grades[(r, n)] = (g == "Y")
     return grades, unsure, odd
 
 
