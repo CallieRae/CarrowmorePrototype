@@ -442,14 +442,29 @@ function renderLine(k, L, v) {
   return head(meta.plain, L.tier, it.level) + asks(it) + body;
 }
 
-function renderPosting(k, p, v, A) {
+// Keeper's "Show at the top" control. Each order is a stable sort, so ties keep the posting's own order.
+// Qualification rank runs Insufficient, Logged experience, Nearly Qualified, Qualified (the label order, reversed).
+const QUAL = {rec: 0, none: 0, evid: 1, gate: 1, near: 2, auth: 3};
+const SORTS = {
+  posting:   {label: "Posting order", key: () => 0},
+  required:  {label: "Required", key: L => L.it.level === "desirable" ? 1 : 0},
+  preferred: {label: "Preferred", key: L => L.it.level === "desirable" ? 0 : 1},
+  cert:      {label: "Certification", key: L => L.it.kind === "log" ? 1 : 0},     // the medical counts with certificates
+  exp:       {label: "Experience", key: L => L.it.kind === "log" ? 0 : 1},
+  least:     {label: "Least qualified", key: L => QUAL[L.it.kind === "medical" ? "rec" : L.tier]},
+  most:      {label: "Most qualified", key: L => -QUAL[L.it.kind === "medical" ? "rec" : L.tier]},
+};
+const sortLines = (lines, order) => lines.map((L, i) => [L, i])
+  .sort((a, b) => (SORTS[order].key(a[0]) - SORTS[order].key(b[0])) || (a[1] - b[1])).map(([L]) => L);
+
+function renderPosting(k, p, v, A, order = "posting") {
   const route = `<div class="route"><strong>Shortest route</strong>` +
     (A.todo.length ? `<ol>${A.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : `<p>Nothing to book. The records cover what they ask for.</p>`) +
     (p.id === "om" ? `<p class="soft" style="margin:8px 0 0">The Array trains the turbine work itself; comfort at height, in enclosed spaces and on small boats is not negotiable. The logs show <span class="num">${A.lines.filter(L => L.it.kind === "log" && L.it.level === "essential" && L.tier === "evid").length} of ${A.lines.filter(L => L.it.kind === "log" && L.it.level === "essential").length}</span> required experience lines.</p>` : "") + `</div>`;
   return `<section class="card" aria-labelledby="h-${p.id}"><h2 id="h-${p.id}">${esc(p.title)}</h2>` +
     `<p class="soft">${esc(p.employer)} · ${esc(p.posts)}. ${esc(p.note)}</p>${route}` +
     p.flags.map(f => `<div class="flag">${esc(f)}</div>`).join("") +
-    A.lines.map(L => `<div class="req">${renderLine(k, L, v)}</div>`).join("") + `</section>`;
+    sortLines(A.lines, order).map(L => `<div class="req">${renderLine(k, L, v)}</div>`).join("") + `</section>`;
 }
 
 // Keeper-only: training needed across both roles, and what we need them to clarify.
@@ -509,17 +524,20 @@ function renderKeeper(code) {
   $("keeper-view").innerHTML =
     `<h1>${esc(k.name)}</h1><p class="soft">${esc(k.grade)} · with the Authority since ${k.joined} · ${k.stations.length} station${k.stations.length > 1 ? "s" : ""} · ${k.entries} of your log entries read</p>` +
     `<div class="card input-card"><h2 id="k-role-h">Role Selection</h2><p>Choose an open role to see how your record compares: what you already have, the training you'd need, and where we need you to clarify. Only you can see this page until you choose to share it.</p>` +
-    `<select id="k-role" aria-labelledby="k-role-h" style="width:100%">${opts}</select></div>` +
+    `<select id="k-role" aria-labelledby="k-role-h" style="width:100%">${opts}</select>` +
+    `<label for="k-sort">Show at the top</label>` +
+    `<select id="k-sort" style="width:100%">${Object.entries(SORTS).map(([id, s]) => `<option value="${id}">${s.label}</option>`).join("")}</select></div>` +
     `<div id="k-detail"></div>`;
   $("k-role").value = DATA.postings[0].id;
   $("k-role").onchange = renderKeeperRole;
+  $("k-sort").onchange = renderKeeperRole;
   renderKeeperRole();
 }
 function renderKeeperRole() {
   const k = byCode[keeperCode], v = V.keeper;
   const p = DATA.postings.find(x => x.id === $("k-role").value) || DATA.postings[0];
   const A = assess(k, p, v);
-  $("k-detail").innerHTML = renderPosting(k, p, v, A) + keeperExtras(k, [[p, A]]);
+  $("k-detail").innerHTML = renderPosting(k, p, v, A, $("k-sort").value) + keeperExtras(k, [[p, A]]);
 }
 
 // ---------- employer: sort by closeness to ready, with the reasons visible ----------
