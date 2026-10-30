@@ -452,7 +452,7 @@ function renderLine(k, L, v) {
     `<p class="soft">These could show it, but the entry alone doesn't settle it (for example, the voltage isn't written down).</p>${entryList([...ev.maybe].reverse())}</details>`;
   if (it.gate && L.tier === "gate") body += `<div class="flag"><strong>A possible shortcut.</strong> The Competence Board accepts a lapsed Authority HV authorization instead of the two years' experience, but only with paperwork showing the original authorization. Switching like this normally needs an authorization, so the Authority may hold a record. The logs can't prove it either way.</div>`;
   if (L.tier === "evid") body += v === V.keeper
-    ? `<div class="flag"><strong>Next step.</strong> Confirm this with your advisor, and tell them if you hold a certificate for it that isn't in our records.</div>`
+    ? `<div class="flag ask"><strong>Next step.</strong> Confirm this with your advisor, and tell them if you hold a certificate for it that isn't in our records.</div>`
     : `<div class="flag"><strong>Follow up.</strong> Confirm the experience with the keeper, and ask whether they hold a certificate for it that isn't on record.</div>`;
   if (L.tier === "gate" && v !== V.keeper) body += `<div class="flag"><strong>Follow up.</strong> Ask the keeper and the Authority for any record of a past HV authorization.</div>`;
   if (L.tier === "none" || (it.gate && L.tier !== "gate")) body += `<p class="soft"><strong>Route:</strong> ${esc(meta.route)}</p>`;
@@ -531,12 +531,13 @@ function keeperExtras(k, assessments) {
   }
   const logged = assessments.flatMap(([, A]) => A.lines.filter(L => L.tier === "evid").map(L => DATA.log_reqs[L.it.req].plain));
   if (logged.length) asksList.unshift(`Logged experience (${logged.join("; ")}): your logs show this work, but nothing formally confirms it yet. Please confirm it with your advisor, and tell us about any certificates for it that aren't in our records.`);
+  // The medical is an examination, not training, so it always lives with the questions.
+  if (assessments.some(([, A]) => A.lines.some(L => L.it.kind === "medical"))) asksList.push("Offshore medical: the role needs one, and there's no medical in the records (expected, as the Authority never required one). It's an examination, not a course. Have you had an offshore or occupational medical recently? If not, your advisor can help you book one.");
   if (assessments.some(([p]) => p.id === "om")) asksList.push("Offshore safety certificate: the O&M posting says it covers working at height, but height is a separate certificate in the scheme list. Confirm exact requirements with employer.");
   const tr = [...training.values()];
   return `<section class="card area-train" data-part="train"><h2>Training you'd need</h2>` +
     (tr.length ? `<p class="soft">For this role. Nothing here is booked; your advisor can help you choose.</p><div class="rank-wrap"><table><thead><tr><th>Course module</th><th>Certificate</th></tr></thead><tbody>` +
       tr.map(t => `<tr><td>${esc(t.m.mod)} ${esc(t.m.name)}</td><td>${esc(t.sc)}</td></tr>`).join("") + `</tbody></table></div>` : `<p>No certificate modules outstanding.</p>`) +
-    `<p style="margin-top:12px">Plus an <strong>offshore medical</strong> (an examination, not a course).</p>` +
     (retake.size ? `<div class="flag"><strong>May need retaking.</strong> These modules are older than their certificate's renewal period. We don't know yet whether the issuing body will still count them.<ul>${[...retake.values()].map(r => `<li>${esc(r)}</li>`).join("")}</ul></div>` : "") +
     `</section>` +
     `<section class="card area-ask" data-part="ask"><h2>Where we need you to clarify</h2><p class="soft">Your answers can only add to your record. Tell your advisor, or reply to the questions they send.</p>` +
