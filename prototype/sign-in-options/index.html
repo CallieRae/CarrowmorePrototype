@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Keeper Sign-in Options</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Chooser: dark family throughout (Pearson Purple ground, Light Purple cards).
+     Layout: a short intro, then one row of three option cards, each led by its art. */
+  :root {
+    color-scheme: dark;
+    --ground: #0D004D; --card: #C1BFFF; --card-ink: #0D004D; --ink: #FFFFFF; --ink-soft: #C1BFFF;
+    --rule: #56E2E1; --font: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font: 16px/1.55 var(--font); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding-block: 40px 56px;
+          padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 8px; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 14px; text-wrap: balance; }
+  .lede { max-width: 64ch; color: var(--ink); margin: 0 0 10px; }
+  .fixed { max-width: 64ch; color: var(--ink-soft); font-size: .92rem; border-left: 4px solid var(--rule); padding: 4px 12px; margin: 0 0 32px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .opt { background: var(--card); color: var(--card-ink); border-radius: 16px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; text-decoration: none; }
+  .opt:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .art { aspect-ratio: 16 / 9; max-width: 100%; background: #07002E url("assets/lighthouse.webp") center / cover; }
+  .a-first { filter: brightness(.55) saturate(1.1); background-position: 50% 30%; background-size: 130%; }
+  .a-beacon { background-size: 170%; background-position: 50% 28%; }
+  .a-approach { background-size: 340%; background-position: 50% 30%; filter: brightness(.8); }
+  .body { padding: 16px 18px 18px; display: grid; gap: 6px; align-content: start; }
+  .body h2 { font-size: 1.2rem; margin: 0; }
+  .body p { margin: 0; font-size: .93rem; }
+  .meta { font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  .open { font-weight: 700; margin-top: 8px; }
+  .opt:hover .open { text-decoration: underline; }
+  footer { margin-top: 36px; font-size: .82rem; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Keeper Skills Record · Carrowmore</p>
+  <h1>Three ways in to the sign-in</h1>
+  <p class="lede">Each option opens on the station at night and brings you to the same sign-in. They differ in how the light arrives and how long you wait for it. Any key or tap skips the intro, and anyone who prefers reduced motion goes straight to the card.</p>
+  <p class="fixed">Fixed across all three: the card is Mist at 75% opacity, all type is Black at 100%, and the sign-in works as it does in the prototype.</p>
+
+  <div class="grid">
+    <a class="opt" href="first-light.html">
+      <div class="art a-first" role="img" aria-label="The lighthouse at night"></div>
+      <div class="body">
+        <span class="meta">A · About 5 seconds</span>
+        <h2>First Light</h2>
+        <p>The lamp is out. It strikes, the light travels outward along the beams and lifts the whole scene, then the card rises. Built on the illustration as supplied.</p>
+        <span class="open">Open First Light</span>
+      </div>
+    </a>
+    <a class="opt" href="beacon.html">
+      <div class="art a-beacon" role="img" aria-label="The lantern with its beams"></div>
+      <div class="body">
+        <span class="meta">B · About 4 seconds</span>
+        <h2>Beacon</h2>
+        <p>The scene redrawn as vector art, so the beams start fully retracted and extend from the lantern while circuit traces draw along them. The beams keep a slow breath afterwards.</p>
+        <span class="open">Open Beacon</span>
+      </div>
+    </a>
+    <a class="opt" href="approach.html">
+      <div class="art a-approach" role="img" aria-label="Close on the lantern"></div>
+      <div class="body">
+        <span class="meta">C · About 5.5 seconds</span>
+        <h2>Approach</h2>
+        <p>Arriving by boat: the view opens close on the dark lantern, the lamp strikes, and the view draws back to the whole station as the light comes up.</p>
+        <span class="open">Open Approach</span>
+      </div>
+    </a>
+  </div>
+  <footer>Copyright 2026 Pearson. All rights reserved. Option studies only; the submitted prototype is unchanged.</footer>
+</div>
+</body>
+</html>

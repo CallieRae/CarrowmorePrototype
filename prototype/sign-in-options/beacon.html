@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beacon Sign-in</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="signin.css">
+<style>
+  /* Option B, Beacon. The station redrawn as live vector art, so the light can truly start
+     retracted: the lamp strikes, four beams extend from the lantern, circuit traces draw along
+     them, and the beams keep a slow breath once the card is up. About 4 seconds to the sign-in. */
+  :root { --card-at: 3.5s; }
+  .scene { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+  .beam, .glow { transform-box: view-box; transform-origin: 958px 340px; }
+  .trace { stroke-dasharray: 1; stroke-dashoffset: 0; }
+  .breath { animation: breathe 7s ease-in-out 4.5s infinite; transform-box: view-box; transform-origin: 958px 340px; }
+  .grain {
+    position: fixed; inset: 0; pointer-events: none; opacity: .2; mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.4 -.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .play:not(.skipped) .scene  { animation: dusk 1.2s ease-out both; }
+  .play:not(.skipped) .glow   { animation: strike 1.6s var(--ease-out) .7s both; }
+  .play:not(.skipped) .beam   { animation: extend 2.2s cubic-bezier(.3, .7, .2, 1) 1.2s both; }
+  .play:not(.skipped) .beam.lo { animation-delay: 1.45s; }
+  .play:not(.skipped) .node   { animation: dusk .5s ease-out calc(2s + var(--d, 0s)) both; }
+  .play:not(.skipped) .trace  { animation: trace 1.6s ease-out calc(2s + var(--d, 0s)) both; }
+
+  @keyframes dusk    { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes strike  { 0% { opacity: 0; transform: scale(.1); } 40% { opacity: 1; transform: scale(1.25); } 100% { opacity: 1; transform: scale(1); } }
+  @keyframes extend  { from { opacity: 0; transform: scale(0); } 20% { opacity: 1; } to { opacity: 1; transform: scale(1); } }
+  @keyframes trace   { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @keyframes breathe { 0%, 100% { opacity: 1; } 50% { opacity: .78; } }
+</style>
+</head>
+<body>
+<svg class="scene" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0D004D"/><stop offset="1" stop-color="#290066"/>
+    </linearGradient>
+    <linearGradient id="col-fuchsia" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#512EAB"/><stop offset=".6" stop-color="#653FC6"/><stop offset="1" stop-color="#B820A9"/></linearGradient>
+    <linearGradient id="col-lav" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7950E2"/><stop offset=".5" stop-color="#B79BFE"/><stop offset="1" stop-color="#EDECF6"/></linearGradient>
+    <linearGradient id="col-turq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D1788"/><stop offset=".3" stop-color="#7CE8E7"/><stop offset="1" stop-color="#EDECF6"/></linearGradient>
+    <linearGradient id="col-blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#512EAB"/><stop offset=".45" stop-color="#9AEEED"/><stop offset="1" stop-color="#B79BFE"/></linearGradient>
+    <linearGradient id="col-mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D1788"/><stop offset="1" stop-color="#653FC6"/></linearGradient>
+    <linearGradient id="top-shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D004D" stop-opacity=".7"/><stop offset=".45" stop-color="#0D004D" stop-opacity="0"/></linearGradient>
+    <linearGradient id="tower-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CAB7FF"/><stop offset="1" stop-color="#B79BFE"/></linearGradient>
+    <linearGradient id="tower-r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7950E2"/><stop offset="1" stop-color="#512EAB"/></linearGradient>
+    <radialGradient id="halo"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".18" stop-color="#FFFFFF" stop-opacity=".9"/><stop offset=".45" stop-color="#CBF6F5" stop-opacity=".45"/><stop offset="1" stop-color="#C1BFFF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="beam-ul" gradientUnits="userSpaceOnUse" x1="958" y1="340" x2="0" y2="70"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".75"/><stop offset=".45" stop-color="#C1BFFF" stop-opacity=".32"/><stop offset="1" stop-color="#C1BFFF" stop-opacity="0"/></linearGradient>
+    <linearGradient id="beam-ur" gradientUnits="userSpaceOnUse" x1="958" y1="340" x2="1920" y2="70"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".75"/><stop offset=".45" stop-color="#C1BFFF" stop-opacity=".32"/><stop offset="1" stop-color="#C1BFFF" stop-opacity="0"/></linearGradient>
+    <linearGradient id="beam-ll" gradientUnits="userSpaceOnUse" x1="958" y1="340" x2="0" y2="860"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".7"/><stop offset=".5" stop-color="#B79BFE" stop-opacity=".3"/><stop offset="1" stop-color="#B79BFE" stop-opacity=".05"/></linearGradient>
+    <linearGradient id="beam-lr" gradientUnits="userSpaceOnUse" x1="958" y1="340" x2="1920" y2="760"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".7"/><stop offset=".5" stop-color="#B79BFE" stop-opacity=".3"/><stop offset="1" stop-color="#B79BFE" stop-opacity=".05"/></linearGradient>
+    <pattern id="rail" width="7" height="22" patternUnits="userSpaceOnUse"><rect width="2" height="22" fill="#0D004D"/></pattern>
+    <pattern id="corbel" width="12" height="20" patternUnits="userSpaceOnUse"><rect width="3" height="20" fill="#0D004D" opacity=".6"/></pattern>
+  </defs>
+
+  <!-- sky and light columns -->
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <rect x="315" width="310" height="1080" fill="url(#col-mid)"/>
+  <rect x="625" width="115" height="1080" fill="url(#col-fuchsia)"/>
+  <rect x="740" width="90" height="1080" fill="url(#col-lav)"/>
+  <rect x="830" width="170" height="1080" fill="url(#col-turq)"/>
+  <rect x="1000" width="100" height="1080" fill="url(#col-blue)"/>
+  <rect x="1100" width="200" height="1080" fill="url(#col-lav)" opacity=".55"/>
+  <rect x="1300" width="420" height="1080" fill="url(#col-mid)"/>
+  <rect width="1920" height="1080" fill="url(#top-shade)"/>
+
+  <!-- beams: drawn at full reach; the intro scales them out from the lantern -->
+  <g class="breath">
+    <polygon class="beam lo" points="958,340 0,700 0,1010" fill="url(#beam-ll)"/>
+    <polygon class="beam lo" points="958,340 1920,610 1920,900" fill="url(#beam-lr)"/>
+    <polygon class="beam" points="958,340 0,-40 0,175" fill="url(#beam-ul)"/>
+    <polygon class="beam" points="958,340 1920,-40 1920,175" fill="url(#beam-ur)"/>
+    <g id="traces" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".85"></g>
+  </g>
+
+  <!-- tower -->
+  <line x1="958" y1="226" x2="958" y2="266" stroke="#B79BFE" stroke-width="5"/>
+  <circle cx="958" cy="248" r="7" fill="#B79BFE"/>
+  <path d="M897 304 Q897 270 958 262 Q1019 270 1019 304 Z" fill="#9677F0"/>
+  <rect x="893" y="300" width="130" height="9" rx="3" fill="#653FC6"/>
+  <rect x="904" y="309" width="108" height="62" fill="#FFFFFF"/>
+  <path d="M934 309 V371 M982 309 V371" stroke="#C1BFFF" stroke-width="4"/>
+  <rect x="898" y="369" width="120" height="12" fill="#7950E2"/>
+  <circle class="glow" cx="958" cy="340" r="190" fill="url(#halo)"/>
+  <rect x="879" y="386" width="158" height="22" fill="url(#rail)"/>
+  <rect x="879" y="384" width="158" height="4" fill="#0D004D"/>
+  <path d="M873 408 H1043 L1033 426 H883 Z" fill="#3D1788"/>
+  <path d="M883 426 H1033 L1012 448 H904 Z" fill="#7950E2"/>
+  <path d="M883 426 H1033 L1012 448 H904 Z" fill="url(#corbel)"/>
+  <path d="M906 448 H958 V830 H880 Z" fill="url(#tower-l)"/>
+  <path d="M958 448 H1010 L1036 830 H958 Z" fill="url(#tower-r)"/>
+  <g fill="#0D004D">
+    <rect x="945" y="495" width="27" height="28"/><rect x="945" y="580" width="27" height="28"/><rect x="945" y="665" width="27" height="28"/>
+  </g>
+  <path d="M958 495 v28 M945 509 h27 M958 580 v28 M945 594 h27 M958 665 v28 M945 679 h27" stroke="#9677F0" stroke-width="2.5"/>
+
+  <!-- rock -->
+  <path d="M820 830 C870 780 950 760 1010 742 C1090 704 1180 674 1290 670 C1335 670 1350 704 1336 744 C1366 824 1424 884 1456 962 L1720 1080 L210 1080 C410 980 640 900 820 830 Z" fill="#3D1788"/>
+  <path d="M560 1002 C700 962 822 932 932 926 C1004 922 1042 902 1062 872 C1102 852 1192 832 1302 822 L1292 862 C1202 882 1122 902 1082 942 C1042 982 962 992 862 1002 Z" fill="#290066"/>
+  <path d="M1000 1080 L1052 960 C1082 902 1152 872 1222 842 C1292 822 1352 804 1382 862 C1412 932 1442 1002 1520 1080 Z" fill="#0D004D"/>
+  <path d="M1080 760 C1150 730 1230 712 1300 716" stroke="#653FC6" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>
+<div class="grain" aria-hidden="true"></div>
+<div class="shell">
+  <section class="card" aria-labelledby="si-h">
+    <img class="logo" src="assets/pearson-logo-purple.png" alt="Pearson">
+    <div id="signin-body" class="stack">
+      <p class="eyebrow">Keeper Skills Record · Carrowmore</p>
+      <h1 id="si-h">Sign in</h1>
+      <div class="tabs" role="tablist" aria-label="I am signing in as">
+        <button type="button" role="tab" aria-selected="true" id="tab-k" aria-controls="form-k">Keeper/Applicant</button>
+        <button type="button" role="tab" aria-selected="false" id="tab-e" aria-controls="form-e">Employer/Advisor</button>
+      </div>
+      <form id="form-k" role="tabpanel" aria-labelledby="tab-k">
+        <p>See your own record against the jobs on offer: what you already have, what training you'd need, and where we need your help to fill gaps.</p>
+        <label for="k-code">Keeper code</label>
+        <input id="k-code" autocomplete="username" placeholder="for example K0566" required>
+        <label for="k-pass">Password</label>
+        <input id="k-pass" type="password" autocomplete="current-password" required>
+        <button class="go" type="submit">Sign in</button>
+      </form>
+      <form id="form-e" role="tabpanel" aria-labelledby="tab-e" hidden>
+        <p>Browse keepers who have shared their record, sorted by name or by how close they are to ready for a role.</p>
+        <label for="e-user">Work email</label>
+        <input id="e-user" type="email" autocomplete="username" placeholder="recruiter@carrowmore-array.example" required>
+        <label for="e-pass">Password</label>
+        <input id="e-pass" type="password" autocomplete="current-password" required>
+        <button class="go" type="submit">Sign in</button>
+      </form>
+      <p class="err" id="si-err" role="alert"></p>
+      <div class="demo"><strong>Prototype sign-in, not real security.</strong> Keepers: any keeper code, password carrowmore. Employers: any email, password array.</div>
+    </div>
+    <div class="done" id="done" hidden>
+      <p class="eyebrow">Signed in</p>
+      <h1 id="done-who"></h1>
+      <p>In the full build this opens your view directly. For now, the prototype keeps its own sign-in.</p>
+      <a id="done-link" href="#" target="_blank" rel="noopener">Open the prototype</a>
+      <button class="go" type="button" id="again">Sign in as someone else</button>
+    </div>
+  </section>
+</div>
+
+<nav class="dock" aria-label="Intro">
+  <button type="button" id="skip" class="skip-btn">Skip intro</button>
+  <button type="button" id="replay">Replay intro</button>
+  <a href="index.html">All options</a>
+  <span class="copy">Copyright 2026 Pearson. All rights reserved.</span>
+</nav>
+<script>
+  // Circuit traces along each beam: a run, one right-angle jog, a run, with a node at each end.
+  // Positions are fractions of the beam's length (t) and offsets across it (o, scaled by t so they stay in the beam).
+  (function () {
+    const A = [958, 340];
+    const beams = [[0, 70], [1920, 70], [0, 855], [1920, 755]];
+    const runs = [
+      { t0: .18, tj: .42, t1: .80, o1: -40, o2: 10,  d: 0 },
+      { t0: .30, tj: .55, t1: .95, o1: 55,  o2: 85,  d: .25 },
+      { t0: .12, tj: .26, t1: .50, o1: 20,  o2: -25, d: .5 }
+    ];
+    const g = document.getElementById("traces");
+    const NS = "http://www.w3.org/2000/svg";
+    beams.forEach((B, bi) => {
+      const dx = B[0] - A[0], dy = B[1] - A[1], len = Math.hypot(dx, dy);
+      const nx = -dy / len, ny = dx / len;
+      const P = (t, o) => [A[0] + dx * t + nx * o * t * 1.6, A[1] + dy * t + ny * o * t * 1.6].map((v) => v.toFixed(1));
+      runs.forEach((r, ri) => {
+        const flip = bi % 2 ? -1 : 1;
+        const o1 = r.o1 * flip, o2 = r.o2 * flip;
+        const pts = [P(r.t0, o1), P(r.tj, o1), P(r.tj + .05, o2), P(r.t1, o2)];
+        const path = document.createElementNS(NS, "path");
+        path.setAttribute("d", "M" + pts.map((p) => p.join(" ")).join(" L"));
+        path.setAttribute("pathLength", "1");
+        path.setAttribute("class", "trace");
+        path.style.setProperty("--d", (r.d + bi * .08) + "s");
+        g.appendChild(path);
+        [pts[0], pts[3]].forEach((p) => {
+          const c = document.createElementNS(NS, "circle");
+          c.setAttribute("cx", p[0]); c.setAttribute("cy", p[1]); c.setAttribute("r", "6");
+          c.setAttribute("fill", "#FFFFFF"); c.setAttribute("stroke", "none");
+          c.setAttribute("class", "node"); c.style.setProperty("--d", (r.d + bi * .08) + "s");
+          g.appendChild(c);
+        });
+      });
+    });
+  })();
+</script>
+<script src="signin.js"></script>
+</body>
+</html>

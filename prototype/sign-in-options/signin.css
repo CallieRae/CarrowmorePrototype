@@ -1,0 +1,126 @@
+/* Sign-in option studies: shared stage, card and controls.
+   Layout: a full-bleed night scene, the lamp fixed at 49.9% / 31.5% of the art,
+   with the sign-in card set to the right of the tower (bottom sheet on phones).
+   A single committed look: the scene is always night, so there is no light/dark swap.
+   Card spec (Callie): Mist #EDECF6 at 75% opacity, all type Black at 100%. */
+:root {
+  color-scheme: dark;
+  --purple: #0D004D; --amethyst: #512EAB; --light-purple: #C1BFFF; --mist: #EDECF6;
+  --turquoise: #56E2E1; --amber: #FFCE00; --black: #000000; --white: #FFFFFF;
+  --night: #07002E;                      /* pre-dawn ground behind the art, a step below Pearson Purple */
+  --card: rgba(237, 236, 246, .75);      /* Mist at 75% */
+  --card-ink: #000000;                   /* Black at 100% */
+  --field: #FFFFFF; --field-line: #0D004D;
+  --lamp-x: 49.9%; --lamp-y: 31.5%;      /* measured from the brightest pixels of the lantern */
+  --font: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-pop: cubic-bezier(.2, .9, .25, 1.15);
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body {
+  margin: 0; overflow: hidden; background: var(--night); color: var(--white);
+  font: 16px/1.5 var(--font); font-variant-ligatures: none;
+}
+
+/* ---------- stage: covers the viewport at the art's 16:9 ratio, so % positions match the art ---------- */
+.stage {
+  position: fixed; left: 50%; top: 50%;
+  width: max(100vw, 177.78vh); height: max(100vh, 56.25vw);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.stage > * { position: absolute; inset: 0; width: 100%; height: 100%; }
+.stage img { object-fit: cover; display: block; }
+.lamp {
+  inset: auto; left: var(--lamp-x); top: var(--lamp-y);
+  width: 34%; height: auto; aspect-ratio: 1; translate: -50% -50%;
+  border-radius: 50%; pointer-events: none; mix-blend-mode: screen;
+  background: radial-gradient(circle, rgba(255,255,255,.95) 0 4%, rgba(203,246,245,.55) 12%, rgba(193,191,255,.22) 30%, transparent 62%);
+}
+
+/* ---------- the sign-in card ---------- */
+.shell {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: flex-end;
+  padding-block: max(24px, env(safe-area-inset-top, 0px)) max(64px, calc(env(safe-area-inset-bottom, 0px) + 56px));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px), 6vw);
+  pointer-events: none; overflow-y: auto;
+}
+.card {
+  pointer-events: auto; width: min(400px, 100%);
+  background: var(--card); color: var(--card-ink);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, .55); border-radius: 18px;
+  padding: 26px 26px 20px; box-shadow: 0 24px 60px rgba(7, 0, 46, .45);
+  display: grid; gap: 14px;
+}
+.card * { color: var(--card-ink); }
+.stack { display: grid; gap: 14px; }
+.card .logo { width: 116px; height: auto; display: block; }
+.eyebrow { font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin: 0; }
+.card h1 { font-size: 1.6rem; line-height: 1.15; margin: 0; text-wrap: balance; }
+.card p { margin: 0; font-size: .95rem; }
+.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 4px; border-radius: 10px; background: rgba(255, 255, 255, .5); }
+.tabs button {
+  font: inherit; font-size: .9rem; font-weight: 600; border: 0; border-radius: 7px; padding: 8px 6px;
+  background: transparent; cursor: pointer;
+}
+.tabs button[aria-selected="true"] { background: var(--white); box-shadow: inset 0 -3px 0 var(--black); }
+form { display: grid; gap: 6px; }
+label { font-weight: 700; font-size: .9rem; margin-top: 6px; }
+input {
+  font: inherit; width: 100%; padding: 10px 12px; border-radius: 8px;
+  border: 1px solid var(--field-line); background: var(--field);
+}
+input::placeholder { color: var(--black); opacity: 1; font-style: italic; font-weight: 400; }
+.go {
+  margin-top: 12px; font: inherit; font-weight: 700; border: 0; border-radius: 8px; padding: 11px 18px;
+  background: var(--turquoise); cursor: pointer;      /* Turquoise fill keeps the label in Black */
+}
+.go:hover { background: #7CE8E7; }
+.err { font-weight: 700; font-size: .9rem; min-height: 1.2em; margin: 0; }
+.err:empty { display: none; }
+.demo { font-size: .8rem; border-left: 4px solid var(--amber); padding: 6px 10px; background: rgba(255, 255, 255, .45); border-radius: 0 6px 6px 0; }
+.done { display: grid; gap: 10px; }
+.done a { font-weight: 700; }
+:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+
+/* ---------- scene controls, on the dark ground (type White / Light Purple) ---------- */
+.dock {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 5;
+  display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center;
+  padding-block: 10px calc(env(safe-area-inset-bottom, 0px) + 12px);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  font-size: .8rem; color: var(--light-purple); pointer-events: none;
+}
+.dock > * { pointer-events: auto; }
+.dock button, .dock a {
+  font: inherit; font-weight: 600; color: var(--white); background: rgba(13, 0, 77, .55);
+  border: 1px solid rgba(193, 191, 255, .5); border-radius: 999px; padding: 6px 14px; cursor: pointer; text-decoration: none;
+}
+.dock .copy { margin-left: auto; color: var(--light-purple); }
+.dock :focus-visible { outline-color: var(--white); }
+
+/* ---------- phones: card becomes a bottom sheet under the lantern ---------- */
+@media (max-width: 760px), (max-aspect-ratio: 4/5) {
+  .shell { align-items: flex-end; justify-content: center; padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .card { padding: 20px 18px 16px; gap: 10px; }
+  .card h1 { font-size: 1.35rem; }
+  .dock .copy { display: none; }
+}
+
+/* ---------- intro choreography hooks ----------
+   Each page scopes its intro keyframes to .play:not(.skipped); adding .skipped drops them,
+   so every element falls back to its resting (final) style. Ambient loops sit on other elements. */
+.card { animation: none; }
+.play:not(.skipped) .card { animation: card-pop .8s var(--ease-pop) var(--card-at, 4s) both; }
+@keyframes card-pop {
+  from { opacity: 0; transform: translateY(18px) scale(.96); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

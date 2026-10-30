@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Approach Sign-in</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="signin.css">
+<style>
+  /* Option C, Approach. You arrive by boat at night: the view opens close on the dark lantern,
+     the lamp strikes, and the view draws back to the whole station as the light comes up.
+     About 5.5 seconds to the sign-in. */
+  :root { --card-at: 4.9s; }
+  .stage { transform-origin: var(--lamp-x) var(--lamp-y); }
+  .unlit { filter: brightness(.28) saturate(1.1); }
+  .lamp { opacity: .5; }
+
+  .play:not(.skipped) .stage { animation: draw-back 5.6s cubic-bezier(.65, 0, .25, 1) both; }
+  .play:not(.skipped) .lamp  { animation: strike 2.4s var(--ease-out) .5s both; }
+  .play:not(.skipped) .lit   { animation: come-up 3.2s ease-in-out 1.2s both; }
+  .play:not(.skipped) .unlit { animation: dusk 1s ease-out both; }
+
+  @keyframes draw-back {
+    from { transform: translate(-50%, -50%) scale(2.8); }
+    to   { transform: translate(-50%, -50%) scale(1); }
+  }
+  @keyframes strike {
+    0%   { opacity: 0; transform: scale(.1); }
+    30%  { opacity: 1; transform: scale(.4); }
+    100% { opacity: .5; transform: scale(1); }
+  }
+  @keyframes come-up { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes dusk    { from { opacity: 0; } to { opacity: 1; } }
+</style>
+</head>
+<body>
+<div class="stage" aria-hidden="true">
+  <img class="unlit" src="assets/lighthouse.webp" alt="">
+  <img class="lit" src="assets/lighthouse.webp" alt="">
+  <div class="lamp"></div>
+</div>
+
+<div class="shell">
+  <section class="card" aria-labelledby="si-h">
+    <img class="logo" src="assets/pearson-logo-purple.png" alt="Pearson">
+    <div id="signin-body" class="stack">
+      <p class="eyebrow">Keeper Skills Record · Carrowmore</p>
+      <h1 id="si-h">Sign in</h1>
+      <div class="tabs" role="tablist" aria-label="I am signing in as">
+        <button type="button" role="tab" aria-selected="true" id="tab-k" aria-controls="form-k">Keeper/Applicant</button>
+        <button type="button" role="tab" aria-selected="false" id="tab-e" aria-controls="form-e">Employer/Advisor</button>
+      </div>
+      <form id="form-k" role="tabpanel" aria-labelledby="tab-k">
+        <p>See your own record against the jobs on offer: what you already have, what training you'd need, and where we need your help to fill gaps.</p>
+        <label for="k-code">Keeper code</label>
+        <input id="k-code" autocomplete="username" placeholder="for example K0566" required>
+        <label for="k-pass">Password</label>
+        <input id="k-pass" type="password" autocomplete="current-password" required>
+        <button class="go" type="submit">Sign in</button>
+      </form>
+      <form id="form-e" role="tabpanel" aria-labelledby="tab-e" hidden>
+        <p>Browse keepers who have shared their record, sorted by name or by how close they are to ready for a role.</p>
+        <label for="e-user">Work email</label>
+        <input id="e-user" type="email" autocomplete="username" placeholder="recruiter@carrowmore-array.example" required>
+        <label for="e-pass">Password</label>
+        <input id="e-pass" type="password" autocomplete="current-password" required>
+        <button class="go" type="submit">Sign in</button>
+      </form>
+      <p class="err" id="si-err" role="alert"></p>
+      <div class="demo"><strong>Prototype sign-in, not real security.</strong> Keepers: any keeper code, password carrowmore. Employers: any email, password array.</div>
+    </div>
+    <div class="done" id="done" hidden>
+      <p class="eyebrow">Signed in</p>
+      <h1 id="done-who"></h1>
+      <p>In the full build this opens your view directly. For now, the prototype keeps its own sign-in.</p>
+      <a id="done-link" href="#" target="_blank" rel="noopener">Open the prototype</a>
+      <button class="go" type="button" id="again">Sign in as someone else</button>
+    </div>
+  </section>
+</div>
+
+<nav class="dock" aria-label="Intro">
+  <button type="button" id="skip" class="skip-btn">Skip intro</button>
+  <button type="button" id="replay">Replay intro</button>
+  <a href="index.html">All options</a>
+  <span class="copy">Copyright 2026 Pearson. All rights reserved.</span>
+</nav>
+<script src="signin.js"></script>
+</body>
+</html>
