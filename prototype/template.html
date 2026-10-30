@@ -117,7 +117,8 @@
   .gate, .backdrop { --art: url("__LIGHTHOUSE__"); }
   /* Signed-in screens: the same illustration, fixed behind the page at 25% opacity
      over the theme ground (Mist in light, Pearson Purple in dark). */
-  .backdrop { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .25;
+  :root { --backdrop-opacity: .25; --gate-card-alpha: .75; --gate-blur: 6px; } /* the three visual knobs */
+  .backdrop { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: var(--backdrop-opacity);
               background: var(--art) 50% 30% / cover no-repeat; }
   body.gated .backdrop { display: none; }
   .mast, main { position: relative; z-index: 1; }
@@ -135,8 +136,8 @@
   .gate .shell { position: absolute; inset: 0; display: flex; align-items: center; justify-content: flex-end; overflow-y: auto;
     padding-block: max(24px, env(safe-area-inset-top, 0px)) max(64px, calc(env(safe-area-inset-bottom, 0px) + 56px));
     padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px), 6vw); }
-  .gate-card { width: min(400px, 100%); background: rgba(237, 236, 246, .75); color: #000000;
-    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, .55);
+  .gate-card { width: min(400px, 100%); background: rgba(237, 236, 246, var(--gate-card-alpha)); color: #000000;
+    -webkit-backdrop-filter: blur(var(--gate-blur)); backdrop-filter: blur(var(--gate-blur)); border: 1px solid rgba(255, 255, 255, .55);
     border-radius: 18px; padding: 26px 26px 20px; box-shadow: 0 24px 60px rgba(7, 0, 46, .45); display: grid; gap: 14px; }
   .gate-card * { color: #000000; }
   .gate-card .logo { width: 116px; height: auto; display: block; }
