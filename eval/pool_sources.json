@@ -1,0 +1,1190 @@
+{
+ "S001": {
+  "norm": "abseil inspection of the north face",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S002": {
+  "norm": "acted as issuing authority for # permits during the overhaul",
+  "sources": [
+   "keyword:R1_MAINT",
+   "keyword:R3_PERMIT"
+  ]
+ },
+ "S003": {
+  "norm": "acted as top man for the tank entry and kept the log ptw # refers",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S004": {
+  "norm": "ais reset back on the air",
+  "sources": [
+   "random:R2_FAULT"
+  ]
+ },
+ "S005": {
+  "norm": "ais transmitting a wrong mmsi after the swap reprogrammed and confirmed with the district",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S006": {
+  "norm": "ais unit reporting checked on the screen",
+  "sources": [
+   "random:R2_FAULT"
+  ]
+ },
+ "S007": {
+  "norm": "alarm bell sounding traced to a loose wire",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S008": {
+  "norm": "anodes checked on the landing ironwork",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S009": {
+  "norm": "aton reporting intermittently traced to the power supply dropping below # ohm at night",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S010": {
+  "norm": "aton reporting intermittently traced to the power supply dropping below # v at night",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S011": {
+  "norm": "aton reporting intermittently traced to the power supply dropping below # psi at night",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S012": {
+  "norm": "authorised the switching programme for the annual shutdown and issued the documents",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S013": {
+  "norm": "balanced loads across the board no # was carrying the lot",
+  "sources": [
+   "random:R1_MAINT",
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S014": {
+  "norm": "battery room vented doors left open # hrs",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S015": {
+  "norm": "bottom end knock on no # dropped the sump and found # big end shells scored",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S016": {
+  "norm": "carried out switching to release the no # circuit proving unit checked before and after",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S017": {
+  "norm": "changed the battery in the portable set",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S018": {
+  "norm": "changer tested steps round correctly",
+  "sources": [
+   "random:R2_FAULT",
+   "random:R3_PERMIT"
+  ]
+ },
+ "S019": {
+  "norm": "checked board readings # v on the outgoing",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S020": {
+  "norm": "checked board readings # bar on the outgoing",
+  "sources": [
+   "random:R2_FAULT"
+  ]
+ },
+ "S021": {
+  "norm": "checked continuity on the run to the fog hut",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S022": {
+  "norm": "checked for weeps on the rams one seeping",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S023": {
+  "norm": "checked the anchor points on the gallery",
+  "sources": [
+   "keyword:R5_HEIGHT",
+   "random:R4_HVSW"
+  ]
+ },
+ "S024": {
+  "norm": "checked the delivery against the note",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S025": {
+  "norm": "checked the septic tank level",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S026": {
+  "norm": "checked the shackles and strops all sound",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S027": {
+  "norm": "cleaned the lantern glass from the staging",
+  "sources": [
+   "keyword:R5_HEIGHT",
+   "random:R1_MAINT"
+  ]
+ },
+ "S028": {
+  "norm": "coal and gas taken up by the winch",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S029": {
+  "norm": "compressor not making pressure rings worn rebuilt the no # cylinder",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S030": {
+  "norm": "configured the synthetic aton message for the outlying rock and proved reception ashore",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S031": {
+  "norm": "cut out and rebuilt # courses on the seaward parapet lime mix to the old spec",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S032": {
+  "norm": "decoke on no # heads off valves ground in and reset to clearance",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S033": {
+  "norm": "defect reported on the no # set",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S034": {
+  "norm": "detailed #nd to the gallery work",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S035": {
+  "norm": "detailed #rd to the gallery work",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S036": {
+  "norm": "detailed pk to the gallery work",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S037": {
+  "norm": "detailed relief to the gallery work",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S038": {
+  "norm": "detailed sak to the gallery work",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S039": {
+  "norm": "detailed the ak to the gallery work",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S040": {
+  "norm": "detailed the supernumerary to the gallery work",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S041": {
+  "norm": "diaphone piston sticking stripped it out lapped the sleeve and reset the travel",
+  "sources": [
+   "keyword:R1_MAINT",
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S042": {
+  "norm": "diaphone tested sounding correct",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S043": {
+  "norm": "dressed a cut hand for #nd",
+  "sources": [
+   "random:R1_MAINT"
+  ]
+ },
+ "S044": {
+  "norm": "dressed a cut hand for sak",
+  "sources": [
+   "random:R2_FAULT"
+  ]
+ },
+ "S045": {
+  "norm": "dressed a cut hand for the ak",
+  "sources": [
+   "random:R2_FAULT"
+  ]
+ },
+ "S046": {
+  "norm": "drive motor brushes and commutator dressed rotation back to time",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S047": {
+  "norm": "earthed off both ends of the sub sea feed cancelled permit # at # and restored supply",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S048": {
+  "norm": "earthed off both ends of the sub sea feed cancelled permit bk # no # at # and restored supply",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S049": {
+  "norm": "earthed off both ends of the sub sea feed cancelled ptw # at # and restored supply",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S050": {
+  "norm": "engine room fire in the no # set hit it with foam and shut off the fuel out in minutes",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S051": {
+  "norm": "engine run up and flushed after use",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S052": {
+  "norm": "entered the water tank for cleaning relief on the manhole",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S053": {
+  "norm": "evacuation route checked and clear",
+  "sources": [
+   "random:R2_FAULT"
+  ]
+ },
+ "S054": {
+  "norm": "fault only showed when the compressor cut in proved it with the clamp meter",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S055": {
+  "norm": "fog signal in operation # hrs",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S056": {
+  "norm": "fresh water pumped up to the tower tank",
+  "sources": [
+   "keyword:R1_MAINT",
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S057": {
+  "norm": "fuel transferred # gal to the day tank",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S058": {
+  "norm": "fuel transferred # lit to the day tank",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S059": {
+  "norm": "fuel transferred one drum to the day tank",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S060": {
+  "norm": "full capacity discharge on the emergency bank held the load for # hrs before cut off",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S061": {
+  "norm": "gas tested the fuel tank before entry",
+  "sources": [
+   "keyword:R5_HEIGHT",
+   "random:R3_PERMIT",
+   "random:R4_HVSW"
+  ]
+ },
+ "S062": {
+  "norm": "gearbox stripped on the winch # teeth found broken replaced the wheel",
+  "sources": [
+   "keyword:R1_MAINT",
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S063": {
+  "norm": "greased the compressor and checked the belts",
+  "sources": [
+   "random:R1_MAINT"
+  ]
+ },
+ "S064": {
+  "norm": "had to stand a man down for coming back unfit reported it and dealt with it on station",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S065": {
+  "norm": "harness and lanyard inspected sound",
+  "sources": [
+   "keyword:R5_HEIGHT",
+   "random:R3_PERMIT"
+  ]
+ },
+ "S066": {
+  "norm": "held the keys for the hv work permit # refers",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S067": {
+  "norm": "held the keys for the hv work permit bk # no # refers",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S068": {
+  "norm": "held the keys for the hv work ptw # refers",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "keyword:R4_HVSW",
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S069": {
+  "norm": "hv room locked and keys signed back in",
+  "sources": [
+   "keyword:R4_HVSW",
+   "random:R1_MAINT"
+  ]
+ },
+ "S070": {
+  "norm": "immobilised a back injury on the steps and packaged him for the winch lift",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S071": {
+  "norm": "injectors off no # and pop tested two were dribbling reconditioned and refitted",
+  "sources": [
+   "keyword:R1_MAINT",
+   "random:R4_HVSW"
+  ]
+ },
+ "S072": {
+  "norm": "intermittent fault on the gallery lights watching it",
+  "sources": [
+   "keyword:R2_FAULT",
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S073": {
+  "norm": "isolated no # transformer earths applied both ends permit # issued to the contractor",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "keyword:R4_HVSW",
+   "random:R1_MAINT",
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S074": {
+  "norm": "isolated no # transformer earths applied both ends ptw # issued to the contractor",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S075": {
+  "norm": "isolated no # transformer earths applied both ends permit bk # no # issued to the contractor",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S076": {
+  "norm": "issued ptw # to the contractor walked the isolations with him before signing",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "random:R2_FAULT"
+  ]
+ },
+ "S077": {
+  "norm": "lamp not lit found the fuse gone renewed",
+  "sources": [
+   "keyword:R1_MAINT",
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S078": {
+  "norm": "landing attempted abandoned too much swell",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S079": {
+  "norm": "lantern glass cleaned inside and out",
+  "sources": [
+   "random:R1_MAINT"
+  ]
+ },
+ "S080": {
+  "norm": "lens panels cleaned and polished",
+  "sources": [
+   "random:R2_FAULT",
+   "random:R4_HVSW"
+  ]
+ },
+ "S081": {
+  "norm": "log made up to date after the relief",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S082": {
+  "norm": "mechanical seal gone on the fire pump fitted new and re aligned the coupling",
+  "sources": [
+   "keyword:R1_MAINT",
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S083": {
+  "norm": "megger test on the no # feeder # ohm condemned the cable and ran a temporary",
+  "sources": [
+   "keyword:R2_FAULT",
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S084": {
+  "norm": "megger test on the no # feeder # psi condemned the cable and ran a temporary",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S085": {
+  "norm": "megger test on the no # feeder # v condemned the cable and ran a temporary",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S086": {
+  "norm": "mercury bath checked level correct",
+  "sources": [
+   "random:R2_FAULT",
+   "random:R4_HVSW"
+  ]
+ },
+ "S087": {
+  "norm": "muster list posted in the messroom",
+  "sources": [
+   "random:R1_MAINT"
+  ]
+ },
+ "S088": {
+  "norm": "needle gunned the gallery rail back to bright and built up # coats to the spec",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S089": {
+  "norm": "noted damage to the boundary wall",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S090": {
+  "norm": "overhauled the raw water side impeller seals and the heat exchanger stack cleaned",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S091": {
+  "norm": "painted the gallery rail one coat",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S092": {
+  "norm": "permit returned and cancelled at #",
+  "sources": [
+   "keyword:R3_PERMIT"
+  ]
+ },
+ "S093": {
+  "norm": "primed the no # pump running sweet",
+  "sources": [
+   "keyword:R1_MAINT",
+   "random:R3_PERMIT"
+  ]
+ },
+ "S094": {
+  "norm": "pump losing prime found the foot valve seat pitted lapped it in",
+  "sources": [
+   "keyword:R1_MAINT",
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S095": {
+  "norm": "racked out no # breaker locked off caps on danger notices up ptw # refers",
+  "sources": [
+   "keyword:R3_PERMIT"
+  ]
+ },
+ "S096": {
+  "norm": "racked out no # breaker locked off caps on danger notices up permit # refers",
+  "sources": [
+   "keyword:R3_PERMIT"
+  ]
+ },
+ "S097": {
+  "norm": "racked out no # breaker locked off caps on danger notices up permit bk # no # refers",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "random:R2_FAULT"
+  ]
+ },
+ "S098": {
+  "norm": "ran no # set # hrs oil and water checked",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S099": {
+  "norm": "ran the boat off the rock in var # held her off the steps while the stores went across",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S100": {
+  "norm": "ran the overhaul party of # men planned the sequence and kept them to it",
+  "sources": [
+   "keyword:R1_MAINT",
+   "random:R3_PERMIT",
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S101": {
+  "norm": "ran the sump pump out # hrs",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S102": {
+  "norm": "ran the whole tower repaint over two seasons staging prep coats and records",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S103": {
+  "norm": "re terminated the no # outgoing at the board ir tested at # psi before re energising",
+  "sources": [
+   "random:R2_FAULT"
+  ]
+ },
+ "S104": {
+  "norm": "read the permit conditions before starting",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "random:R2_FAULT"
+  ]
+ },
+ "S105": {
+  "norm": "rebuilt the changeover logic after the flood drew out the sequence before touching it",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S106": {
+  "norm": "rebuilt the clockwork drive cleaned forty years of gum out of the train",
+  "sources": [
+   "keyword:R1_MAINT",
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S107": {
+  "norm": "rebuilt the no # pump end to end new wear rings delivery back up to # ohm",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S108": {
+  "norm": "rebuilt the no # pump end to end new wear rings delivery back up to # bar",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S109": {
+  "norm": "rebuilt the no # pump end to end new wear rings delivery back up to # v",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S110": {
+  "norm": "rebuilt the no # pump end to end new wear rings delivery back up to # psi",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S111": {
+  "norm": "rebuilt the stores ledger from scratch three years of it had never been posted",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S112": {
+  "norm": "reconfigured distribution so the lamp feed is independent of the domestic side",
+  "sources": [
+   "random:R1_MAINT"
+  ]
+ },
+ "S113": {
+  "norm": "reconstructed the log for the missing week from the rough book and the radio sheets",
+  "sources": [
+   "random:R2_FAULT"
+  ]
+ },
+ "S114": {
+  "norm": "recovered #rd from the cable duct after he was overcome harness and line as rigged",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S115": {
+  "norm": "refused to sign permit # back the isolations were not as stated reissued after",
+  "sources": [
+   "keyword:R3_PERMIT"
+  ]
+ },
+ "S116": {
+  "norm": "relaid # m of yard drain to a proper fall it had been running backwards for years",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S117": {
+  "norm": "rendered the patch by the door",
+  "sources": [
+   "random:R1_MAINT"
+  ]
+ },
+ "S118": {
+  "norm": "renewed # cells and rebalanced the bank equalising charge started",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S119": {
+  "norm": "renewed a shackle on the boat mooring",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S120": {
+  "norm": "renewed fuse links no # way all made off",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S121": {
+  "norm": "renewed the glazing bars on the seaward side where they had wasted through",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S122": {
+  "norm": "renewed the putty on # panes",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S123": {
+  "norm": "renewed the sacrificial anodes on the slipway and recorded the wastage rates",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S124": {
+  "norm": "renewed the winch wire # splices made up and the drum re laid properly",
+  "sources": [
+   "keyword:R1_MAINT",
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S125": {
+  "norm": "repacked the gland on the no # pump set the drip and ran up to # ohm",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S126": {
+  "norm": "repacked the gland on the no # pump set the drip and ran up to # v",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S127": {
+  "norm": "repaired the storm damage to the landing wall rebuilt to the original batter",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S128": {
+  "norm": "replaced # lantern panes cut and bedded no leaks after the next gale",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S129": {
+  "norm": "reset the overspeed after a false trip",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S130": {
+  "norm": "reset tripped breaker on lighting sub board",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S131": {
+  "norm": "restored the hv after the contractor cleared removed earths and de isolated in sequence",
+  "sources": [
+   "keyword:R4_HVSW",
+   "random:R3_PERMIT"
+  ]
+ },
+ "S132": {
+  "norm": "returns completed and posted",
+  "sources": [
+   "random:R1_MAINT"
+  ]
+ },
+ "S133": {
+  "norm": "rigged staging round the lantern for the glazing job tied back at # points",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S134": {
+  "norm": "ropes inspected and logged before use",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S135": {
+  "norm": "rotation checked against the stopwatch",
+  "sources": [
+   "random:R1_MAINT",
+   "random:R3_PERMIT"
+  ]
+ },
+ "S136": {
+  "norm": "sat through the night to catch the earth fault it was the heater element in the fog hut",
+  "sources": [
+   "keyword:R2_FAULT",
+   "random:R1_MAINT",
+   "random:R3_PERMIT"
+  ]
+ },
+ "S137": {
+  "norm": "scheduled call made and logged",
+  "sources": [
+   "random:R2_FAULT"
+  ]
+ },
+ "S138": {
+  "norm": "sea state and swell recorded",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S139": {
+  "norm": "set the timing gear on the signal to the published character and proved it over # hrs",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S140": {
+  "norm": "set the timing on no # after the pump was refitted ran it up and checked exhaust temps",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S141": {
+  "norm": "set up a duty standby arrangement on the two sump pumps with alternating starts",
+  "sources": [
+   "keyword:R1_MAINT"
+  ]
+ },
+ "S142": {
+  "norm": "set up the fall arrest on the vertical ladder and tested it with a dead weight",
+  "sources": [
+   "keyword:R5_HEIGHT",
+   "random:R2_FAULT"
+  ]
+ },
+ "S143": {
+  "norm": "set up the new lamp focus adjusted until the beam was even round the horizon",
+  "sources": [
+   "random:R1_MAINT"
+  ]
+ },
+ "S144": {
+  "norm": "set up the telemetry link so the lamp fault alarm comes through on the aton message",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S145": {
+  "norm": "showed #nd the lamp changer routine",
+  "sources": [
+   "random:R1_MAINT"
+  ]
+ },
+ "S146": {
+  "norm": "showed #rd the lamp changer routine",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S147": {
+  "norm": "showed pk the lamp changer routine",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S148": {
+  "norm": "signal secured visibility cleared",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S149": {
+  "norm": "signed on to permit bk # no # for the day s work",
+  "sources": [
+   "keyword:R3_PERMIT",
+   "random:R4_HVSW"
+  ]
+ },
+ "S150": {
+  "norm": "signed on to ptw # for the day s work",
+  "sources": [
+   "keyword:R3_PERMIT"
+  ]
+ },
+ "S151": {
+  "norm": "stocktake carried out two items short",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S152": {
+  "norm": "stood by while #nd switched the no # transformer out",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S153": {
+  "norm": "stood by while #rd switched the no # transformer out",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S154": {
+  "norm": "stood by while pk switched the no # transformer out",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S155": {
+  "norm": "stood by while relief switched the no # transformer out",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S156": {
+  "norm": "stood by while the ak switched the no # transformer out",
+  "sources": [
+   "keyword:R4_HVSW",
+   "random:R1_MAINT"
+  ]
+ },
+ "S157": {
+  "norm": "stood by while the supernumerary switched the no # transformer out",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S158": {
+  "norm": "stripped and cleaned the mercury bath float centred and the rotation smoothed out",
+  "sources": [
+   "keyword:R1_MAINT",
+   "keyword:R2_FAULT",
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S159": {
+  "norm": "stripped failed cement render off the tower and replaced with lime it needs to breathe",
+  "sources": [
+   "keyword:R1_MAINT",
+   "keyword:R2_FAULT",
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S160": {
+  "norm": "surface prep argued with the district they wanted it over the rust did it properly",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S161": {
+  "norm": "switched the ring to the alternative feed via the no # switch proved dead and earthed off",
+  "sources": [
+   "keyword:R4_HVSW",
+   "random:R2_FAULT"
+  ]
+ },
+ "S162": {
+  "norm": "tank entry # hrs inside",
+  "sources": [
+   "keyword:R5_HEIGHT",
+   "random:R1_MAINT",
+   "random:R2_FAULT"
+  ]
+ },
+ "S163": {
+  "norm": "tightened glands in the cable trunk by the stair",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S164": {
+  "norm": "took sak round the plant",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S165": {
+  "norm": "took the #kv board off worked the sequence myself #nd witnessing",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S166": {
+  "norm": "took the #kv board off worked the sequence myself pk witnessing",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S167": {
+  "norm": "took the #kv board off worked the sequence myself relief witnessing",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S168": {
+  "norm": "took the #kv board off worked the sequence myself sak witnessing",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S169": {
+  "norm": "took the #kv board off worked the sequence myself the ak witnessing",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S170": {
+  "norm": "took the #kv board off worked the sequence myself the supernumerary witnessing",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S171": {
+  "norm": "topped coolant checked belts nil defects",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S172": {
+  "norm": "topped the hydraulic reservoir # lit",
+  "sources": [
+   "random:R1_MAINT",
+   "random:R4_HVSW"
+  ]
+ },
+ "S173": {
+  "norm": "tower whitewashed to the second band",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S174": {
+  "norm": "traced an intermittent on the lamp changer back to a chafed core in the riser duct",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S175": {
+  "norm": "traced and lifted an earth fault on the tower lighting ring split the ring to find it",
+  "sources": [
+   "keyword:R2_FAULT",
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S176": {
+  "norm": "traced bimetallic corrosion at the rail fixings to the wrong bolts being used in #",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S177": {
+  "norm": "traced repeated false alerts to a fault in the position feed from the receiver",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S178": {
+  "norm": "traced the nuisance low volt alarm to a soft cell in the no # bank replaced it",
+  "sources": [
+   "keyword:R1_MAINT",
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S179": {
+  "norm": "treated #nd for a crush injury to the hand splinted and kept him until the boat came",
+  "sources": [
+   "random:R5_HEIGHT"
+  ]
+ },
+ "S180": {
+  "norm": "up the ladder to the gallery harness on",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ },
+ "S181": {
+  "norm": "wick trimmed and the glass cleaned",
+  "sources": [
+   "random:R3_PERMIT"
+  ]
+ },
+ "S182": {
+  "norm": "windsock renewed",
+  "sources": [
+   "keyword:R1_MAINT",
+   "random:R3_PERMIT"
+  ]
+ },
+ "S183": {
+  "norm": "wire inspected no broken strands seen",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S184": {
+  "norm": "witnessed earths applied at the no # end",
+  "sources": [
+   "keyword:R4_HVSW"
+  ]
+ },
+ "S185": {
+  "norm": "worked a poor range casualty through on ch # and relayed to the coast station",
+  "sources": [
+   "random:R1_MAINT",
+   "random:R2_FAULT"
+  ]
+ },
+ "S186": {
+  "norm": "worked the fault down by halving the circuit found a wet joint in the no # pull box",
+  "sources": [
+   "keyword:R2_FAULT"
+  ]
+ },
+ "S187": {
+  "norm": "worked the mast head in var # two point attachment throughout",
+  "sources": [
+   "random:R4_HVSW"
+  ]
+ },
+ "S188": {
+  "norm": "wrote the method for the tower repaint and briefed the party before we started",
+  "sources": [
+   "keyword:R5_HEIGHT"
+  ]
+ }
+}

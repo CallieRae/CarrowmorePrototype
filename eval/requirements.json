@@ -1,0 +1,44 @@
+{
+  "_note": "Pre-registered. The five requirements graded from logbook evidence. Certificate and medical requirements are graded from certifications[], not logs, and are not part of this test.",
+  "evidenced_rule": "A keeper is Evidenced for a requirement when at least 2 of their logbook entries are graded as supporting it.",
+  "grading_question": "Does this entry show the keeper PERSONALLY doing this? Y = yes, N = no, ? = can't tell. Standing by, holding keys or watching someone else does not count.",
+  "requirements": [
+    {
+      "id": "R1_MAINT",
+      "posting": "Carrowmore Array O&M Technician (Essential)",
+      "posting_text": "Hands-on mechanical or electrical maintenance experience on plant you were responsible for.",
+      "question": "Hands-on mechanical or electrical maintenance of plant (engines, generators, pumps, motors, electrical gear)?",
+      "gate": false
+    },
+    {
+      "id": "R2_FAULT",
+      "posting": "Carrowmore Array O&M Technician (Desirable)",
+      "posting_text": "Fault-finding on electrical systems without a laptop telling you the answer.",
+      "question": "Diagnosing an electrical fault (working out what was wrong), not only replacing a part?",
+      "gate": false
+    },
+    {
+      "id": "R3_PERMIT",
+      "posting": "Carrowmore Array O&M Technician (Desirable); HV Authorized Person (Desirable)",
+      "posting_text": "Experience of working to a permit system. / Experience of issuing safety documents under a formal permit regime.",
+      "question": "Working to, or issuing, a permit-to-work or formal safety document?",
+      "gate": false
+    },
+    {
+      "id": "R4_HVSW",
+      "posting": "HV Authorized Person (Mandatory, insurer-set)",
+      "posting_text": "Two years of documented switching experience on a system at 11kV or above.",
+      "question": "Personally carrying out high-voltage switching, isolation or earthing?",
+      "gate": true,
+      "gate_note": "Log evidence can never mark this requirement as met. The best the tool may say is Evidenced, with the Competence Board's documentary-evidence route."
+    },
+    {
+      "id": "R5_HEIGHT",
+      "posting": "Carrowmore Array O&M Technician (Essential)",
+      "posting_text": "Comfortable working at height, in enclosed spaces, and on a small boat in a swell.",
+      "question": "Working at height or in a confined or enclosed space?",
+      "gate": false,
+      "note": "Included deliberately as the requirement we expect logs to evidence poorly. 'Comfortable' is a disposition; logs can only show exposure."
+    }
+  ]
+}
