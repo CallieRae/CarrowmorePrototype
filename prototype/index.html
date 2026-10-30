@@ -15,6 +15,7 @@
     --bg: var(--mist); --surface: var(--white); --ink: #000000; --ink-strong: var(--purple); --ink-soft: var(--amethyst);
     --line: #C1BFFF; --value-ink: var(--amethyst);
     /* Keeper areas after the role card: Amber for training, Fuchsia for clarifying (tints in light, deep shades in dark). */
+    --zone-q: #EDECF6; --zone-q-flag: #FFFFFF; /* Role Certification and Role Experience: Mist, notes inside go White */
     --train-bg: #FEF0B4; --train-line: #FFD846; --train-soft: var(--amethyst); --train-row: #C1BFFF; --train-row-alt: #B79BFE;
     --ask-bg: #F6C8F1; --ask-line: #EC8DE2; --ask-soft: var(--amethyst);
     --btn: var(--amethyst); --btn-ink: var(--white);
@@ -28,6 +29,7 @@
     :root:not([data-theme="light"]) {
       --bg: var(--purple); --surface: #290066; --ink: var(--white); --ink-strong: var(--white); --ink-soft: var(--light-purple);
       --line: #472399; --value-ink: #CAB7FF;
+      --zone-q: #3D1788; --zone-q-flag: #290066;
       --train-bg: #7F6701; --train-line: #BF9A00; --train-soft: var(--white); --train-row: #472399; --train-row-alt: #330B77; --ask-bg: #7B1571; --ask-line: #B820A9; --ask-soft: var(--white); --btn: var(--light-purple); --btn-ink: var(--purple);
       --f-auth: #168584; --f-near: #7F6701; --f-evid: #512EAB; --f-gate: #991B8D; --f-none: #330B77;
       --pill-ink: var(--white); --tbl-head: #0D004D; --tbl-alt: #330B77; --focus: var(--light-purple);
@@ -36,6 +38,7 @@
   :root[data-theme="dark"] {
     --bg: var(--purple); --surface: #290066; --ink: var(--white); --ink-strong: var(--white); --ink-soft: var(--light-purple);
     --line: #472399; --value-ink: #CAB7FF;
+      --zone-q: #3D1788; --zone-q-flag: #290066;
       --train-bg: #7F6701; --train-line: #BF9A00; --train-soft: var(--white); --train-row: #472399; --train-row-alt: #330B77; --ask-bg: #7B1571; --ask-line: #B820A9; --ask-soft: var(--white); --btn: var(--light-purple); --btn-ink: var(--purple);
     --f-auth: #168584; --f-near: #7F6701; --f-evid: #512EAB; --f-gate: #991B8D; --f-none: #330B77;
     --pill-ink: var(--white); --tbl-head: #0D004D; --tbl-alt: #330B77; --focus: var(--light-purple);
@@ -76,6 +79,9 @@
   .zone { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px 2px; margin-top: 16px; }
   .zone-title { font-size: 1.15rem; margin: 0 0 8px; color: var(--ink-strong); }
   .zone-title + .req { border-top: 0; padding-top: 4px; }
+  /* Certification and Experience take a fill, so they read apart from the open Role Description. */
+  .zone[data-part="certs"], .zone[data-part="exp"] { background: var(--zone-q); }
+  .zone[data-part="certs"] .flag, .zone[data-part="exp"] .flag { background: var(--zone-q-flag); }
   .zone > .route:last-child, .zone > .flag:last-child { margin-bottom: 14px; }
   /* Training and clarifying read as their own areas, set apart from the role card by fill. */
   .area-train { --surface: var(--train-bg); --line: var(--train-line); --ink-soft: var(--train-soft); }
@@ -278,6 +284,7 @@
         <div><label for="e-sort">Sort</label>
           <select id="e-sort">
             <option value="ready">Closest to ready</option>
+            <option value="logged">Logged experience</option>
             <option value="alpha">Alphabetical</option>
           </select></div>
       </div>
@@ -605,15 +612,20 @@ function renderEmployer() {
   const p = DATA.postings.find(x => x.id === $("e-role").value);
   const mode = $("e-sort").value;
   const rows = DATA.keepers.map(k => readiness(k, p));
-  rows.sort(mode === "alpha" ? (a, b) => a.k.name.localeCompare(b.k.name) : cmp);
+  // Logged experience: most experience lines the logs show, then HV switching logged, then closest to ready.
+  const byLogged = (a, b) => (b.A.shown - a.A.shown) || ((b.A.gateEvidenced ? 1 : 0) - (a.A.gateEvidenced ? 1 : 0)) || cmp(a, b);
+  rows.sort(mode === "alpha" ? (a, b) => a.k.name.localeCompare(b.k.name) : mode === "logged" ? byLogged : cmp);
+  const ranked = mode !== "alpha";
   $("sort-explain").textContent = mode === "alpha"
     ? "Sorted by name."
+    : mode === "logged"
+    ? "Most logged experience first: the experience lines each keeper's logs show (not yet confirmed)" + (p.id === "hv" ? ", then HV switching logged" : "") + ", then closest to ready. Each keeper's reasons are shown next to their name."
     : "Closest to ready, without a percentage: fewest requirements left to clear (certificates, medical, the HV paperwork), then fewest course modules, then HV switching logged, then the most logged experience. Each keeper's reasons are shown next to their name.";
   const prev = $("e-keeper").value;
   $("e-keeper").innerHTML = rows.map((r, i) =>
-    `<option value="${r.k.code}">${mode === "ready" ? (i + 1) + ". " : ""}${esc(r.k.name)} (${r.k.code}): ${esc(summary(r, p))}</option>`).join("");
-  $("rank").innerHTML = `<table><thead><tr><th>${mode === "ready" ? "#" : ""}</th><th>Keeper</th><th>To clear</th><th>Modules</th>${p.id === "hv" ? "<th>HV switching</th>" : ""}<th>Logged experience</th></tr></thead><tbody>` +
-    rows.map((r, i) => `<tr><td>${mode === "ready" ? i + 1 : ""}</td><td>${esc(r.k.name)} (${r.k.code})</td><td>${r.A.gates}</td><td>${r.A.modules}</td>${p.id === "hv" ? `<td>${r.A.gateEvidenced ? "Logged" : "Not identified"}</td>` : ""}<td>${r.A.shown} of ${r.A.expTotal}</td></tr>`).join("") + `</tbody></table>`;
+    `<option value="${r.k.code}">${ranked ? (i + 1) + ". " : ""}${esc(r.k.name)} (${r.k.code}): ${esc(summary(r, p))}</option>`).join("");
+  $("rank").innerHTML = `<table><thead><tr><th>${ranked ? "#" : ""}</th><th>Keeper</th><th>To clear</th><th>Modules</th>${p.id === "hv" ? "<th>HV switching</th>" : ""}<th>Logged experience</th></tr></thead><tbody>` +
+    rows.map((r, i) => `<tr><td>${ranked ? i + 1 : ""}</td><td>${esc(r.k.name)} (${r.k.code})</td><td>${r.A.gates}</td><td>${r.A.modules}</td>${p.id === "hv" ? `<td>${r.A.gateEvidenced ? "Logged" : "Not identified"}</td>` : ""}<td>${r.A.shown} of ${r.A.expTotal}</td></tr>`).join("") + `</tbody></table>`;
   $("e-keeper").value = rows.some(r => r.k.code === prev) ? prev : rows[0].k.code;
   renderEmployerDetail();
 }
