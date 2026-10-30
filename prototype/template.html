@@ -94,7 +94,8 @@
   footer strong { color: var(--ink-strong); }
   /* Input box: deep Turquoise 168584 marks where you choose, against the white output cards.
      White on 168584 is 4.45:1, so text here is set bold at 18.7px or larger (WCAG AA large text). */
-  .input-card { background: #168584; border-color: #168584; color: #FFFFFF; }
+  /* A lighter rim, like the Light Purple and #472399 edges on the cards below: core Turquoise on the deep Turquoise fill. */
+  .input-card { background: #168584; border: 2px solid #56E2E1; color: #FFFFFF; }
   .input-card h2, .input-card label, .input-card p, .input-card .soft, .input-card summary { color: #FFFFFF; }
   .input-card p, .input-card .soft, .input-card summary, .input-card label { font-weight: 600; font-size: 1.1rem; }
   .input-card h2 { font-size: 1.4rem; }
@@ -224,7 +225,7 @@
       <button type="submit">Sign in</button>
     </form>
         <p class="err" id="si-err" role="alert"></p>
-        <div class="demo"><strong>Prototype sign-in, not real security.</strong> Every record is inside this one file, so this only shows how each view is scoped.</div>
+        <div class="demo"><strong>Prototype sign-in, not real security.</strong> Keepers: any keeper code (for example K0566), password <code>carrowmore</code>. Employers: any email, password <code>array</code>.</div>
       </div>
     </div>
     <div class="dock">
