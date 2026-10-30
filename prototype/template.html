@@ -213,7 +213,7 @@
       <label for="k-code">Keeper code</label>
       <input id="k-code" autocomplete="username" placeholder="for example K0566" required>
       <label for="k-pass">Password</label>
-      <input id="k-pass" type="password" autocomplete="current-password" required>
+      <input id="k-pass" type="text" autocomplete="off" spellcheck="false" required>
       <button type="submit">Sign in</button>
     </form>
         <form id="form-e" hidden>
@@ -221,7 +221,7 @@
       <label for="e-user">Work email</label>
       <input id="e-user" autocomplete="username" placeholder="recruiter@carrowmore-array.example" required>
       <label for="e-pass">Password</label>
-      <input id="e-pass" type="password" autocomplete="current-password" required>
+      <input id="e-pass" type="text" autocomplete="off" spellcheck="false" required>
       <button type="submit">Sign in</button>
     </form>
         <p class="err" id="si-err" role="alert"></p>
@@ -599,6 +599,36 @@ $("form-e").onsubmit = e => {
 $("e-role").onchange = renderEmployer;
 $("e-sort").onchange = renderEmployer;
 $("e-keeper").onchange = renderEmployerDetail;
+// Prototype autofill: clicking into a sign-in box fills a working value, left visible and editable.
+// Only an empty box, or one still holding the last value we filled, is ever replaced, so typing is never overwritten.
+const KEEPER_CODES = ["K0566", ...Object.keys(byCode).filter(c => c !== "K0566").sort()];
+let codeAt = -1;
+function autofill(id, next) {
+  const el = $(id);
+  // The filled value is selected, so typing replaces it rather than adding to it. A mouse click
+  // would collapse that selection when the button comes up, so the first mouseup keeps it.
+  let justFilled = false;
+  el.addEventListener("focus", () => {
+    if (el.value) return;
+    el.value = el.dataset.auto = next();
+    el.select(); justFilled = true;
+  });
+  el.addEventListener("mouseup", e => { if (justFilled) { e.preventDefault(); justFilled = false; } });
+  el.addEventListener("blur", () => { justFilled = false; });
+  return el;
+}
+const kCode = autofill("k-code", () => KEEPER_CODES[codeAt = (codeAt + 1) % KEEPER_CODES.length]);
+// A further click in the keeper code box steps to the next keeper (focus alone fills the first).
+let codeHadFocus = false;
+kCode.addEventListener("pointerdown", () => { codeHadFocus = document.activeElement === kCode; });
+kCode.addEventListener("click", () => {
+  if (!codeHadFocus || kCode.value !== kCode.dataset.auto) return;
+  kCode.value = kCode.dataset.auto = KEEPER_CODES[codeAt = (codeAt + 1) % KEEPER_CODES.length];
+  kCode.select();
+});
+autofill("k-pass", () => "carrowmore");
+autofill("e-user", () => "recruiter@carrowmore-array.example");
+autofill("e-pass", () => "array");
 $("signout").onclick = () => { $("keeper-view").innerHTML = ""; $("e-detail").innerHTML = ""; $("k-pass").value = ""; $("e-pass").value = ""; show("signin"); };
 // First Light intro: plays on first load only; signing out returns straight to the card.
 const gate = $("signin");
