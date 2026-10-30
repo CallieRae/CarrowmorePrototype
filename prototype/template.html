@@ -14,6 +14,9 @@
     --purple: #0D004D; --amethyst: #512EAB; --light-purple: #C1BFFF; --mist: #EDECF6; --white: #FFFFFF;
     --bg: var(--mist); --surface: var(--white); --ink: #000000; --ink-strong: var(--purple); --ink-soft: var(--amethyst);
     --line: #C1BFFF; --value-ink: var(--amethyst);
+    /* Keeper areas after the role card: Amber for training, Fuchsia for clarifying (tints in light, deep shades in dark). */
+    --train-bg: #FEF0B4; --train-line: #FFD846; --train-soft: var(--amethyst);
+    --ask-bg: #F6C8F1; --ask-line: #EC8DE2; --ask-soft: var(--amethyst);
     --btn: var(--amethyst); --btn-ink: var(--white);
     --f-auth: #CBF6F5; --f-near: #FEF0B4; --f-evid: #C1BFFF; --f-gate: #F6C8F1; --f-none: var(--mist);
     --pill-ink: var(--purple);
@@ -24,14 +27,16 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: var(--purple); --surface: #290066; --ink: var(--white); --ink-strong: var(--white); --ink-soft: var(--light-purple);
-      --line: #472399; --value-ink: #CAB7FF; --btn: var(--light-purple); --btn-ink: var(--purple);
+      --line: #472399; --value-ink: #CAB7FF;
+      --train-bg: #7F6701; --train-line: #BF9A00; --train-soft: var(--white); --ask-bg: #7B1571; --ask-line: #B820A9; --ask-soft: var(--white); --btn: var(--light-purple); --btn-ink: var(--purple);
       --f-auth: #168584; --f-near: #7F6701; --f-evid: #512EAB; --f-gate: #991B8D; --f-none: #330B77;
       --pill-ink: var(--white); --tbl-head: #0D004D; --tbl-alt: #330B77; --focus: var(--light-purple);
     }
   }
   :root[data-theme="dark"] {
     --bg: var(--purple); --surface: #290066; --ink: var(--white); --ink-strong: var(--white); --ink-soft: var(--light-purple);
-    --line: #472399; --value-ink: #CAB7FF; --btn: var(--light-purple); --btn-ink: var(--purple);
+    --line: #472399; --value-ink: #CAB7FF;
+      --train-bg: #7F6701; --train-line: #BF9A00; --train-soft: var(--white); --ask-bg: #7B1571; --ask-line: #B820A9; --ask-soft: var(--white); --btn: var(--light-purple); --btn-ink: var(--purple);
     --f-auth: #168584; --f-near: #7F6701; --f-evid: #512EAB; --f-gate: #991B8D; --f-none: #330B77;
     --pill-ink: var(--white); --tbl-head: #0D004D; --tbl-alt: #330B77; --focus: var(--light-purple);
   }
@@ -46,7 +51,7 @@
   main { max-width: 920px; margin: 0 auto; padding: 24px 16px 64px; }
   h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 6px; color: var(--ink-strong); }
   h2 { font-size: 1.3rem; margin: 0 0 4px; color: var(--ink-strong); }
-  h3 { font-size: 1.05rem; margin: 0; color: var(--ink-strong); }
+  h3, h4 { font-size: 1.05rem; margin: 0; color: var(--ink-strong); }
   p { margin: 0 0 12px; }
   .soft { color: var(--ink-soft); }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin: 0 0 22px; }
@@ -67,6 +72,14 @@
   .flag { border-left: 5px solid var(--rule-flag); background: var(--bg); padding: 10px 14px; margin: 10px 0; border-radius: 0 8px 8px 0; font-size: .95rem; }
   .ask { border-left: 5px solid var(--rule-ask); }
   .req { border-top: 1px solid var(--line); padding: 14px 0; }
+  /* The role card holds three titled containers: description, certification, experience. */
+  .zone { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px 2px; margin-top: 16px; }
+  .zone-title { font-size: 1.15rem; margin: 0 0 8px; color: var(--ink-strong); }
+  .zone-title + .req { border-top: 0; padding-top: 4px; }
+  .zone > .route:last-child, .zone > .flag:last-child { margin-bottom: 14px; }
+  /* Training and clarifying read as their own areas, set apart from the role card by fill. */
+  .area-train { --surface: var(--train-bg); --line: var(--train-line); --ink-soft: var(--train-soft); }
+  .area-ask { --surface: var(--ask-bg); --line: var(--ask-line); --ink-soft: var(--ask-soft); }
   .req-head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
   .tier { font-size: .8rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; white-space: nowrap; color: var(--pill-ink); }
   /* Qualified: 168584 with black type (4.72:1; white would be 4.45:1, under AA at pill size).
@@ -408,7 +421,7 @@ function entryList(list) {
 const levelPill = level => level === "desirable"
   ? `<span class="level lv-pref">Preferred</span>` : `<span class="level lv-req">Required</span>`;
 const head = (title, tier, level) =>
-  `<div class="req-head"><h3>${esc(title)}</h3><span class="tier t-${tier}">${TIER[tier]}</span>${levelPill(level)}</div>`;
+  `<div class="req-head"><h4>${esc(title)}</h4><span class="tier t-${tier}">${TIER[tier]}</span>${levelPill(level)}</div>`;
 // Label the employer's wording by what it is, so a desirable item never reads as required.
 const askLabel = it => it.kind === "medical" ? "Required Medical"
   : it.kind === "cert" ? "Required Certification"
@@ -461,10 +474,15 @@ function renderPosting(k, p, v, A, order = "posting") {
   const route = `<div class="route"><strong>Shortest route</strong>` +
     (A.todo.length ? `<ol>${A.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : `<p>Nothing to book. The records cover what they ask for.</p>`) +
     (p.id === "om" ? `<p class="soft" style="margin:8px 0 0">The Array trains the turbine work itself; comfort at height, in enclosed spaces and on small boats is not negotiable. The logs show <span class="num">${A.lines.filter(L => L.it.kind === "log" && L.it.level === "essential" && L.tier === "evid").length} of ${A.lines.filter(L => L.it.kind === "log" && L.it.level === "essential").length}</span> required experience lines.</p>` : "") + `</div>`;
+  const zone = (title, inner) => `<div class="zone"><h3 class="zone-title">${title}</h3>${inner}</div>`;
+  const lines = list => sortLines(list, order).map(L => `<div class="req">${renderLine(k, L, v)}</div>`).join("");
+  const certs = A.lines.filter(L => L.it.kind !== "log"), exp = A.lines.filter(L => L.it.kind === "log");
+  const certZone = certs.length ? zone("Role Certification:", lines(certs)) : "";
+  const expZone = exp.length ? zone("Role Experience:", lines(exp)) : "";
   return `<section class="card" aria-labelledby="h-${p.id}"><h2 id="h-${p.id}">${esc(p.title)}</h2>` +
-    `<p class="soft">${esc(p.employer)} · ${esc(p.posts)}. ${esc(p.note)}</p>${route}` +
-    p.flags.map(f => `<div class="flag">${esc(f)}</div>`).join("") +
-    sortLines(A.lines, order).map(L => `<div class="req">${renderLine(k, L, v)}</div>`).join("") + `</section>`;
+    zone("Role Description:", `<p class="soft">${esc(p.employer)} · ${esc(p.posts)}. ${esc(p.note)}</p>${route}` +
+      p.flags.map(f => `<div class="flag">${esc(f)}</div>`).join("")) +
+    (order === "exp" ? expZone + certZone : certZone + expZone) + `</section>`;
 }
 
 // Keeper-only: training needed across both roles, and what we need them to clarify.
@@ -504,13 +522,13 @@ function keeperExtras(k, assessments) {
   if (logged.length) asksList.unshift(`Logged experience (${logged.join("; ")}): your logs show this work, but nothing formally confirms it yet. Please confirm it with your advisor, and tell us about any certificates for it that aren't in our records.`);
   if (assessments.some(([p]) => p.id === "om")) asksList.push("Offshore safety certificate: the O&M posting says it covers working at height, but height is a separate certificate in the scheme list. Confirm exact requirements with employer.");
   const tr = [...training.values()];
-  return `<section class="card"><h2>Training you'd need</h2>` +
+  return `<section class="card area-train"><h2>Training you'd need</h2>` +
     (tr.length ? `<p class="soft">For this role. Nothing here is booked; your advisor can help you choose.</p><div class="rank-wrap"><table><thead><tr><th>Course module</th><th>Certificate</th></tr></thead><tbody>` +
       tr.map(t => `<tr><td>${esc(t.m.mod)} ${esc(t.m.name)}</td><td>${esc(t.sc)}</td></tr>`).join("") + `</tbody></table></div>` : `<p>No certificate modules outstanding.</p>`) +
     `<p style="margin-top:12px">Plus an <strong>offshore medical</strong> (an examination, not a course).</p>` +
     (retake.size ? `<div class="flag"><strong>May need retaking.</strong> These modules are older than their certificate's renewal period. We don't know yet whether the issuing body will still count them.<ul>${[...retake.values()].map(r => `<li>${esc(r)}</li>`).join("")}</ul></div>` : "") +
     `</section>` +
-    `<section class="card"><h2>Where we need you to clarify</h2><p class="soft">Your answers can only add to your record. Tell your advisor, or reply to the questions they send.</p>` +
+    `<section class="card area-ask"><h2>Where we need you to clarify</h2><p class="soft">Your answers can only add to your record. Tell your advisor, or reply to the questions they send.</p>` +
     `<div class="list"><ol>${asksList.map(a => `<li style="margin-bottom:8px">${esc(a)}</li>`).join("")}</ol></div></section>`;
 }
 
