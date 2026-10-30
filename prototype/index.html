@@ -79,6 +79,18 @@
   .zone > .route:last-child, .zone > .flag:last-child { margin-bottom: 14px; }
   /* Training and clarifying read as their own areas, set apart from the role card by fill. */
   .area-train { --surface: var(--train-bg); --line: var(--train-line); --ink-soft: var(--train-soft); }
+  /* Employer candidate summary: Pearson Purple in both themes, set apart from the role card below,
+     with the house stat squares (Light Purple, one Turquoise) as buttons that jump to each container. */
+  .cand { background: #0D004D; border: 1px solid #512EAB; color: #FFFFFF; }
+  .cand h2, .cand p { color: #FFFFFF; } .cand .soft { color: #C1BFFF; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 14px; }
+  .stat { display: grid; gap: 2px; justify-items: center; text-align: center; padding: 12px 10px; border: 0; border-radius: 10px;
+          background: #C1BFFF; color: #0D004D; font: inherit; cursor: pointer; }
+  .stat:first-child { background: #56E2E1; }
+  .stat:hover { filter: brightness(1.06); }
+  .stat b { font-size: 1.6rem; line-height: 1.1; color: #0D004D; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .85rem; font-weight: 700; color: #0D004D; }
+  .cand :focus-visible { outline-color: #FFFFFF; }
   .area-ask { --surface: var(--ask-bg); --line: var(--ask-line); --ink-soft: var(--ask-soft); }
   /* Every training row is filled, alternating two purples, so no row reads as loose text on the Amber. */
   .area-train tbody td { background: var(--train-row); }
@@ -605,13 +617,30 @@ function renderEmployer() {
   $("e-keeper").value = rows.some(r => r.k.code === prev) ? prev : rows[0].k.code;
   renderEmployerDetail();
 }
+// Quick stats: counts, never percentages. A certificate (or the medical) counts only when held and in date;
+// experience counts when the logs show it, which is not the same as confirmed.
+function candidateStats(A) {
+  const certs = A.lines.filter(L => L.it.kind !== "log"), exp = A.lines.filter(L => L.it.kind === "log");
+  const held = certs.filter(L => L.tier === "auth").length, shown = exp.filter(L => L.tier === "evid" || L.tier === "gate").length;
+  const stat = (go, n, of, label) => `<button type="button" class="stat" data-go="${go}"><b>${n} of ${of}</b><span>${label}</span></button>`;
+  return `<div class="stats">` +
+    stat(".role-card", held + shown, A.lines.length, "Requirements on record") +
+    stat(".zone[data-part='certs']", held, certs.length, "Certification held") +
+    stat(".zone[data-part='exp']", shown, exp.length, "Experience shown in logs") + `</div>`;
+}
 function renderEmployerDetail() {
   const p = DATA.postings.find(x => x.id === $("e-role").value);
   const k = byCode[$("e-keeper").value], v = V.employer, A = assess(k, p, v);
   $("e-detail").innerHTML =
-    `<div class="card"><h2>${esc(k.name)} (${k.code})</h2><p class="soft" style="margin:0">${esc(k.grade)} · with the Authority since ${k.joined} · ${k.stations.length} station${k.stations.length > 1 ? "s" : ""} · ${k.entries} log entries</p>` +
-    `<p style="margin:10px 0 0">Inferred from logs and training records. Evidence of work is not certification, and nothing here replaces your own assessment at interview.</p></div>` +
+    `<div class="card cand"><h2>${esc(k.name)} (${k.code})</h2><p class="soft" style="margin:0">${esc(k.grade)} · with the Authority since ${k.joined} · ${k.stations.length} station${k.stations.length > 1 ? "s" : ""} · ${k.entries} log entries</p>` +
+    `<p style="margin:10px 0 0">Inferred from logs and training records. Evidence of work is not certification, and nothing here replaces your own assessment at interview.</p>` +
+    candidateStats(A) + `</div>` +
     renderPosting(k, p, v, A);
+  for (const b of $("e-detail").querySelectorAll(".stat")) b.onclick = () => {
+    const target = $("e-detail").querySelector(b.dataset.go);
+    target.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
+    target.setAttribute("tabindex", "-1"); target.focus({preventScroll: true});
+  };
 }
 
 // ---------- sign-in (prototype only) ----------
