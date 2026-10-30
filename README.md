@@ -1,5 +1,7 @@
 # Carrowmore: what a keeper is qualified for, nearly qualified for, and the shortest route
 
+> **Post-submission sandboxing.** The last commit of the exercise is `b6cc45b` ("Final write-up", 21 Oct 2026). Everything after it is interface work done afterwards: the First Light sign-in, the gradient backdrop, sign-in autofill, the keeper's Show menu and titled containers, the employer's count buttons and Logged experience sort, and fixes from a later QA pass. The evidence logic (how each requirement is labelled and ranked), the evaluation and its results are unchanged; `CALL.md` gains one item in its list of what to throw away. To see the prototype as it stood: `git checkout b6cc45b`.
+
 Senior PM, Zero to One exercise. Read in this order: `FRAMING.md` (the bet), the prototype, then `CALL.md` (the call, QA, and the three written answers). The two are also combined as a one-page Word file, `Carrowmore_Framing_and_Call.docx`.
 
 ## Open the prototype
@@ -8,8 +10,9 @@ Senior PM, Zero to One exercise. Read in this order: `FRAMING.md` (the bet), the
 
 Or open `prototype/index.html` in any browser. It needs no install or server; without a network it falls back from Plus Jakarta Sans to Arial.
 
-- **Keeper/Applicant:** any keeper code (e.g. `K0566`, `K1483`, `K0303`), password `carrowmore`. One record only: choose an open role to see how the record compares, the training it needs, and where the keeper is asked to clarify. Two roles are assessed; the other four postings are listed but marked as not yet assessed.
-- **Employer/Advisor:** any email, password `array`. Choose a role and a candidate; sort alphabetically or by closest to ready (requirements left to clear, never a percentage).
+- **Keeper/Applicant:** any keeper code (e.g. `K0566`, `K1483`, `K0303`), password `carrowmore`. One record only: choose an open role to see how the record compares, the training it needs, and where the keeper is asked to clarify. Two roles are assessed; the other four postings are listed but marked as not yet assessed. **Show** narrows the page to one part: Full Posting, Role Summary, All Qualifications, Required Certifications, Required Skills/Experience, Open Questions or Training Path. The role card is split into Role Description, Role Certification and Role Experience.
+- **Employer/Advisor:** any email, password `array`. Choose a role and a candidate; sort by closest to ready (requirements left to clear), by logged experience, or alphabetically. Each candidate's summary has count buttons, never percentages: requirements on record, certifications held, medical on record (✓) or not (?), and experience shown in the logs. Each jumps to its section. Logged HV switching never counts toward requirements on record, because logs cannot clear an insurer requirement.
+- **Autofill (prototype only):** clicking into a sign-in box fills a working value, left visible and editable; each further click in the keeper code box steps to the next keeper. Passwords show as plain text.
 
 The sign-in is a prototype affordance, not security: every record is in the one file. It's there to show how the two views are scoped differently. It opens on a short intro, the lighthouse coming up from dark; any key or tap skips it, and it is off for anyone who has reduced motion turned on.
 

@@ -18,4 +18,4 @@
 
 - **Accessibility**: plain language, symbols with color, WCAG AA contrast. Time: about 3 hours, 1 each on discovery, build, and testing and write-up.
 
-**If this graduated:** throw away the testing shortcuts (one-time AI labels, one file holding every record, a sign-in for UX with no security). Keep: the logic (translating between natural language and prescribed qualifications), the qualification labels, the rule that logged evidence never clears a licensed requirement, and the test setup. Roadmap would consider addition of estimated certification cost and time for candidates to meet requirements.
+**If this graduated:** throw away the testing shortcuts (one-time AI labels, one file holding every record, a sign-in for UX with no security, and the keeper code autofill, which cycles through every keeper). Keep: the logic (translating between natural language and prescribed qualifications), the qualification labels, the rule that logged evidence never clears a licensed requirement, and the test setup. Roadmap would consider addition of estimated certification cost and time for candidates to meet requirements.

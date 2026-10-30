@@ -67,7 +67,7 @@
   :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
   .tabs { display: flex; gap: 8px; margin: 0 0 14px; flex-wrap: wrap; }
   .tabs button { background: var(--surface); color: var(--ink-strong); border: 1px solid var(--line); }
-  .tabs button[aria-selected="true"] { background: var(--btn); color: var(--btn-ink); border-color: var(--btn); }
+  .tabs button[aria-pressed="true"] { background: var(--btn); color: var(--btn-ink); border-color: var(--btn); }
   .demo { font-size: .88rem; border-left: 4px solid var(--rule-flag); padding: 8px 12px; margin-top: 16px; background: var(--bg); border-radius: 0 8px 8px 0; }
   .err { color: var(--ink-strong); font-weight: 600; margin-top: 10px; }
   .route { border-left: 5px solid var(--rule-route); background: var(--bg); padding: 12px 14px; margin: 14px 0 18px; border-radius: 0 8px 8px 0; }
@@ -132,7 +132,8 @@
   /* A lighter rim, like the Light Purple and #472399 edges on the cards below: core Turquoise on the deep Turquoise fill. */
   .input-card { background: #168584; border: 2px solid #56E2E1; color: #FFFFFF; }
   .input-card h2, .input-card label, .input-card p, .input-card .soft, .input-card summary { color: #FFFFFF; }
-  .input-card p, .input-card .soft, .input-card summary, .input-card label { font-weight: 600; font-size: 1.1rem; }
+  /* Bold at 1.2rem (19.2px) makes this WCAG large text, so white on 168584 (4.45:1) clears the 3:1 bar. */
+  .input-card p, .input-card .soft, .input-card summary, .input-card label { font-weight: 700; font-size: 1.2rem; }
   .input-card h2 { font-size: 1.4rem; }
   .input-card select { background: #FFFFFF; color: #0D004D; border-color: #FFFFFF; }
   .input-card td { background: #FFFFFF; color: #0D004D; }
@@ -180,7 +181,7 @@
   .gate-card p { margin: 0; font-size: .95rem; }
   .gate-card .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 4px; margin: 0; border-radius: 10px; background: rgba(255, 255, 255, .5); }
   .gate-card .tabs button { font-size: .9rem; border: 0; border-radius: 7px; padding: 8px 6px; background: transparent; color: #000000; }
-  .gate-card .tabs button[aria-selected="true"] { background: #FFFFFF; color: #000000; box-shadow: inset 0 -3px 0 #000000; }
+  .gate-card .tabs button[aria-pressed="true"] { background: #FFFFFF; color: #000000; box-shadow: inset 0 -3px 0 #000000; }
   .gate-card form { display: grid; gap: 6px; }
   .gate-card label { font-size: .9rem; margin: 6px 0 0; }
   .gate-card input { width: 100%; background: #FFFFFF; border-color: #0D004D; }
@@ -239,9 +240,9 @@
         <img class="logo" src="__LOGO_PURPLE__" alt="Pearson">
         <p class="eyebrow">Keeper Skills Record · Carrowmore redeployment</p>
         <h1 id="si-h">Sign in</h1>
-        <div class="tabs" role="tablist">
-          <button role="tab" aria-selected="true" id="tab-k">Keeper/Applicant</button>
-          <button role="tab" aria-selected="false" id="tab-e">Employer/Advisor</button>
+        <div class="tabs" role="group" aria-label="Sign in as">
+          <button type="button" aria-pressed="true" id="tab-k">Keeper/Applicant</button>
+          <button type="button" aria-pressed="false" id="tab-e">Employer/Advisor</button>
         </div>
         <form id="form-k">
       <p>See your own record against the jobs on offer: what you already have, what training you'd need, and where we need your help to fill gaps.</p>
@@ -289,7 +290,7 @@
           </select></div>
       </div>
       <p class="soft" id="sort-explain" style="margin-top:12px"></p>
-      <details><summary>Show the ranked list</summary><div class="rank-wrap" id="rank"></div></details>
+      <details id="rank-box" open><summary id="rank-toggle">Collapse list</summary><div class="rank-wrap" id="rank"></div></details>
       <label for="e-keeper">Whose record</label>
       <select id="e-keeper" style="width:100%"></select>
     </div>
@@ -488,10 +489,11 @@ const SHOW = {
   questions: "Open Questions",
   training:  "Training Path",
 };
-// Parts: desc, certs, exp (the role card's three containers), train, ask (the two keeper areas).
+// Parts: desc, certs, exp (the role card's three containers), train, ask (the two keeper areas),
+// route (a copy of the Shortest route that shows only with Training Path, above the training).
 const SHOW_PARTS = {
   full: ["desc", "certs", "exp", "train", "ask"], summary: ["desc"], quals: ["certs", "exp"],
-  certs: ["certs"], skills: ["exp"], questions: ["ask"], training: ["train"],
+  certs: ["certs"], skills: ["exp"], questions: ["ask"], training: ["route", "train"],
 };
 function applyShow(root, show) {
   const parts = SHOW_PARTS[show] || SHOW_PARTS.full, requiredOnly = show === "certs" || show === "skills";
@@ -501,12 +503,15 @@ function applyShow(root, show) {
   for (const card of root.querySelectorAll(".role-card")) card.hidden = !card.querySelector("[data-part]:not([hidden])");
 }
 
-function renderPosting(k, p, v, A) {
-  const route = `<div class="route"><strong>Shortest route</strong>` +
+function routeBox(p, A) {
+  return `<div class="route"><strong>Shortest route</strong>` +
     (A.todo.length ? `<ol>${A.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : `<p>Nothing to book. The records cover what they ask for.</p>`) +
     (p.id === "om" ? `<p class="soft" style="margin:8px 0 0">The Array trains the turbine work itself; comfort at height, in enclosed spaces and on small boats is not negotiable. The logs show <span class="num">${A.lines.filter(L => L.it.kind === "log" && L.it.level === "essential" && L.tier === "evid").length} of ${A.lines.filter(L => L.it.kind === "log" && L.it.level === "essential").length}</span> required experience lines.</p>` : "") + `</div>`;
+}
+function renderPosting(k, p, v, A) {
+  const route = routeBox(p, A);
   const zone = (part, title, inner) => `<div class="zone" data-part="${part}"><h3 class="zone-title">${title}</h3>${inner}</div>`;
-  const lines = list => list.map(L => `<div class="req" data-level="${L.it.level}">${renderLine(k, L, v)}</div>`).join("");
+  const lines = list => list.map(L => `<div class="req" data-level="${L.it.level}" data-kind="${L.it.kind}">${renderLine(k, L, v)}</div>`).join("");
   const certs = A.lines.filter(L => L.it.kind !== "log"), exp = A.lines.filter(L => L.it.kind === "log");
   return `<section class="card role-card" aria-labelledby="h-${p.id}"><h2 id="h-${p.id}">${esc(p.title)}</h2>` +
     zone("desc", "Role Description:", `<p class="soft">${esc(p.employer)} · ${esc(p.posts)}. ${esc(p.note)}</p>${route}` +
@@ -572,7 +577,7 @@ function renderKeeper(code) {
     DATA.not_assessed.map(t => `<option disabled>${esc(t)}</option>`).join("") + `</optgroup>`;
   $("keeper-view").innerHTML =
     `<h1>${esc(k.name)}</h1><p class="soft">${esc(k.grade)} · with the Authority since ${k.joined} · ${k.stations.length} station${k.stations.length > 1 ? "s" : ""} · ${k.entries} of your log entries read</p>` +
-    `<div class="card input-card"><h2 id="k-role-h">Role Selection</h2><p>Choose an open role to see how your record compares: what you already have, the training you'd need, and where we need you to clarify. Only you can see this page until you choose to share it.</p>` +
+    `<div class="card input-card"><h2 id="k-role-h">Role Selection</h2><p>Choose an open role to see how your record compares: what you already have, the training you'd need, and where we need you to clarify. In the full build, only you can see this page until you choose to share it.</p>` +
     `<select id="k-role" aria-labelledby="k-role-h" style="width:100%">${opts}</select>` +
     `<label for="k-show">Show</label>` +
     `<select id="k-show" style="width:100%">${Object.entries(SHOW).map(([id, label]) => `<option value="${id}">${label}</option>`).join("")}</select></div>` +
@@ -586,7 +591,7 @@ function renderKeeperRole() {
   const k = byCode[keeperCode], v = V.keeper;
   const p = DATA.postings.find(x => x.id === $("k-role").value) || DATA.postings[0];
   const A = assess(k, p, v);
-  $("k-detail").innerHTML = renderPosting(k, p, v, A) + keeperExtras(k, [[p, A]]);
+  $("k-detail").innerHTML = renderPosting(k, p, v, A) + `<div data-part="route">${routeBox(p, A)}</div>` + keeperExtras(k, [[p, A]]);
   applyShow($("k-detail"), $("k-show").value);
 }
 
@@ -629,16 +634,21 @@ function renderEmployer() {
   $("e-keeper").value = rows.some(r => r.k.code === prev) ? prev : rows[0].k.code;
   renderEmployerDetail();
 }
-// Quick stats: counts, never percentages. A certificate (or the medical) counts only when held and in date;
-// experience counts when the logs show it, which is not the same as confirmed.
+// Quick stats: counts, never percentages. A certificate counts only when held and in date. Experience
+// counts when the logs show it, which is not confirmation, and an insurer gate (HV switching) never
+// counts toward the total: logs cannot clear it. The medical gets its own button, shown when the role needs one.
 function candidateStats(A) {
-  const certs = A.lines.filter(L => L.it.kind !== "log"), exp = A.lines.filter(L => L.it.kind === "log");
-  const held = certs.filter(L => L.tier === "auth").length, shown = exp.filter(L => L.tier === "evid" || L.tier === "gate").length;
-  const stat = (go, n, of, label) => `<button type="button" class="stat" data-go="${go}"><b>${n} of ${of}</b><span>${label}</span></button>`;
+  const certs = A.lines.filter(L => L.it.kind === "cert"), med = A.lines.find(L => L.it.kind === "medical");
+  const exp = A.lines.filter(L => L.it.kind === "log");
+  const held = certs.filter(L => L.tier === "auth").length;
+  const shown = exp.filter(L => L.tier === "evid" || L.tier === "gate").length;
+  const onRecord = held + exp.filter(L => L.tier === "evid").length + (med && med.tier === "auth" ? 1 : 0);
+  const stat = (go, big, label) => `<button type="button" class="stat" data-go="${go}"><b>${big}</b><span>${label}</span></button>`;
   return `<div class="stats">` +
-    stat(".role-card", held + shown, A.lines.length, "Requirements on record") +
-    stat(".zone[data-part='certs']", held, certs.length, "Certification held") +
-    stat(".zone[data-part='exp']", shown, exp.length, "Experience shown in logs") + `</div>`;
+    stat(".role-card", `${onRecord} of ${A.lines.length}`, "Requirements on record") +
+    stat(".zone[data-part='certs']", `${held} of ${certs.length}`, "Certifications held") +
+    (med ? stat(".req[data-kind='medical']", med.tier === "auth" ? "✓" : "?", med.tier === "auth" ? "Medical on record" : "Medical not on record") : "") +
+    stat(".zone[data-part='exp']", `${shown} of ${exp.length}`, "Experience shown in logs") + `</div>`;
 }
 function renderEmployerDetail() {
   const p = DATA.postings.find(x => x.id === $("e-role").value);
@@ -665,8 +675,8 @@ function show(view) {
   window.scrollTo(0, 0);
 }
 function tab(which) {
-  $("tab-k").setAttribute("aria-selected", which === "k");
-  $("tab-e").setAttribute("aria-selected", which === "e");
+  $("tab-k").setAttribute("aria-pressed", which === "k");
+  $("tab-e").setAttribute("aria-pressed", which === "e");
   $("form-k").hidden = which !== "k"; $("form-e").hidden = which !== "e"; $("si-err").textContent = "";
 }
 $("tab-k").onclick = () => tab("k");
@@ -688,6 +698,7 @@ $("form-e").onsubmit = e => {
 };
 $("e-role").onchange = renderEmployer;
 $("e-sort").onchange = renderEmployer;
+$("rank-box").addEventListener("toggle", () => { $("rank-toggle").textContent = $("rank-box").open ? "Collapse list" : "Expand list"; });
 $("e-keeper").onchange = renderEmployerDetail;
 // Prototype autofill: clicking into a sign-in box fills a working value, left visible and editable.
 // Only an empty box, or one still holding the last value we filled, is ever replaced, so typing is never overwritten.

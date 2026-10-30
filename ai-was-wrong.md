@@ -20,3 +20,16 @@ Working notes for Section 6, question 2. Logged as it happens, not reconstructed
 | 14 | QA: route copy | Wrote "The Array trains everything else on the job" into the O&M route | The posting calls comfort at height, in enclosed spaces and on small boats "not negotiable"; it doesn't train that | Rewrote: the Array trains the turbine work itself; that comfort is not negotiable |
 | 15 | QA: evidence rule | Counted any two matching entries as logged experience | 6 verdicts rested on one repeated template line (e.g. "Painted the gallery rail, one coat" ×2 as height work), and 8 entries were same-day duplicates | Tool now drops duplicates and needs two different dates and two different sentences; 7 lines were demoted across all keepers. Re-scored on the ten test keepers: overclaims 6.5% (was 6.2%), recall 76% (was 79%); the call doesn't change |
 | 16 | QA: certificates | Trusted `valid_2026` outright, and in QA first counted 15 suspect certificates | 15 valid certificates include some modules older than the renewal period, but 11 of those also have a recent module, consistent with a renewal. Only 4 show no training at all within the renewal window, 3 of them in schemes the tool assesses | The 3 keep their tier but now say the training records don't show a renewal, and go on the keeper's clarify list. The QA figure of 15 was mine and overstated |
+
+## Post-submission sandboxing
+
+Interface work after `b6cc45b`. Same rule: logged as it happens.
+
+| # | When | What the AI did | Why it was wrong | What I did |
+|---|---|---|---|---|
+| 17 | Sign-in studies | Shipped option pages where both sign-in forms and the signed-in panel showed at once | A `display: grid` rule outranked the `hidden` attribute, with no `[hidden]` rule to restore it | Caught on the first screenshot; added the rule before anything was shared |
+| 18 | Signed-in backdrop | Put the full illustration behind the signed-in views at 25% | Amethyst text measured 4.3:1 on it, under WCAG AA; it was also too busy to read against | Measured before shipping and darkened that text; Callie then asked for the color columns only at 15%, where Amethyst returns at 5.5:1 |
+| 19 | Sign-in autofill | Filled the box on focus but left the caret at the end | Clicking in and typing gave "K0566K1483": the autofill and the typing ran together | Caught by test before commit; the filled value is now selected, so typing replaces it |
+| 20 | Employer count buttons | Stored a jump selector with double quotes inside a double-quoted attribute | The attribute broke, so the Certification and Experience buttons went nowhere | Caught by test before commit; quotes swapped |
+| 21 | Employer count buttons | Counted logged HV switching toward "Requirements on record" | Breaks the framing's hard rule: logs never clear an insurer gate. 5 of 76 candidate summaries overstated, e.g. K1374 on HV read 4 of 6 for 3 | Caught in QA; insurer gates no longer count toward the total. The medical moved to its own ✓ / ? button |
+| 22 | Contrast checks | Checked contrast area by area through the session but never the Role Selection and Candidate Selection boxes | Their text was 4.45:1, under AA at its size; the code comment claimed bold large text it wasn't. Pre-dated the session, but each check missed it | Caught by the full QA sweep (38 color pairs); text set bold at 19.2px, which is WCAG large text |
