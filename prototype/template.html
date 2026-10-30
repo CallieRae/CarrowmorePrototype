@@ -14,6 +14,7 @@
     --purple: #0D004D; --amethyst: #512EAB; --light-purple: #C1BFFF; --mist: #EDECF6; --white: #FFFFFF;
     --bg: var(--mist); --surface: var(--white); --ink: #000000; --ink-strong: var(--purple); --ink-soft: var(--amethyst);
     --line: #C1BFFF; --value-ink: var(--amethyst);
+    --ink-bare: var(--purple); /* text set straight on the backdrop: Amethyst is 4.3:1 there, Pearson Purple 8.9:1 */
     --btn: var(--amethyst); --btn-ink: var(--white);
     --f-auth: #CBF6F5; --f-near: #FEF0B4; --f-evid: #C1BFFF; --f-gate: #F6C8F1; --f-none: var(--mist);
     --pill-ink: var(--purple);
@@ -24,14 +25,14 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: var(--purple); --surface: #290066; --ink: var(--white); --ink-strong: var(--white); --ink-soft: var(--light-purple);
-      --line: #472399; --value-ink: #CAB7FF; --btn: var(--light-purple); --btn-ink: var(--purple);
+      --line: #472399; --value-ink: #CAB7FF; --ink-bare: var(--light-purple); --btn: var(--light-purple); --btn-ink: var(--purple);
       --f-auth: #168584; --f-near: #7F6701; --f-evid: #512EAB; --f-gate: #991B8D; --f-none: #330B77;
       --pill-ink: var(--white); --tbl-head: #0D004D; --tbl-alt: #330B77; --focus: var(--light-purple);
     }
   }
   :root[data-theme="dark"] {
     --bg: var(--purple); --surface: #290066; --ink: var(--white); --ink-strong: var(--white); --ink-soft: var(--light-purple);
-    --line: #472399; --value-ink: #CAB7FF; --btn: var(--light-purple); --btn-ink: var(--purple);
+    --line: #472399; --value-ink: #CAB7FF; --ink-bare: var(--light-purple); --btn: var(--light-purple); --btn-ink: var(--purple);
     --f-auth: #168584; --f-near: #7F6701; --f-evid: #512EAB; --f-gate: #991B8D; --f-none: #330B77;
     --pill-ink: var(--white); --tbl-head: #0D004D; --tbl-alt: #330B77; --focus: var(--light-purple);
   }
@@ -111,7 +112,16 @@
   body.gated { overflow: hidden; }
   body.gated .mast, body.gated main > :not(#signin) { visibility: hidden; }
   .gate { position: fixed; inset: 0; z-index: 20; background: #07002E; color: #FFFFFF;
-          --lamp-x: 49.9%; --lamp-y: 31.5%; --art: url("__LIGHTHOUSE__"); }
+          --lamp-x: 49.9%; --lamp-y: 31.5%; }
+  /* One copy of the illustration serves both the gate and the signed-in backdrop. */
+  .gate, .backdrop { --art: url("__LIGHTHOUSE__"); }
+  /* Signed-in screens: the same illustration, fixed behind the page at 25% opacity
+     over the theme ground (Mist in light, Pearson Purple in dark). */
+  .backdrop { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .25;
+              background: var(--art) 50% 30% / cover no-repeat; }
+  body.gated .backdrop { display: none; }
+  .mast, main { position: relative; z-index: 1; }
+  #keeper-view > .soft, #employer-view > .soft, footer, footer code, footer em { color: var(--ink-bare); }
   .gate .stage { position: absolute; left: 50%; top: 50%; width: max(100vw, 177.78vh); height: max(100vh, 56.25vw);
                  transform: translate(-50%, -50%); overflow: hidden; }
   .gate .plate { position: absolute; inset: 0; background: var(--art) center / cover no-repeat; }
@@ -172,6 +182,7 @@
 </style>
 </head>
 <body>
+<div class="backdrop" aria-hidden="true"></div>
 <header class="mast">
   <div class="mast-in">
     <img src="__LOGO_WHITE__" alt="Pearson">
