@@ -166,7 +166,8 @@ def main():
             .replace("/*__DATA__*/null", json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
             .replace("__LOGO_WHITE__", asset("pearson-logo-white.png"))
             .replace("__LOGO_PURPLE__", asset("pearson-logo-purple.png"))
-            .replace("__LIGHTHOUSE__", asset("lighthouse.webp", "image/webp")))
+            .replace("__LIGHTHOUSE__", asset("lighthouse.webp", "image/webp"))
+            .replace("__GRADIENT__", asset("lighthouse-gradient.webp", "image/webp")))
     (ROOT / "prototype" / "index.html").write_text(html, encoding="utf-8")
     print(f"wrote prototype/index.html ({len(html) // 1024} KB, {len(out)} keepers)")
 
