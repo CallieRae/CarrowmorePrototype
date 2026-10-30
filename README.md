@@ -11,7 +11,7 @@ Or open `prototype/index.html` in any browser. It needs no install or server; wi
 - **Keeper/Applicant:** any keeper code (e.g. `K0566`, `K1483`, `K0303`), password `carrowmore`. One record only: choose an open role to see how the record compares, the training it needs, and where the keeper is asked to clarify. Two roles are assessed; the other four postings are listed but marked as not yet assessed.
 - **Employer/Advisor:** any email, password `array`. Choose a role and a candidate; sort alphabetically or by closest to ready (requirements left to clear, never a percentage).
 
-The sign-in is a prototype affordance, not security: every record is in the one file. It's there to show how the two views are scoped differently.
+The sign-in is a prototype affordance, not security: every record is in the one file. It's there to show how the two views are scoped differently. It opens on a short intro, the lighthouse coming up from dark; any key or tap skips it, and it is off for anyone who has reduced motion turned on.
 
 ### What the labels mean
 
@@ -40,6 +40,7 @@ python3 prototype/build.py
 | `EVALUATION_PLAN.md` | The test and its kill rules, committed before any AI output existed |
 | `ai-was-wrong.md` | Running log of every error found, by the AI, the build or QA, and what changed |
 | `prototype/` | The keeper and employer views (`index.html`), template, build script and the Pearson logo from the brand guidelines |
+| `prototype/sign-in-options/` | Three sign-in intro studies (First Light, Beacon, Approach); First Light is the one in use |
 | `prompts/map_prompt.md` | The prompt the AI followed to label log sentences |
 | `eval/` | Keeper selection, keyword baseline, blind grading sheets, AI labels, scoring |
 | `carrowmore-data-pack/` | `clean/`, `employers/` and `reference/` from the supplied pack; `raw/` is not committed |

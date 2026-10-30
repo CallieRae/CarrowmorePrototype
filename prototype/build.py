@@ -159,12 +159,14 @@ def main():
         "keepers": out,
     }
     import base64
-    logo = lambda name: "data:image/png;base64," + base64.b64encode(
-        (ROOT / "prototype" / "assets" / name).read_bytes()).decode()
+    def asset(name, mime="image/png"):
+        return f"data:{mime};base64," + base64.b64encode((ROOT / "prototype" / "assets" / name).read_bytes()).decode()
     template = (ROOT / "prototype" / "template.html").read_text()
     html = (template
             .replace("/*__DATA__*/null", json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
-            .replace("__LOGO_WHITE__", logo("pearson-logo-white.png")))
+            .replace("__LOGO_WHITE__", asset("pearson-logo-white.png"))
+            .replace("__LOGO_PURPLE__", asset("pearson-logo-purple.png"))
+            .replace("__LIGHTHOUSE__", asset("lighthouse.webp", "image/webp")))
     (ROOT / "prototype" / "index.html").write_text(html, encoding="utf-8")
     print(f"wrote prototype/index.html ({len(html) // 1024} KB, {len(out)} keepers)")
 
